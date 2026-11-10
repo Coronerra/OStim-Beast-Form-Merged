@@ -1,0 +1,49 @@
+files 0.3 400 0.4 407 added 7 changed 25 removed 0
+plugin byte-identical to 0.3 (masters unchanged); no HKX/PEX/NIF/DDS changed -> no Pandora run
+ + Docs/OStim Beast Form Merged/BodyLanguage_decorator_errors_0.4.txt
+ + Docs/OStim Beast Form Merged/OStimNet_SkyrimNet_Integration_0.4.txt
+ + Docs/OStim Beast Form Merged/STATIC_CHECKS_0.4.txt
+ + Docs/OStim Beast Form Merged/hub_graph_0.4.json
+ + SKSE/Plugins/OStimNet/animationsDescriptions/zz OStim Beast Form Merged SkyrimNet.json
+ + SKSE/Plugins/SkyrimNet/external/coronerra.beastform_ostimnet/manifest.json
+ + SKSE/Plugins/SkyrimNet/external/coronerra.beastform_ostimnet/prompts/submodules/user_final_instructions/0510_beastform_ostimnet_partner.prompt
+ ~ Docs/OStim Beast Form Merged/OStimNet_PassesFilters_player_beastform.patch
+ ~ Docs/OStim Beast Form Merged/README_OStim_Beast_Form_Merged.txt
+ ~ README_OStim_Beast_Form_Merged.txt
+ ~ SKSE/Plugins/OStim/scenes/BakaCreatures/vampirelord/fm/BakaOVampireLordHubFM.json
+ ~ SKSE/Plugins/OStim/scenes/BakaCreatures/werewolf/fm/BakaOWerewolfHubFM.json
+ ~ SKSE/Plugins/OStim/scenes/BillyyCreatures/BillyyVampireLord/fm/BillyyVampireLordHubFM.json
+ ~ SKSE/Plugins/OStim/scenes/BillyyCreatures/BillyyWerewolf/ffm/BillyyWerewolfHubFFM.json
+ ~ SKSE/Plugins/OStim/scenes/BillyyCreatures/BillyyWerewolf/fm/BillyyWerewolfHubFM.json
+ ~ SKSE/Plugins/OStim/scenes/BillyyCreatures/BillyyWerewolf/fmm/BillyyWerewolfHubFMM.json
+ ~ SKSE/Plugins/OStim/scenes/BillyyCreatures/BillyyWerewolf/fmmm/BillyyWerewolfHubFMMM.json
+ ~ SKSE/Plugins/OStim/scenes/BillyyCreatures/BillyyWerewolf/fmmmm/BillyyWerewolfHubFMMMM.json
+ ~ SKSE/Plugins/OStim/scenes/FlufyCreatures/werewolf/fm/FlufyOWerewolfHubFM.json
+ ~ SKSE/Plugins/OStim/scenes/FunnyBizCreatures/vampirelord/fm/FBCOMCVampireLordHubFM.json
+ ~ SKSE/Plugins/OStim/scenes/OBFMerged/OBFWerewolfIdleMF.json
+ ~ SKSE/Plugins/OStim/scenes/OCreatures/OCrVampireLord/fm/OCrVampireLordIdleFM.json
+ ~ SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/ff/OCrWerewolfIdleFF.json
+ ~ SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/ffm/OCrWerewolfIdleFFM.json
+ ~ SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fm/OCrWerewolfIdleFM.json
+ ~ SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fmm/OCrWerewolfIdleFMM.json
+ ~ SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fmmm/OCrWerewolfIdleFMMM.json
+ ~ SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fmmmm/OCrWerewolfIdleFMMMM.json
+ ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-1.json
+ ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-2.json
+ ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-4.json
+ ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-5.json
+all JSON parse
+OCrWerewolfIdleFM: buttons=3 ['BakaOWerewolfHubFM', 'BillyyWerewolfHubFM', 'FlufyOWerewolfHubFM'] reachable=183/183 intro_start=True
+OCrWerewolfIdleFF: buttons=0 [] reachable=0/0 intro_start=False
+OCrWerewolfIdleFMMMM: buttons=1 ['BillyyWerewolfHubFMMMM'] reachable=6/6 intro_start=True
+OCrWerewolfIdleFMMM: buttons=1 ['BillyyWerewolfHubFMMM'] reachable=6/6 intro_start=True
+OCrWerewolfIdleFMM: buttons=1 ['BillyyWerewolfHubFMM'] reachable=33/33 intro_start=True
+OCrWerewolfIdleFFM: buttons=1 ['BillyyWerewolfHubFFM'] reachable=6/6 intro_start=True
+OCrVampireLordIdleFM: buttons=3 ['BakaOVampireLordHubFM', 'BillyyVampireLordHubFM', 'FBCOMCVampireLordHubFM'] reachable=28/28 intro_start=True
+OBFWerewolfIdleMF: buttons=1 ['WWFCowgirl1-1'] reachable=5/5 intro_start=True
+every random intro start for a beast signature is the matching populated main hub; pack pages noRandomSelection
+OCrWerewolfIdleFF: 0 buttons, not hub-tagged, noRandomSelection (no installed FF scenes) - unchanged by design
+descriptions 20 all map to installed scene ids; 0 overlap with OStimNet/Lirael/OCR description files
+WWF intents: 1/2/4/5 lustful, 3 romantic (kept)
+SkyrimNet bundle manifests parse; prompt render test: see render_test_0.4.log
+PASS static checks; no game/runtime test performed

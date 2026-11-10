@@ -1,0 +1,37 @@
+SkyrimNet PublicDecorator errors seen while in beast form (0.3 test)
+====================================================================
+Seen: PublicDecorator 'ttlb_get_short_body_description', 'ttlb_get_genitals',
+'ttlb_get_full_body_description' SEH exceptions, and attribute decorator
+'faction' Access Violation reading 0x28.
+
+Where they come from
+- ttlb_* decorators belong to tetherball88's "TT BodyLanguage" (BodyLanguage.dll,
+  bundle tetherball88.bodylanguage). Its prompts
+  submodules/body_language/0001_body.prompt and 0020_genitals.prompt call them for
+  every actor being described, including a player in werewolf/Vampire Lord form.
+  The DLL measures humanoid body meshes/skeletons; a beast-race actor (Coronerra
+  BFA werewolf body, VL body) does not match, and the native code faults.
+  SkyrimNet catches it (SEH), logs it, and the decorator returns nothing.
+- 'faction' is a SkyrimNet core decnpc() attribute, not something this mod
+  registers. Same likely cause (beast race / transformed actor state).
+
+Why 0.4 does NOT ship a fix
+- Beast Form has no extension point that can stop another bundle's submodule from
+  calling its own decorator. SkyrimNet submodules are additive; we cannot
+  "skip" theirs from ours.
+- The clean fix is a race guard inside BodyLanguage itself (DLL: skip actors whose
+  race lacks ActorTypeNPC / is WerewolfBeastRace or DLC1VampireBeastRace; or its
+  prompt: wrap 0001_body/0020_genitals in a race check). Shipping edited copies of
+  BodyLanguage prompt files would overwrite tetherball88's files (license: no
+  as-is redistribution) and silently break on his updates.
+- Beast Aware (0405_beastaware_form, already in this mod) already tells the LLM
+  what the beast body looks like, so nothing is lost when ttlb_* returns empty.
+
+Impact: log noise only, no game crash (SkyrimNet traps the exception).
+
+If you want it gone (your own PC only, not shipped): in MO2, in the BodyLanguage
+mod, make 0001_body.prompt and 0020_genitals.prompt start with
+  {% set bl_race = lower(decnpc(actorUUID).race) %}
+  {% if bl_race != "werewolf" and bl_race != "vampire lord" and bl_race != "werebear" %}
+and add {% endif %} as the last line. Or report it to tetherball88 (BodyLanguage
+GitHub issues) with the log lines. The 'faction' AV would need a SkyrimNet report.

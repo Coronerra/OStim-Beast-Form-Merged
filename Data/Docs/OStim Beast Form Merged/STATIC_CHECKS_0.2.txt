@@ -1,0 +1,13 @@
+MASTER BEFORE: ['Skyrim.esm', 'Update.esm', 'Dawnguard.esm', 'Dragonborn.esm', 'JS Emissive Eyes SE - Johnskyrim.esp', 'Growl - Werebeasts of Skyrim.esp', 'OStim.esp', 'OCum.esp', 'OCreatures.esp']
+MASTER AFTER: ['Skyrim.esm', 'Update.esm', 'Dawnguard.esm', 'Dragonborn.esm', 'JS Emissive Eyes SE - Johnskyrim.esp', 'Growl - Werebeasts of Skyrim.esp', 'OStim.esp', 'OCum.esp']
+ALL 23 records match 0.1 after ONLY self-index remap and OCR keyword deletion; no VMAD additions.
+RACE 0xcdd84 HEAD ['0x8000800', '0x8000802', '0x8000801', '0x8000803', '0x8000802', '0x8000801'] FaceGen True KWDA ['0x13795', '0xf23c5', '0x6f6fb', '0x5019d35']
+RACE 0x200283a HEAD ['0x8000805', '0x8000806', '0x8000808', '0x8000807'] FaceGen True KWDA ['0xa82bb', '0xf23c5', '0x13796']
+ARMA 000CDD87 BOD2 0x59c slot30 OFF; paths [('MOD2', 'actors\\werewolfbeast\\character assets\\coronerra\\bfa\\malebodywerewolf_1.nif'), ('MOD3', 'actors\\werewolfbeast\\character assets\\coronerra\\bfa\\2T\\femalebodywerewolf_1.nif')]
+Four Lite registrations retained, all level 19; female WW requirements retained.
+OCR actual KYWD editor IDs/local forms confirmed: {'OCrWerewolfRace': '0x5c58', 'OCrVampireLordRace': '0x5c57'}
+All 0.1 NIF/TRI meshes byte-identical.
+Scene/event proof: 14 unique own scene IDs; 21 unique fallback actor events; all HKX present. No OCR scene ID overrides.
+Compiled PEX: OBF_OCRCompat 1311 27e2355187e8c4d60a864a18b862ca0d
+Compiled PEX: OBF_PlayerAlias 747 a1b7eeb787f9771c39cf6269e3c7f6a8
+PASS static checks; runtime/game and behavior generation NOT performed.

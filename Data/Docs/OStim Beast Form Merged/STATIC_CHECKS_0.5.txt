@@ -1,0 +1,89 @@
+OStim Beast Form Merged 0.5 static checks (2026-11-10 11:39 MST)
+
+== Files changed/added vs 0.4
+Files Docs/OStim Beast Form Merged/README_OStim_Beast_Form_Merged.txt and Docs/OStim Beast Form Merged/README_OStim_Beast_Form_Merged.txt differ
+Only in Docs/OStim Beast Form Merged: STATIC_CHECKS_0.5.txt
+Files README_OStim_Beast_Form_Merged.txt and README_OStim_Beast_Form_Merged.txt differ
+Files Scripts/OBF_MCM.pex and Scripts/OBF_MCM.pex differ
+Files Scripts/OCumBeastPie.pex and Scripts/OCumBeastPie.pex differ
+Files Scripts/Source/OBF_MCM.psc and Scripts/Source/OBF_MCM.psc differ
+Files Scripts/Source/OCumBeastPie.psc and Scripts/Source/OCumBeastPie.psc differ
+Files meshes/actors/werewolfbeast/character assets/coronerra/bfa/malebodywerewolf_0.nif and meshes/actors/werewolfbeast/character assets/coronerra/bfa/malebodywerewolf_0.nif differ
+Files meshes/actors/werewolfbeast/character assets/coronerra/bfa/malebodywerewolf_1.nif and meshes/actors/werewolfbeast/character assets/coronerra/bfa/malebodywerewolf_1.nif differ
+Only in textures/MoreNastyCritters/werewolf: werewolfballs.dds
+Only in textures/MoreNastyCritters/werewolf: werewolfballs_n.dds
+Only in textures/MoreNastyCritters/werewolf: werewolfballs_sk.dds
+Only in textures/MoreNastyCritters/werewolf: werewolfpenis_n.dds
+Only in textures/MoreNastyCritters/werewolf: werewolfpenis_red.dds
+Only in textures/MoreNastyCritters/werewolf: werewolfpenis_sk.dds
+
+== Plugin
+md5 0c00e6c91770849c44ba342942eaeecb (identical to 0.4)
+ESL flag 0x200: True
+masters: Skyrim.esm, Update.esm, Dawnguard.esm, Dragonborn.esm, JS Emissive Eyes SE - Johnskyrim.esp, Growl - Werebeasts of Skyrim.esp, OStim.esp, OCum.esp
+OCreatures master: False
+
+== Male body NIFs (new vs v1.3 fluffy source; head/eyes/teeth removed only)
+-- malebodywerewolf_0.nif
+blocks new=170 ref=195
+WereWolfPenisTip v=48 t=68 bones=1 parts=1 triParts=68| ref v=48 t=68 maxdPos=0 sameBones=1 bonesList:[NPC Pelvis [Pelv]]
+WereWolfBody v=3690 t=6206 bones=65 parts=4 triParts=6206| ref v=3690 t=6206 maxdPos=0 sameBones=1
+WereWolfBodyFur v=1464 t=2016 bones=18 parts=1 triParts=2016| ref v=1464 t=2016 maxdPos=0 sameBones=1
+WereWolfSheath v=558 t=1058 bones=3 parts=1 triParts=1058| ref v=558 t=1058 maxdPos=0 sameBones=1 bonesList:[NPC Pelvis [Pelv]][NPC L Thigh [LThg]][NPC R Thigh [LThg]]
+WereWolfBodyShell.001 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.002 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.003 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.004 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.005 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.006 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.007 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.008 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.009 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.010 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+-- malebodywerewolf_1.nif
+blocks new=170 ref=195
+WereWolfPenisTip v=48 t=68 bones=1 parts=1 triParts=68| ref v=48 t=68 maxdPos=0 sameBones=1 bonesList:[NPC Pelvis [Pelv]]
+WereWolfBody v=3690 t=6206 bones=65 parts=4 triParts=6206| ref v=3690 t=6206 maxdPos=0 sameBones=1
+WereWolfBodyFur v=1464 t=2016 bones=18 parts=1 triParts=2016| ref v=1464 t=2016 maxdPos=0 sameBones=1
+WereWolfSheath v=558 t=1058 bones=3 parts=1 triParts=1058| ref v=558 t=1058 maxdPos=0 sameBones=1 bonesList:[NPC Pelvis [Pelv]][NPC L Thigh [LThg]][NPC R Thigh [LThg]]
+WereWolfBodyShell.001 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.002 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.003 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.004 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.005 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.006 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.007 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.008 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.009 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+WereWolfBodyShell.010 v=3690 t=2550 bones=65 parts=4 triParts=2550| ref v=3690 t=2550 maxdPos=0 sameBones=1
+
+== Sheath/tip textures
+WereWolfPenisTip: [0]textures\morenastycritters\werewolf\werewolfpenis_red.dds [1]textures\morenastycritters\werewolf\werewolfpenis_n.dds [2]textures\morenastycritters\werewolf\werewolfpenis_sk.dds
+WereWolfBody: [0]textures\actors\character\werewolf\WerewolfBody.dds [1]textures\actors\character\werewolf\WereWolfBody_n.dds [2]textures\actors\character\werewolf\WerewolfBody_sk.dds
+WereWolfSheath: [0]textures\morenastycritters\werewolf\werewolfballs.dds [1]textures\morenastycritters\werewolf\werewolfballs_n.dds [2]textures\morenastycritters\werewolf\werewolfballs_sk.dds
+b1227807915f2f50d84176852a7e189c  textures/MoreNastyCritters/werewolf/werewolfballs.dds
+214ff77cc36a0cce2705d6205aacd426  textures/MoreNastyCritters/werewolf/werewolfballs_n.dds
+76543b822e559ecba47d06cfd5a2cc10  textures/MoreNastyCritters/werewolf/werewolfballs_sk.dds
+952093110c6451574e0327de41272a3d  textures/MoreNastyCritters/werewolf/werewolfpenis_n.dds
+b72f2597ac36c17da1bebf288266b117  textures/MoreNastyCritters/werewolf/werewolfpenis_red.dds
+2357c2a40911081595f20b38e73f126a  textures/MoreNastyCritters/werewolf/werewolfpenis_sk.dds
+
+== Compile (Caprica 0.3.0, compile-only stubs for OCumMaleScript/OCumScript signatures = OCum 4.1.1 and TL merge)
+Importing files...
+Imported 100 files.
+Compiling 2 files...
+Compiling OCumBeastPie.psc
+Compiling OBF_MCM.psc
+OCumBeastPie.psc (67, 7:12): Warning W7000: Unknown Event ('OnPie') on non-native class 'OCumBeastPie' that extends from 'Quest'.
+OCumBeastPie.psc (120, 7:20): Warning W7000: Unknown Event ('OnBeastOrgasm') on non-native class 'OCumBeastPie' that extends from 'Quest'.
+OCumBeastPie.psc (392, 7:22): Warning W7000: Unknown Event ('OnBeastLoadMesh') on non-native class 'OCumBeastPie' that extends from 'Quest'.
+OBF_MCM.psc (126, 7:24): Warning W7000: Unknown Event ('OnOptionHighlight') on non-native class 'OBF_MCM' that extends from 'SKI_ConfigBase'.
+OBF_MCM.psc (116, 7:27): Warning W7000: Unknown Event ('OnOptionSliderAccept') on non-native class 'OBF_MCM' that extends from 'SKI_ConfigBase'.
+OBF_MCM.psc (74, 7:21): Warning W7000: Unknown Event ('OnOptionSelect') on non-native class 'OBF_MCM' that extends from 'SKI_ConfigBase'.
+OBF_MCM.psc (55, 7:27): Warning W7000: Unknown Event ('OnOptionKeyMapChange') on non-native class 'OBF_MCM' that extends from 'SKI_ConfigBase'.
+OBF_MCM.psc (34, 7:18): Warning W7000: Unknown Event ('OnPageReset') on non-native class 'OBF_MCM' that extends from 'SKI_ConfigBase'.
+OBF_MCM.psc (67, 7:22): Warning W7000: Unknown Event ('OnOptionDefault') on non-native class 'OBF_MCM' that extends from 'SKI_ConfigBase'.
+OBF_MCM.psc (21, 7:19): Warning W7000: Unknown Event ('OnConfigInit') on non-native class 'OBF_MCM' that extends from 'SKI_ConfigBase'.
+OBF_MCM.psc (102, 7:25): Warning W7000: Unknown Event ('OnOptionSliderOpen') on non-native class 'OBF_MCM' that extends from 'SKI_ConfigBase'.
+dd1da48ea09ed29dc71e862f12b15448  Scripts/OCumBeastPie.pex
+52b655ab6f688f32499d18f3cdf20bac  Scripts/OBF_MCM.pex

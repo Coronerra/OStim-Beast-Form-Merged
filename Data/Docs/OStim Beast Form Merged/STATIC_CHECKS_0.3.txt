@@ -1,0 +1,9 @@
+OCrWerewolfIdleFM hub=True direct=183 sex-scenes-reachable=183
+OCrWerewolfIdleFF hub=False direct=0 sex-scenes-reachable=0
+OCrWerewolfIdleFMMMM hub=True direct=6 sex-scenes-reachable=6
+OCrWerewolfIdleFMMM hub=True direct=6 sex-scenes-reachable=6
+OCrWerewolfIdleFMM hub=True direct=33 sex-scenes-reachable=33
+OCrWerewolfIdleFFM hub=True direct=6 sex-scenes-reachable=6
+OCrVampireLordIdleFM hub=True direct=28 sex-scenes-reachable=28
+OBFWerewolfIdleMF hub=True direct=5 sex-scenes-reachable=5
+PASS: 23 old records byte-identical; 8 new; 25 ESL forms; exact Lite VMAD/scripts; OCR optional; WW+VL mesh present; medallion 128x128 DXT5 8 mips; 267 sex scenes reachable; no cross-species/sex edges; 21 existing events, no new events.
