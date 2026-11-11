@@ -41,6 +41,13 @@ Binaries (ESP, PEX, NIF, DDS, HKX, TRI) are in the release zip, not in git.
 
 The plugin must load after HDT Werewolves, Growl, MFA patches and OCreatures, because its race and ARMA overrides have to win.
 
+### Growl dependence (and retargeting the race)
+
+`Growl - Werebeasts of Skyrim.esp` is a hard master. The `WerewolfBeastRace` override is based on Growl's race record and still references Growl keyword `0x019D35` and Growl ATKD form IDs `0x05BAD0`, `0x02E166`, `0x02E16B`. Scripts do **not** call Growl scripts: they resolve `WerewolfBeastRace` from `Skyrim.esm` (`0x000CDD84`) and pause `PlayerWerewolfShiftBackTime` (`Skyrim.esm` `0x0002BA19`) during scenes.
+
+To run without Growl (vanilla werewolves, Twilight Werewolf Overhaul, or another overhaul that still uses `WerewolfBeastRace`): copy the ESP, keep this mod's BFA HEAD parts, FaceGen flag, and `NakedTorsoWerewolfBeast` ARMA changes, replace those Growl form IDs with the target race's equivalents (or copy this mod's head/body changes onto the target `WerewolfBeastRace`), then SSEEdit Clean Masters to drop Growl. If the overhaul uses a different timer global, point `ShiftBackTime` in `OBF_Main` at it. Skip HDT Werewolves' MFA and Growl Patch if Growl is not used. `JS Emissive Eyes SE - Johnskyrim.esp` is a separate hard master (spell `0x000873`). A brand-new transformation race is not handled. No official vanilla/TWO patch ships yet.
+
+
 ## 4. Scripts
 | Script | Extends | What it does |
 |---|---|---|

@@ -148,6 +148,28 @@ coronerra's werewolf medallion is interface/OStim/icons/OBeastLite/hub/hub.dds:
 Billyy's own OCreatures/werewolf/werewolf icon paths are unchanged.
 No separate icon pack was folded in.
 
+
+GROWL / OTHER WEREWOLF OVERHAULS
+Growl - Werebeasts of Skyrim.esp is a hard master of this 0.5 plugin.
+Without Growl, the plugin will not load. That is because the werewolf
+race override was built on Growl's WerewolfBeastRace record (it still
+carries a Growl keyword and Growl attack-data form IDs). The scripts
+do not call Growl scripts: they only check for the standard
+WerewolfBeastRace (Skyrim.esm 0x000CDD84) and pause the vanilla timer
+PlayerWerewolfShiftBackTime (Skyrim.esm 0x0002BA19) during OStim scenes.
+
+There is no official patch yet for vanilla werewolves, Twilight
+Werewolf Overhaul, or another overhaul. If that overhaul still uses
+WerewolfBeastRace, you can retarget a copy of this ESP in SSEEdit:
+keep this mod's talking heads, FaceGen flag, and body addon changes;
+replace the Growl form IDs with the target race's equivalents; then
+Clean Masters to drop Growl. If the overhaul uses a different timer,
+point ShiftBackTime in OBF_Main at that global. Skip HDT Werewolves'
+MFA and Growl Patch if you are not using Growl. A brand-new
+transformation race is not handled. See the GitHub README section
+"Growl dependence" for the full steps:
+https://github.com/Coronerra/OStim-Beast-Form-Merged#growl-dependence
+
 REQUIREMENTS / ORDER
 Same eight masters: Skyrim, Update, Dawnguard, Dragonborn,
 JS Emissive Eyes SE - Johnskyrim.esp, Growl - Werebeasts of Skyrim.esp,

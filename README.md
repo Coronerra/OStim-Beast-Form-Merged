@@ -94,7 +94,7 @@ Get every requirement from its original page and support its author. **Nothing b
 3. Dawnguard.esm
 4. Dragonborn.esm
 5. JS Emissive Eyes SE - Johnskyrim.esp: [JS Emissive Eyes SE](https://www.nexusmods.com/skyrimspecialedition/mods/60108) by **johnskyrim**
-6. Growl - Werebeasts of Skyrim.esp: [Growl - Werebeasts of Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/31245) by **EnaiSiaion**
+6. Growl - Werebeasts of Skyrim.esp: [Growl - Werebeasts of Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/31245) by **EnaiSiaion**. **This is a hard plugin master** — the plugin will not load without it. See [Growl dependence](#growl-dependence) if you want vanilla werewolves, Twilight Werewolf Overhaul, or another overhaul.
 7. OStim.esp: [OStim Standalone](https://www.nexusmods.com/skyrimspecialedition/mods/98163) by **VersuchDrei** and the OStim team
 8. OCum.esp: [OCum Ascended](https://www.nexusmods.com/skyrimspecialedition/mods/77506) by **Aietos** (with OsmosisWrench and Sairion350)
 
@@ -149,6 +149,36 @@ You need **one** of these. Both together also seems to work.
 👉 Get Lirael's free converted animation packs from **[her LoversLab uploads](https://www.loverslab.com/profile/6654496-lauffey/content/?type=downloads_file)**, and support her work on **[Patreon](https://www.patreon.com/LiraelAtelier)**.
 
 ---
+
+
+<a id="growl-dependence"></a>
+
+## 🐺 Growl dependence, and using vanilla / Twilight Werewolf Overhaul / another overhaul
+
+**OStim Beast Form Merged 0.5 requires [Growl - Werebeasts of Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/31245) by EnaiSiaion.** `Growl - Werebeasts of Skyrim.esp` is a hard master of `OStim_Beast_Form_Merged.esp`. Without Growl installed, this plugin will not load.
+
+That is a plugin-record dependency, not a script one:
+
+- The werewolf race override (`WerewolfBeastRace`) was built on Growl's race record. It still carries a Growl keyword (`Growl - Werebeasts of Skyrim.esp` form `0x019D35`) and Growl attack-data form IDs, plus this mod's talking heads, body addons, and the JS Emissive Eyes spell.
+- The Papyrus scripts do **not** call any Growl script. They only check that you are the standard `WerewolfBeastRace` (`Skyrim.esm` `0x000CDD84`) and, during OStim scenes, they pause the vanilla werewolf timer `PlayerWerewolfShiftBackTime` (`Skyrim.esm` `0x0002BA19`). Growl uses that same timer, which is why the pause works with Growl.
+
+### Using vanilla werewolves, Twilight Werewolf Overhaul, or another overhaul
+
+There is no official ready-made patch for those yet. You can make one, and you are welcome to share it.
+
+This only stays straightforward if the other mod still uses the standard `WerewolfBeastRace`. This mod does not handle a brand-new transformation race, and it does not handle werebears as a start-scene race.
+
+In [SSEEdit](https://www.nexusmods.com/skyrimspecialedition/mods/164) (xEdit):
+
+1. Copy `OStim_Beast_Form_Merged.esp` to a new personal plugin. Don't edit the original until you know the copy works.
+2. On `WerewolfBeastRace`, keep this mod's talking head parts (the `BFA_*` HEAD entries), the FaceGen flag, and this mod's body addon / `NakedTorsoWerewolfBeast` armor-addon path changes.
+3. Replace the Growl keyword and any Growl attack-data form IDs with the equivalent records from vanilla Skyrim, Twilight Werewolf Overhaul, or whichever overhaul you use. The cleanest way is to start from that overhaul's (or vanilla's) `WerewolfBeastRace` and copy this mod's head, FaceGen, and body changes onto it.
+4. Once no Growl form IDs remain in the plugin, use SSEEdit's **Clean Masters** to drop `Growl - Werebeasts of Skyrim.esp`. The plugin can then load without Growl.
+5. If your overhaul still uses the vanilla `PlayerWerewolfShiftBackTime` global, the scene timer-pause should keep working. If it uses a different timer, the pause will not affect that timer until a small script change points `ShiftBackTime` in `OBF_Main` at the new global (or you use a no-timer / stay-transformed option from that overhaul).
+6. Skip HDT Werewolves' **MFA and Growl Patch** if you are not using Growl. Use a body patch meant for your overhaul, or rely on the meshes in this pack and test.
+7. `JS Emissive Eyes SE - Johnskyrim.esp` is a separate hard master (a glowing-eye spell on the race). The same clean-masters approach applies if you don't use that mod.
+
+This path has not been tested on vanilla werewolves or on Twilight Werewolf Overhaul. If you build a patch and it works, tell me and I can link it here.
 
 ## 🛠️ Installation (Mod Organizer 2)
 
