@@ -11,15 +11,18 @@ Play as a werewolf in OStim with your mind intact.
 
 ## ⚠️ Which download is for you?
 
-There are three related projects. **Use exactly one setup.**
+There are three related projects. **Use exactly one setup.** One optional add-on (last row) goes on top of either TWO setup.
 
 | You use… | Get this |
 |---|---|
 | **Growl + the HDT Werewolves / ABC look** | **This repo: OStim Beast Form Merged 0.6** ([v0.6 release](https://github.com/Coronerra/OStim-Beast-Form-Merged/releases/tag/v0.6)) |
 | Growl + this mod already, and you want TWO 4.1 bodies **without losing your save** | **[OStim Beast Form Merged - TWO Patch 0.1](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch)** ([v0.1 release](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch/releases/tag/v0.1); keep this mod enabled; the patch sits on top; works with Merged 0.6) |
 | TWO 4.1, no Growl needed | **[OStim Beast Form - TWO Edition 0.2](https://github.com/Coronerra/OStim-Beast-Form-TWO)** ([v0.2 release](https://github.com/Coronerra/OStim-Beast-Form-TWO/releases/tag/v0.2)) |
+| *Optional add-on:* either TWO setup above, **and you use TWO Extras' herm or urta player werewolf** | **[OStim Beast Form TWO Herm Patch 0.1](https://github.com/Coronerra/OStim-Beast-Form-TWO-Herm-Patch)** ([v0.1 release](https://github.com/Coronerra/OStim-Beast-Form-TWO-Herm-Patch/releases/tag/v0.1)) on top. Optional; needs TWO Extras. |
 
 **Never use the TWO Edition together with this mod or with the Merged TWO Patch.** They share the same scripts. The TWO Patch is meant to be used *with* this mod.
+
+**Optional: TWO herm / urta player werewolf.** If you use TWO's herm or urta player werewolf (TWO Extras' "Toggle Herm Werewolf" spell), you can also add the **[OStim Beast Form TWO Herm Patch 0.1](https://github.com/Coronerra/OStim-Beast-Form-TWO-Herm-Patch)** ([v0.1 release](https://github.com/Coronerra/OStim-Beast-Form-TWO-Herm-Patch/releases/tag/v0.1)). It is optional and sits on top of Merged 0.6 + the Merged TWO Patch, or on the TWO Edition 0.2. It needs TWO Extras (and TWO's `WerewolvesExtrasGrowl.esp` if you use Growl). I am not going to test this myself. If you use TWO's herm or urta werewolf, please test it and report any problems in the support section of the [OStim Beast Form Merged](https://www.loverslab.com/files/file/52768-ostim-beast-form-merged/) page on LoversLab.
 
 ---
 
@@ -332,6 +335,9 @@ Tell your assistant to start with `AI_CONTEXT.md`. Third-party assets in the dow
 
 ## 📝 Changelog
 
+**Docs update (no new zip)**
+- The "Which download is for you?" table now points at the optional [OStim Beast Form TWO Herm Patch 0.1](https://github.com/Coronerra/OStim-Beast-Form-TWO-Herm-Patch) for TWO's herm / urta player werewolf. I am not going to test this myself. If you use TWO's herm or urta werewolf, please test it and report any problems in the support section of the [OStim Beast Form Merged](https://www.loverslab.com/files/file/52768-ostim-beast-form-merged/) page on LoversLab.
+
 **0.6**
 - Removed the experimental WWF_OnTop female cowgirl test scenes (`WWFCowgirl1-1` to `1-5`) and their "WW Female Cowgirl 1 (TEST)" button on the female werewolf + man hub (`OBFWerewolfIdleMF`). Their OStimNet descriptions were removed too.
 - Female werewolf scenes are not bundled. They come from separate, optional scene packs (for example, an OStim conversion of Dayelyte's female werewolf animations), which add their own button to the female werewolf hubs.
@@ -365,6 +371,7 @@ Bug reports, logs and feedback are welcome in the support thread. *Have fun and 
 - [OStim-Beast-Form](https://github.com/Coronerra/OStim-Beast-Form): Start OStim scenes as the player while in werewolf beast form (Skyrim SE).
 - [OStim-Beast-Form-TWO](https://github.com/Coronerra/OStim-Beast-Form-TWO): OStim Beast Form - TWO Edition 0.2 (Twilight Werewolf Overhaul 4.1 bodies, no Growl; never use together with this mod)
 - [OStim-Beast-Form-Merged-TWO-Patch](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch): OStim Beast Form Merged - TWO Patch 0.1 (TWO 4.1 bodies on top of this mod, keeps Growl and your save)
+- [OStim-Beast-Form-TWO-Herm-Patch](https://github.com/Coronerra/OStim-Beast-Form-TWO-Herm-Patch): OStim Beast Form TWO Herm Patch 0.1 (optional add-on for TWO's herm / urta player werewolf, on top of the Merged TWO Patch or the TWO Edition; not tested by the author, please report on LoversLab)
 - [OStim-Beast-Form-Merged](https://github.com/Coronerra/OStim-Beast-Form-Merged): This repo: OStim Beast Form Merged 0.6 (werewolf as a sentient OStim race)
 - [Ostrands-with-Werewolves](https://github.com/Coronerra/Ostrands-with-Werewolves): Ostrands with Werewolves 0.8.0.3 - OStrands creature fork with female werewolf support (GPL v3)
 - [Werewolf-Overhaul-Proof-of-Concept](https://github.com/Coronerra/Werewolf-Overhaul-Proof-of-Concept): Proof of Concept: female HDT werewolf body, fluffy fur, ABC+MFA talking heads, SkyrimNet Beast Aware (tested only on modified Nolvus 6.0.21)
