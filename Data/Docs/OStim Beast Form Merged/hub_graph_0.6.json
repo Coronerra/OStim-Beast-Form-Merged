@@ -1,0 +1,74 @@
+{
+ "version": "0.6",
+ "hubs": {
+  "OBFWerewolfIdleMF": {
+   "own_buttons": [],
+   "origin_pages": [],
+   "random_start": true
+  },
+  "OCrVampireLordIdleFM": {
+   "own_buttons": [
+    "BakaOVampireLordHubFM",
+    "BillyyVampireLordHubFM",
+    "FBCOMCVampireLordHubFM"
+   ],
+   "origin_pages": [
+    "BakaOVampireLordHubFM",
+    "BillyyVampireLordHubFM",
+    "FBCOMCVampireLordHubFM"
+   ],
+   "random_start": true
+  },
+  "OCrWerewolfIdleFFM": {
+   "own_buttons": [
+    "BillyyWerewolfHubFFM"
+   ],
+   "origin_pages": [
+    "BillyyWerewolfHubFFM"
+   ],
+   "random_start": true
+  },
+  "OCrWerewolfIdleFM": {
+   "own_buttons": [
+    "BakaOWerewolfHubFM",
+    "BillyyWerewolfHubFM",
+    "FlufyOWerewolfHubFM"
+   ],
+   "origin_pages": [
+    "BakaOWerewolfHubFM",
+    "BillyyWerewolfHubFM",
+    "FlufyOWerewolfHubFM"
+   ],
+   "random_start": true
+  },
+  "OCrWerewolfIdleFMM": {
+   "own_buttons": [
+    "BillyyWerewolfHubFMM"
+   ],
+   "origin_pages": [
+    "BillyyWerewolfHubFMM"
+   ],
+   "random_start": true
+  },
+  "OCrWerewolfIdleFMMM": {
+   "own_buttons": [
+    "BillyyWerewolfHubFMMM"
+   ],
+   "origin_pages": [
+    "BillyyWerewolfHubFMMM"
+   ],
+   "random_start": true
+  },
+  "OCrWerewolfIdleFMMMM": {
+   "own_buttons": [
+    "BillyyWerewolfHubFMMMM"
+   ],
+   "origin_pages": [
+    "BillyyWerewolfHubFMMMM"
+   ],
+   "random_start": true
+  }
+ },
+ "unreachable": [],
+ "broken": []
+}

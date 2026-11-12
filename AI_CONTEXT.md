@@ -14,7 +14,7 @@ Data/                         mirrors the game Data folder (text sources only)
   SKSE/Plugins/OStimNet/animationsDescriptions/   OStimNet scene descriptions for this mod's own scenes
   SKSE/Plugins/SkyrimNet/external/coronerra.beastaware/         SkyrimNet prompt bundle (Beast Aware)
   SKSE/Plugins/SkyrimNet/external/coronerra.beastform_ostimnet/ SkyrimNet prompt bundle (OStimNet bridge)
-  Docs/                        changelog README, static checks, hub graphs, integration notes
+  Docs/                        changelog README, static checks, hub graph (0.6), integration notes
 BUILD_NOTES.md                 build history and record-level details
 ```
 Binaries (ESP, PEX, NIF, DDS, HKX, TRI) are in the release zip, not in git.
@@ -70,7 +70,7 @@ Compile with Caprica or the CK compiler (game: skyrim). Imports needed: vanilla,
   - Main hubs: `scenes/OCreatures/OCrWerewolf/<fm|ffm|fmm|fmmm|fmmmm|ff>/OCrWerewolfIdle*.json` and `OCrVampireLord/...`, tagged `idle,intro,creature,werewolf,hub`. Same IDs/paths as OCR, so they override cleanly.
   - Each pack page (e.g. `BillyyCreatures/BillyyWerewolf/fm/BillyyWerewolfHubFM.json`) adds its own button to the main hub with `"origin": "OCrWerewolfIdleFM"`, has `noRandomSelection: true`, and lists stage 1 of each animation. It returns with a medallion icon (`OBeastLite/hub/hub`).
   - Stages chain Next/Back. Return -> pack page; medallion -> main hub.
-  - `OBFMerged/OBFWerewolfIdleMF.json`: female werewolf + male human hub (WWF_OnTop). ⚠️ The WWF_OnTop/WWFCowgirl animation is an experimental proof of concept that badly deforms the female werewolf. Don't use it as a reference for good animation.
+  - `OBFMerged/OBFWerewolfIdleMF.json`: female werewolf + male human hub. Since 0.6 it has no buttons of its own (the experimental WWF_OnTop test scenes were removed). Separate female-werewolf scene packs add their button to it with `"origin": "OBFWerewolfIdleMF"`.
   - `OBeastLite/...`: old 0.2 IDs kept as non-random forwarding aliases so old saves and installs don't break.
 - Fallback animation events `OBF_B_*` (project `OBFMerged`, 21 HKX) let the idles play without OCR. That's why Pandora must be run.
 
@@ -80,7 +80,7 @@ Compile with Caprica or the CK compiler (game: skyrim). Imports needed: vanilla,
 
 ## 7. How to extend
 - **New animation pack with werewolf scenes:** best case, the pack's page uses `"origin": "OCrWerewolfIdleFM"` (or the matching actor-count idle), so it appears on the main hub automatically. Otherwise add a pack-page JSON with that origin, list stage 1 of each animation, and add a Return navigation. Use actor `"type": "Werewolf"` with the male werewolf first.
-- **Female werewolf scenes (most wanted):** actor type `Werewolf` with `intendedSex: female` (OBLWerewolfFemale gives vagina/breasts). Attach to `OBFWerewolfIdleMF` (female WW + man) or `OCrWerewolfIdleFF`, which stays untagged until real FF scenes exist. Tag it `hub` once it has content.
+- **Female werewolf scenes (most wanted):** actor type `Werewolf` with `intendedSex: female` (OBLWerewolfFemale gives vagina/breasts). Attach to `OBFWerewolfIdleMF` (female WW + man) or `OCrWerewolfIdleFF` with `origin` from your own pack, instead of editing these files. `OCrWerewolfIdleFF` stays untagged and `noRandomSelection` here. Ship your own random-start hubs in your pack (OStim sorts penis-havers first, so a female WW + man pair usually has the man in slot 0).
 - **Vampire Lord version:** the plumbing already exists (actor types, VL hubs, OBL VL swap, Beast Load, BFA VL heads). What's missing: `OBF_Main.IsPlayerBeast()` currently checks only `WerewolfBeastRace`, so the start-scene hotkey and the beast-timer guard are werewolf-only. Add `DLC1VampireBeastRace` there (VL scenes can still start through OStim/OStimNet). Also needed: a VL aroused mesh with confirmed authorship, and more VL scenes.
 - **Custom bodies/textures:** replace the files under `meshes/actors/werewolfbeast/character assets/coronerra/bfa/` keeping names, or point ARMA CDD87 elsewhere in your own override plugin loaded after this one. Keep the head (slot 30) off the body, because the head comes from the HDPT records.
 - **OCR:** never add OCreatures.esp as a master. Gate on `Game.GetModByName("OCreatures.esp") != 255` as `OBF_OCRCompat` and `OBL_Main` do.

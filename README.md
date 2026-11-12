@@ -1,6 +1,6 @@
-# OStim Beast Form Merged 0.5
+# OStim Beast Form Merged 0.6
 
-> **GitHub edition of the mod page.** Download the mod from the **[v0.5 release](https://github.com/Coronerra/OStim-Beast-Form-Merged/releases/tag/v0.5)** (`OStim_Beast_Form_Merged_0.5.zip`). This repo holds the open-source parts: Papyrus sources, SkyrimNet bundles, OStim JSON and docs. AI assistants: start with **[AI_CONTEXT.md](AI_CONTEXT.md)**. Build history: [BUILD_NOTES.md](BUILD_NOTES.md). License: [MIT for coronerra's work; third-party assets belong to their authors](LICENSE).
+> **GitHub edition of the mod page.** Download the mod from the **[v0.6 release](https://github.com/Coronerra/OStim-Beast-Form-Merged/releases/tag/v0.6)** (`OStim_Beast_Form_Merged_0.6.zip`). This repo holds the open-source parts: Papyrus sources, SkyrimNet bundles, OStim JSON and docs. AI assistants: start with **[AI_CONTEXT.md](AI_CONTEXT.md)**. Build history: [BUILD_NOTES.md](BUILD_NOTES.md). License: [MIT for coronerra's work; third-party assets belong to their authors](LICENSE).
 
 
 **Skyrim SE / AE · OStim Standalone · ESL-flagged plugin · by coronerra**
@@ -15,9 +15,9 @@ There are three related projects. **Use exactly one setup.**
 
 | You use… | Get this |
 |---|---|
-| **Growl + the HDT Werewolves / ABC look** | **This repo: OStim Beast Form Merged 0.5** |
-| Growl + this mod already, and you want TWO 4.1 bodies **without losing your save** | **[OStim Beast Form Merged - TWO Patch](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch)** (keep this mod enabled; the patch sits on top) |
-| TWO 4.1, no Growl needed | **[OStim Beast Form - TWO Edition](https://github.com/Coronerra/OStim-Beast-Form-TWO)** |
+| **Growl + the HDT Werewolves / ABC look** | **This repo: OStim Beast Form Merged 0.6** ([v0.6 release](https://github.com/Coronerra/OStim-Beast-Form-Merged/releases/tag/v0.6)) |
+| Growl + this mod already, and you want TWO 4.1 bodies **without losing your save** | **[OStim Beast Form Merged - TWO Patch 0.1](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch)** ([v0.1 release](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch/releases/tag/v0.1); keep this mod enabled; the patch sits on top; works with Merged 0.6) |
+| TWO 4.1, no Growl needed | **[OStim Beast Form - TWO Edition 0.2](https://github.com/Coronerra/OStim-Beast-Form-TWO)** ([v0.2 release](https://github.com/Coronerra/OStim-Beast-Form-TWO/releases/tag/v0.2)) |
 
 **Never use the TWO Edition together with this mod or with the Merged TWO Patch.** They share the same scripts. The TWO Patch is meant to be used *with* this mod.
 
@@ -43,7 +43,7 @@ If you ever wanted it all in one werewolf (the body, the talking head, the scene
 
 I made this just to see if it could be done. **Everything I made for it is open source.** If you want to make custom bodies, textures or anything else for it, you're welcome to. Go for it.
 
-### What it does (0.5)
+### What it does (0.6)
 
 **Beast-form scenes**
 - A start-scene hotkey that works while transformed. Beast form blocks normal activation, so the mod uses its own key. You set it in the MCM. It can be the same key as OStim's activation key, and that works fine (I use the Up Arrow for both).
@@ -87,11 +87,11 @@ I made this just to see if it could be done. **Everything I made for it is open 
 Vampire Lord support is early groundwork: actor typing, hubs, the aroused swap, climax handling and talking heads. It is **not finished**. A full Vampire Lord release is planned if the werewolf release goes well.
 
 ### 🙏 CALL FOR HELP: FEMALE WEREWOLF ANIMATIONS
-This works fine for **male** werewolves. But as far as I know, **no one has ever made OStim scenes for female werewolves**. A **female werewolf body is included in this pack**, ready to go.
+This works fine for **male** werewolves. **Female werewolf scenes are not bundled with this mod.** A **female werewolf body is included in this pack**, ready to go, along with a female werewolf + man hub and a female werewolf + woman hub that other scene packs can add buttons to.
 
 The female body is based on **[HDT Werewolves](https://www.nexusmods.com/skyrimspecialedition/mods/78295) by Duzellx**. Duzellx gave permission to use and modify it, on the condition that Duzellx and every earlier author who worked on it are credited. That includes **jacques00**, who created the original HDT Werewolves, and **Allegretto**, who made the official SE port. Full credits are below.
 
-> ⚠️ **WARNING: DO NOT USE THE INCLUDED FEMALE WEREWOLF ANIMATION.** The female werewolf + man scene in this pack (**WWF_OnTop / WWFCowgirl**, on the female werewolf hub) is a horrid, experimental mess. It exists only to prove that a female werewolf scene was possible. It **will deform the female werewolf extremely**, and I do **not** recommend that anyone use it. I no longer have the time to animate, which is exactly why I'm asking for help below.
+> **0.6:** the experimental WWF_OnTop female cowgirl test scenes that earlier versions shipped have been **removed**. Female werewolf scenes come from separate, optional scene packs (for example, an OStim conversion of **Dayelyte's** female werewolf animations). Such a pack is not bundled here; when one is installed, it adds its own button to the female werewolf hubs. Without one, the female werewolf + man hub is just an idle with no buttons.
 
 **Animators, this is a call-out to you.** If you can make female werewolf scenes, or want to try, please get in touch in the support thread. The community can help too: test, give feedback and spread the word. The body is waiting. It needs animations.
 
@@ -151,7 +151,7 @@ You need **one** of these. Both together also seems to work.
 
 ## 🤝 OCreatures Reforged (OCR) compatibility
 
-**OStim Beast Form Merged 0.5 is compatible with [OCreatures Reforged](https://dwemermods.com/mods/5173) 0.1.9 by Lirael Atelier.** You can use it with or without OCR.
+**OStim Beast Form Merged 0.6 is compatible with [OCreatures Reforged](https://dwemermods.com/mods/5173) 0.1.9 by Lirael Atelier.** You can use it with or without OCR.
 
 - **The only rule: load this mod below OCR.** Put it below OCR in the left pane, and put `OStim_Beast_Form_Merged.esp` after `OCreatures.esp` in the plugin list.
 - OCR is **not** a master, so it can be on or off. You don't need to toggle OCR for this mod.
@@ -169,7 +169,7 @@ You need **one** of these. Both together also seems to work.
 
 ## 🐺 Growl dependence, and using vanilla / Twilight Werewolf Overhaul / another overhaul
 
-**OStim Beast Form Merged 0.5 requires [Growl - Werebeasts of Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/31245) by EnaiSiaion.** `Growl - Werebeasts of Skyrim.esp` is a hard master of `OStim_Beast_Form_Merged.esp`. Without Growl installed, this plugin will not load.
+**OStim Beast Form Merged 0.6 requires [Growl - Werebeasts of Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/31245) by EnaiSiaion.** `Growl - Werebeasts of Skyrim.esp` is a hard master of `OStim_Beast_Form_Merged.esp`. Without Growl installed, this plugin will not load.
 
 That is a plugin-record dependency, not a script one:
 
@@ -198,13 +198,13 @@ This path has not been tested on vanilla werewolves or on Twilight Werewolf Over
 
 1. Install every requirement above from its own page. Run the game once to make sure it starts.
 2. **If you used my earlier standalone releases, disable them.** That means OStim Beast Form, OStim Beast Lite, Beast Aware, OCum Werewolf Shot, OCum Beast Pie and BeastForm BFA Heads, which are all merged in here now. Running both will double things up.
-3. Install **OStim_Beast_Form_Merged_0.5.zip** as a new mod. The archive root is `Data`.
+3. Install **OStim_Beast_Form_Merged_0.6.zip** as a new mod. The archive root is `Data`.
 4. Put it in the **left pane** as shown below, then set the **right pane** (plugin order).
 5. **Run Pandora** (or your behavior engine) to regenerate behaviors.
 6. Load your game, wait for SkyUI to register the MCM, then open **OStim Beast Form** and **set the Start scene hotkey**. It can be the same key as OStim's activation key. That works fine; I use the Up Arrow for both.
 7. Transform, get out of combat, face your partner up close and press the hotkey.
 
-**Updating from 0.4:** close MO2 and the game first. Back up your old mod folder, then extract 0.5 over it and overwrite everything. Plugin order doesn't change, and there are no new animations, so you don't need to rerun Pandora for this update. Existing saves pick up the new MCM defaults on load.
+**Updating from 0.5:** close MO2 and the game first. Back up your old mod folder. Then either install 0.6 as a clean replacement, or delete the old `SKSE/Plugins/OStim/scenes/WWF_OnTop` folder inside the mod and extract 0.6 over it, overwriting everything (extracting over it alone would leave the five old test-scene files behind). Plugin order doesn't change, the plugin and scripts are unchanged, and there are no new animations, so you don't need to rerun Pandora. Saves stay compatible.
 
 **Uninstalling:** don't uninstall mid-scene. Disable the mod outside a scene, in normal form. Removing script mods mid-playthrough is always at your own risk.
 
@@ -226,7 +226,7 @@ Place them top to bottom like this:
 10. OCreatures Reforged 0.1.9 (optional; must be **above** this mod)
 11. Lirael Atelier's animation packs
 12. SkyrimNet / OStimNet / OStim Navigator (optional)
-13. **OStim Beast Form Merged 0.5: below all of the above**, so its body, head, hub and scene files win
+13. **OStim Beast Form Merged 0.6: below all of the above**, so its body, head, hub and scene files win
 14. Better Facial Animations (if used)
 15. Pandora output (always last)
 
@@ -311,10 +311,10 @@ This mod stands on a lot of other people's work. Thank you all.
 
 ## 📥 Downloads
 
-- **OStim_Beast_Form_Merged_0.5.zip** (main file): the mod itself. Install this one.
-- **OStim_Beast_Form_Merged_0.5_Source.zip** (source): the Papyrus `.psc` sources, SkyrimNet prompt bundles and OStim actor definitions, for reading or rebuilding. It isn't needed to play.
+- **OStim_Beast_Form_Merged_0.6.zip** (main file): the mod itself. Install this one.
+- **OStim_Beast_Form_Merged_0.6_Source.zip** (source): the Papyrus `.psc` sources, SkyrimNet prompt bundles and OStim actor definitions, for reading or rebuilding. It isn't needed to play.
 - **Ostrands_with_Werewolves_0.8.0.3.zip** (optional, separate mod): the OStrands DLL with female werewolf support. GPL v3, with source. Also on [GitHub](https://github.com/Coronerra/Ostrands-with-Werewolves/releases/tag/v0.8.0.3).
-- Both of this mod's files are also on GitHub: [OStim Beast Form Merged v0.5 release](https://github.com/Coronerra/OStim-Beast-Form-Merged/releases/tag/v0.5).
+- Both of this mod's files are also on GitHub: [OStim Beast Form Merged v0.6 release](https://github.com/Coronerra/OStim-Beast-Form-Merged/releases/tag/v0.6). Older versions stay on the [releases page](https://github.com/Coronerra/OStim-Beast-Form-Merged/releases).
 
 Everything I made for this is open source. Feel free to build on it with custom bodies, textures or anything else. Third-party assets stay under their own authors' permissions. This mod's full source is on GitHub at [OStim-Beast-Form-Merged](https://github.com/Coronerra/OStim-Beast-Form-Merged). Source code for my earlier standalone pieces is also public on GitHub: [OStim Beast Form](https://github.com/Coronerra/OStim-Beast-Form), [Beast Aware](https://github.com/Coronerra/Beast-Aware), [OCum Werewolf Shot](https://github.com/Coronerra/OCum-Werewolf-Shot) and [OCum Tull/Liquid/Softbody patch](https://github.com/Coronerra/OCum-Tull-Liquid-Softbody-Patch).
 
@@ -330,9 +330,22 @@ Tell your assistant to start with `AI_CONTEXT.md`. Third-party assets in the dow
 
 ---
 
+## 📝 Changelog
+
+**0.6**
+- Removed the experimental WWF_OnTop female cowgirl test scenes (`WWFCowgirl1-1` to `1-5`) and their "WW Female Cowgirl 1 (TEST)" button on the female werewolf + man hub (`OBFWerewolfIdleMF`). Their OStimNet descriptions were removed too.
+- Female werewolf scenes are not bundled. They come from separate, optional scene packs (for example, an OStim conversion of Dayelyte's female werewolf animations), which add their own button to the female werewolf hubs.
+- Docs, changelogs and the "Which download is for you?" table updated; links to TWO Edition 0.2 and the Merged TWO Patch.
+- Plugin, FormIDs, masters (Growl is still a hard master), scripts, meshes, textures and HKX are unchanged from 0.5. Saves stay compatible. No Pandora run needed.
+
+**0.5**
+- Male werewolf body restored with its sheath and knot; Beast Load (OCum) heavy beast climax with multi-round stacking; new "Beast climax (OCum)" MCM section. See `Data/README_OStim_Beast_Form_Merged.txt` for the full history.
+
+---
+
 ## ❓ Known limits
 - Werewolf scenes are **male werewolf + female partner**, because that's what the packs provide. There are no FF werewolf scenes yet.
-- ⚠️ **The included female werewolf animation (WWF_OnTop / WWFCowgirl) is not recommended for anyone.** It's a horrid experimental mess that only exists to prove it could be done, and it will deform the female werewolf extremely. The author no longer has time to animate, so a real fix has to come from the community.
+- **No female werewolf scenes are bundled.** The experimental WWF_OnTop test scenes were removed in 0.6. Female werewolf scenes come from separate, optional scene packs.
 - Scenes **can't start in combat**. Try the "Try StopCombat" MCM option.
 - Only the standard `WerewolfBeastRace` and `DLC1VampireBeastRace` are handled. Mods that add a brand-new transformation race aren't.
 - Only the packs listed under Requirements have been tested. Other OStim packs with werewolf animations may work but haven't been tested yet.
@@ -350,7 +363,9 @@ Bug reports, logs and feedback are welcome in the support thread. *Have fun and 
 - [OCum-Tull-Liquid-Softbody-Patch](https://github.com/Coronerra/OCum-Tull-Liquid-Softbody-Patch): One OCumMaleScript for OCum Ascended 4.1.1 + Tull/Liquid Pack add-on + Scene Change Fix + GT Softbody fixes
 - [OCum-Werewolf-Shot](https://github.com/Coronerra/OCum-Werewolf-Shot): OCum Ascended cum shot from the ABC werewolf cock tip (WWD 9). ESL + mesh.
 - [OStim-Beast-Form](https://github.com/Coronerra/OStim-Beast-Form): Start OStim scenes as the player while in werewolf beast form (Skyrim SE).
-- [OStim-Beast-Form-Merged](https://github.com/Coronerra/OStim-Beast-Form-Merged): This repo: OStim Beast Form Merged 0.5 (werewolf as a sentient OStim race)
+- [OStim-Beast-Form-TWO](https://github.com/Coronerra/OStim-Beast-Form-TWO): OStim Beast Form - TWO Edition 0.2 (Twilight Werewolf Overhaul 4.1 bodies, no Growl; never use together with this mod)
+- [OStim-Beast-Form-Merged-TWO-Patch](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch): OStim Beast Form Merged - TWO Patch 0.1 (TWO 4.1 bodies on top of this mod, keeps Growl and your save)
+- [OStim-Beast-Form-Merged](https://github.com/Coronerra/OStim-Beast-Form-Merged): This repo: OStim Beast Form Merged 0.6 (werewolf as a sentient OStim race)
 - [Ostrands-with-Werewolves](https://github.com/Coronerra/Ostrands-with-Werewolves): Ostrands with Werewolves 0.8.0.3 - OStrands creature fork with female werewolf support (GPL v3)
 - [Werewolf-Overhaul-Proof-of-Concept](https://github.com/Coronerra/Werewolf-Overhaul-Proof-of-Concept): Proof of Concept: female HDT werewolf body, fluffy fur, ABC+MFA talking heads, SkyrimNet Beast Aware (tested only on modified Nolvus 6.0.21)
 

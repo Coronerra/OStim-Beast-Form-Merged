@@ -28,10 +28,10 @@ plugin byte-identical to 0.3 (masters unchanged); no HKX/PEX/NIF/DDS changed -> 
  ~ SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fmm/OCrWerewolfIdleFMM.json
  ~ SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fmmm/OCrWerewolfIdleFMMM.json
  ~ SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fmmmm/OCrWerewolfIdleFMMMM.json
- ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-1.json
- ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-2.json
- ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-4.json
- ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-5.json
+ ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-1.json  [removed in 0.6]
+ ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-2.json  [removed in 0.6]
+ ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-4.json  [removed in 0.6]
+ ~ SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-5.json  [removed in 0.6]
 all JSON parse
 OCrWerewolfIdleFM: buttons=3 ['BakaOWerewolfHubFM', 'BillyyWerewolfHubFM', 'FlufyOWerewolfHubFM'] reachable=183/183 intro_start=True
 OCrWerewolfIdleFF: buttons=0 [] reachable=0/0 intro_start=False
@@ -40,10 +40,10 @@ OCrWerewolfIdleFMMM: buttons=1 ['BillyyWerewolfHubFMMM'] reachable=6/6 intro_sta
 OCrWerewolfIdleFMM: buttons=1 ['BillyyWerewolfHubFMM'] reachable=33/33 intro_start=True
 OCrWerewolfIdleFFM: buttons=1 ['BillyyWerewolfHubFFM'] reachable=6/6 intro_start=True
 OCrVampireLordIdleFM: buttons=3 ['BakaOVampireLordHubFM', 'BillyyVampireLordHubFM', 'FBCOMCVampireLordHubFM'] reachable=28/28 intro_start=True
-OBFWerewolfIdleMF: buttons=1 ['WWFCowgirl1-1'] reachable=5/5 intro_start=True
+OBFWerewolfIdleMF: buttons=1 ['WWFCowgirl1-1'] reachable=5/5 intro_start=True  [0.6: test scenes removed, hub has no buttons of its own]
 every random intro start for a beast signature is the matching populated main hub; pack pages noRandomSelection
 OCrWerewolfIdleFF: 0 buttons, not hub-tagged, noRandomSelection (no installed FF scenes) - unchanged by design
 descriptions 20 all map to installed scene ids; 0 overlap with OStimNet/Lirael/OCR description files
-WWF intents: 1/2/4/5 lustful, 3 romantic (kept)
+WWF intents: 1/2/4/5 lustful, 3 romantic (kept)  [0.6: these scenes were removed]
 SkyrimNet bundle manifests parse; prompt render test: see render_test_0.4.log
 PASS static checks; no game/runtime test performed

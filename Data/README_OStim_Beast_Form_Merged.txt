@@ -1,6 +1,32 @@
-OStim Beast Form Merged 0.5 - public release (Skyrim SE/AE, tested on SE 1.5.97)
+OStim Beast Form Merged 0.6 - public release (Skyrim SE/AE, tested on SE 1.5.97)
 By That Guy (Coronerra). Everything made by coronerra is open source (MIT);
 third-party assets belong to their original authors (see credits on the mod page).
+
+0.6 CHANGELOG
+1. Removed the experimental WWF_OnTop female cowgirl test scenes
+   (SKSE/Plugins/OStim/scenes/WWF_OnTop/WWFCowgirl1-1..5.json) and their
+   "WW Female Cowgirl 1 (TEST)" button on the female werewolf + man hub
+   (OBFWerewolfIdleMF). Their five OStimNet descriptions are gone too.
+2. Female werewolf scenes are not bundled with this mod. They come from a
+   separate, optional female-werewolf scene pack (for example an OStim
+   conversion of Dayelyte's female werewolf animations). Such a pack adds its
+   own button to the female werewolf hubs. Without one, the female werewolf +
+   man hub is an idle with no buttons, which is expected.
+3. Docs: the old WWF_OnTop warnings, hub graphs 0.3/0.4 and mentions were
+   removed or marked as removed. Docs/.../STATIC_CHECKS_0.6.txt and
+   hub_graph_0.6.json describe the current scene graph.
+Plugin, scripts, meshes, textures and HKX are byte-identical to 0.5: same
+ESL plugin, same FormIDs, same 8 masters (Growl is still a hard master).
+Saves stay compatible. No new animations: NO Pandora run needed.
+
+0.6 INSTALL
+1. Close Mod Organizer AND Skyrim.
+2. Back up the mod folder, then DELETE the old folder
+   SKSE/Plugins/OStim/scenes/WWF_OnTop inside it (or install 0.6 as a clean
+   replacement of the mod). Extracting over the old folder alone would leave
+   the five old test-scene files behind.
+3. Extract 0.6 over the mod folder, overwrite all. Plugin order unchanged.
+   Don't run LOOT.
 
 0.5 CHANGELOG
 1. Male werewolf body restored WITH its original limp penis, sheath and knot.
@@ -89,7 +115,7 @@ OCR model:
 - WW FM main hub: 3 buttons = Baka, Billyy, FlufyFox werewolf pages
   (3 / 26 / 6 animations). FMM, FFM, FMMM, FMMMM: Billyy page each.
   VL main hub: Baka, Billyy, FunnyBiz vampire lord pages (2 / 2 / 2).
-  Female werewolf + man hub: one WW_OnTop Cowgirl button (stage 1).
+  Female werewolf + man hub: one test-scene button (removed in 0.6).
 - Every pack page button has an icon; Baka/Fluffy got the medallion
   (VL: OStim's vampire-bite icon), Billyy/FunnyBiz keep their own.
 - Pack pages are no longer random start scenes, so every beast scene
@@ -100,10 +126,9 @@ OCR model:
 0.4 SKYRIMNET / OSTIMNET (metadata + prompt only)
 No plugin, script or HKX changes: NO Pandora run, no new masters.
 - zz OStim Beast Form Merged SkyrimNet.json: OStimNet descriptions for Beast
-  Form's own scenes only (female-werewolf hub, OBF/OBL forwarding pages,
-  WWFCowgirl1-1..5). OCR idle and Billyy/Baka/Fluffy/FunnyBiz scenes keep the
+  Form's own scenes only (female-werewolf hub, OBF/OBL forwarding pages;
+  the test-scene descriptions were removed in 0.6). OCR idle and Billyy/Baka/Fluffy/FunnyBiz scenes keep the
   descriptions from the Lirael/OCR patches; nothing there is duplicated.
-- WWFCowgirl1-1/2/4/5 tagged lustful (stage 3 keeps romantic).
 - New SkyrimNet bundle coronerra.beastform_ostimnet: while you are a werewolf
   or Vampire Lord, a nearby free NPC is told you can still be picked for
   OStimNet StartNewSex (OStimNet's partner list skips beast races). They still
@@ -122,13 +147,13 @@ WW pages contain only Werewolf + human actors; VL only VampireLord + humans.
 Pack pages remain linked, but no longer carry the global hub tag. All sex
 scenes have a medallion return to their matching main hub. Old Beast Lite
 and OBF pages are non-random forwarding aliases, not empty selectable hubs.
-The installed female WW / male human WWF_OnTop scenes get a separate
-OBFWerewolfIdleMF hub (five scenes), using an existing idle animation event.
+A separate OBFWerewolfIdleMF hub (female WW + male human) was added, using
+an existing idle animation event. (Its 0.3-0.5 test scenes were removed in 0.6.)
 OCrWerewolfIdleFF is preserved as an intro/idle but NOT hub-tagged: there are
 zero installed compatible FF sex scenes. This avoids another empty hub.
 Hub direct scene counts: WW FM 183, FFM 6, FMM 33, FMMM 6, FMMMM 6;
-VL FM 28; female WW/male human 5. Total 267 real sex scenes.
-Packs: Billyy COMPLETE, Baka, FlufyFox, FunnyBiz, WWF_OnTop.
+VL FM 28. (0.3 also counted 5 female WW test scenes, removed in 0.6.)
+Packs: Billyy COMPLETE, Baka, FlufyFox, FunnyBiz.
 Future packs added later require regenerating the static direct-link list if
 they do not provide origins to the standard OCr*Idle IDs themselves.
 
@@ -150,7 +175,7 @@ No separate icon pack was folded in.
 
 
 GROWL / OTHER WEREWOLF OVERHAULS
-Growl - Werebeasts of Skyrim.esp is a hard master of this 0.5 plugin.
+Growl - Werebeasts of Skyrim.esp is a hard master of this plugin (0.5 and 0.6).
 Without Growl, the plugin will not load. That is because the werewolf
 race override was built on Growl's WerewolfBeastRace record (it still
 carries a Growl keyword and Growl attack-data form IDs). The scripts
@@ -206,9 +231,9 @@ MCM works as in 0.2; preserve/recheck your hotkey.
   FlufyFox buttons (with icons). Each opens a page of that pack's werewolf
   animations; Return goes back to the page, medallion to the main hub.
   Vampire Lord: Baka / Billyy / FunnyBiz. 3-5 actors: Billyy button.
-- During a Beast Form hub/WWF scene, NPC comments should describe the scene
-  (OStimNavigator.log: "Loaded 20 animation descriptions from ...zz OStim
-  Beast Form Merged SkyrimNet.json").
+- During a Beast Form hub scene, NPC comments should describe the scene
+  (OStimNavigator.log: "Loaded 15 animation descriptions from ...zz OStim
+  Beast Form Merged SkyrimNet.json" as of 0.6).
 - SkyrimNet bundle list should show "Beast Form OStimNet Bridge".
 - ttlb_* errors will still appear; expected (see BodyLanguage notes).
 
