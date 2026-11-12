@@ -9,6 +9,20 @@ Play as a werewolf in OStim with your mind intact.
 
 ---
 
+## ⚠️ Which download is for you?
+
+There are three related projects. **Use exactly one setup.**
+
+| You use… | Get this |
+|---|---|
+| **Growl + the HDT Werewolves / ABC look** | **This repo: OStim Beast Form Merged 0.5** |
+| Growl + this mod already, and you want TWO 4.1 bodies **without losing your save** | **[OStim Beast Form Merged - TWO Patch](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch)** (keep this mod enabled; the patch sits on top) |
+| TWO 4.1, no Growl needed | **[OStim Beast Form - TWO Edition](https://github.com/Coronerra/OStim-Beast-Form-TWO)** |
+
+**Never use the TWO Edition together with this mod or with the Merged TWO Patch.** They share the same scripts. The TWO Patch is meant to be used *with* this mod.
+
+---
+
 ## ⚠️ WARNINGS
 
 **1. THIS IS NOT A CREATURE OR CRITTER MOD!** THIS IS A MOD TO UNLOCK ONE OF THE 2 SENTIENT RACES OSTIM LEAVES OUT (WEREWOLVES AND VAMPIRE LORDS). THIS MOD FOCUSES ON THE WEREWOLF. IF IT IS A SUCCESS, I WILL CREATE A VAMPIRE LORDS ONE TO CREATE A WHOLE OSTIM UNDERWORLD MOD.
