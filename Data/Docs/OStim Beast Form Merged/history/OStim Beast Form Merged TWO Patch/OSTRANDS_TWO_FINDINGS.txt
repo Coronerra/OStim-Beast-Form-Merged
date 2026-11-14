@@ -1,0 +1,62 @@
+OStrands and TWO 4.1 - findings for OStim Beast Form Merged - TWO Patch 0.1
+By That Guy (Coronerra).
+
+VERDICT: NO new OStrands build is needed. Keep OStrands 0.8.0.3 (the Beast
+Form build) and its OStrands.ini unchanged.
+
+1. How OStrands finds a werewolf penis (src/Settings.cpp line 153, src/Anatomy.cpp ScanSchlong)
+   - Rig:  { "werewolf", WWD 2 .. WWD 9 }, taken from the actor's skeleton.
+   - "Has penis" = some skinned geometry on the actor uses one of the LAST 3
+     rig bones (WWD 7, WWD 8, WWD 9).
+   - The strands follow the WWD bones themselves, not any mesh.
+
+2. Rig bones, skeleton rest positions (x, y, z)
+   bone     TWO 4.1 skeleton         ABC skeleton (0.5)       OCreatures skeleton
+   WWD 1    0.00 -1.792 77.575       0.00 -1.792 77.575       0.00 -1.792 77.575
+   WWD 2    0.00  2.402 70.606       0.00  2.402 70.606       0.00  2.402 70.606
+   WWD 3    0.00  8.015 69.896       0.00  8.015 69.896       0.00  8.016 69.896
+   WWD 4    0.00 12.855 70.218       0.00 12.855 70.218       0.00 12.855 70.219
+   WWD 5    0.00 17.307 69.444       0.00 17.307 69.444       0.00 17.308 69.445
+   WWD 6    0.00 21.114 69.249       0.00 21.114 69.249       0.00 21.115 69.250
+   WWD 7    0.00 24.986 69.058       0.00 24.986 69.058       0.00 24.986 69.059
+   WWD 8    0.00 27.890 69.444       0.00 27.890 69.444       0.00 27.890 69.445
+   WWD 9    0.00 30.277 68.927       0.00 30.277 68.927       0.00 30.277 68.929
+   Pelvis   0.00 -3.264 78.945       same                     same
+   Head     0.00 48.793 113.011      same                     0.00 48.791 113.013
+   HeadMag  0.114 57.978 105.298     same                     0.114 57.977 105.300
+   TWO's skeleton = the ABC skeleton for every bone OStrands uses for males
+   and mouths (identical to 1e-4).
+
+3. What is skinned to WWD 7/8/9 with the patch
+   - TWO male/female body meshes: NOT skinned to WWD 7-9.
+   - Patch sheath (werewolfsheath.nif, the 0.5 sheath/tip): NOT skinned to
+     WWD 7-9 (same weights as 0.5).
+   - GT Softbody aroused cock (Addon_Dog_Black_Hard.nif, equipped by Merged
+     0.5's OBL quest during scenes): skinned to WWD 3-9. Unchanged.
+   => Soft: no penis detected (no strands, same as 0.5). Scene: penis
+      detected on the same bones as 0.5.
+
+4. Female werewolf openings (src/Anatomy.cpp FindOpening)
+   bone              TWO 4.1                 ABC / OCreatures
+   NPC L/R Pussy02   +-1, -4.13, 69.04       +-2, -0.13, 68.59
+   VaginaB1          present                 MISSING
+   Clitoral1         present                 MISSING
+   VaginaDeep1       present (0,-4.24,71.04) MISSING
+   NPC LB/RB/RT/LT Anus2  present            MISSING
+   NPC Anus Deep1    present (0,-9.04,73.38) MISSING
+   - The [CreatureOpenings] fallback (marker bone WWD 1) only builds an anus
+     from the pelvis when NONE of the anus rim bones exist, and only uses the
+     pelvis as the vagina's deep point when VaginaDeep1 is missing.
+   - With TWO's skeleton all rim and deep bones exist, so OStrands uses the
+     real bones. The fallback stays enabled but is simply never used. This
+     is an improvement for female werewolves, not a break.
+
+5. Mouth: NPC Head + NPC Head MagicNode, present at the same positions.
+
+6. Paths/configs: OStrands does not read werewolf mesh paths, race head
+   parts or NiStringExtraData, so TWO's file names and the patch's new skin
+   don't matter to it. OCum's Werewolf Shot urethra point is the WWD 9 bone,
+   at the same position.
+
+Not yet checked in game: strand look on TWO's female vagina/anus bones; strands
+during the GT softbody physics with TWO's ball SMP active.

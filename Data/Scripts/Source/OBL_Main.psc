@@ -41,6 +41,10 @@ Function Setup()
 	if OBL_SwapEnabled.GetValue() < 1
 		return
 	endif
+	; 0.7: the werewolf aroused mesh is whatever OBL_WerewolfAddonAA points at in the loaded plugin
+	; (GT Softbody or TWO's own hard canine, picked in the installer). Read it from the record so
+	; saves that stored an older WerewolfMesh value keep working after the softbody choice changes.
+	WerewolfMesh = AddonMeshPath(OBL_WerewolfAddon, WerewolfMesh)
 	; FileExists only sees loose files, not BSA contents. Missing mesh = skip that swap.
 	HaveWerewolfMesh = MiscUtil.FileExists(WerewolfMesh)
 	HaveVampireMesh = MiscUtil.FileExists(VampireLordMesh)
@@ -48,6 +52,20 @@ Function Setup()
 		RegisterForModEvent("ostim_thread_start", "OnThreadStart")
 		RegisterForModEvent("ostim_thread_end", "OnThreadEnd")
 	endif
+EndFunction
+
+; Path of the item's first armor addon (male, third person), as "Data/Meshes/...". Fallback if none.
+String Function AddonMeshPath(Armor item, String fallback)
+	if item
+		ArmorAddon aa = item.GetNthArmorAddon(0)
+		if aa
+			String p = aa.GetModelPath(false, false)
+			if p != ""
+				return "Data/Meshes/" + p
+			endif
+		endif
+	endif
+	return fallback
 EndFunction
 
 Event OnThreadStart(string EventName, string StrArg, float ThreadID, Form Sender)

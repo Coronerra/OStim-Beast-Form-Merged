@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fomod>
+	<Name>OStim Beast Form Merged</Name>
+	<Author>That Guy (Coronerra)</Author>
+	<Version>0.7</Version>
+	<Description>Play as a werewolf in OStim with your mind intact. One installer for Growl and TWO users, with the TWO - Total Werewolf Overhaul 4.1 body (Frosferes). Requires TWO 4.1 (not included). Source: https://github.com/Coronerra/OStim-Beast-Form-Merged</Description>
+	<Website>https://github.com/Coronerra/OStim-Beast-Form-Merged</Website>
+	<Groups><element>Creatures</element></Groups>
+</fomod>

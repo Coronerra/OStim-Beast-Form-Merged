@@ -1,0 +1,40 @@
+PASS patch ESL flag 0x200 (TES4 flags 0x200)
+PASS masters: Skyrim.esm, Update.esm, Dawnguard.esm, Dragonborn.esm, JS Emissive Eyes SE - Johnskyrim.esp, Growl - Werebeasts of Skyrim.esp, MonsterLipSync1.esp, Werewolves.esp, OStim_Beast_Form_Merged.esp
+PASS no OCreatures / OStim / OCum / WerewolvesGrowl master
+     record RACE 000CDD84 WerewolfBeastRace
+     record ARMO 09000800 OBFTWO_SkinNakedWerewolfBeast
+     record ARMA 000CDD87 NakedTorsoWerewolfBeast
+     record ARMA 09000801 OBFTWO_WerewolfSheathAA
+     record HDPT 07000806 FemaleMouthWerewolf
+PASS new forms in ESL range: 09000800, 09000801
+PASS no record of OStim_Beast_Form_Merged.esp is overridden (all 31 Merged records, FormIDs and scripts untouched)
+PASS HEDR records=5 nextID=0x802
+PASS RACE WerewolfBeastRace: every subrecord except HEAD/INDX/WNAM byte-identical to Merged 0.5 (Growl keyword + attacks, JS Eyes spell, FaceGen flag, voices, DATA)
+PASS RACE HEAD lists equal TWO Growl patch (male: MFA 800/802/801 + TWO fur 800-804; female: TWO 805/807/806 + fur 808-80C)
+PASS every HEAD resolves to an HDPT that exists in TWO Werewolves.esp (MFA ones as TWO overrides)
+PASS RACE WNAM -> new skin 09000800
+PASS RACE FaceGen flag on
+PASS ARMA NakedTorsoWerewolfBeast byte-identical to TWO (BOD2 0x59C, vanilla body paths -> TWO / BodySlide body)
+PASS skin ARMO addons = TWO body ARMA + sheath ARMA
+PASS sheath ARMA on slot 49 only (OBL aroused addon 0x835 = slot 52, OCum urethra node 0x830 = slot 48, Beast Load uses partner slots only)
+PASS sheath male model = patch mesh, female model = TWO Core AddonEmpty.nif (no sheath on female werewolves)
+PASS AddonEmpty.nif is in TWO Core (installed for every genital choice)
+PASS HDPT FemaleMouthWerewolf = TWO record, only NAM1 .nif typo -> TWO ExpMouthWerewolf.tri
+PASS ExpMouthWerewolf.tri ships in TWO Core
+PASS BFA add-on ESL, masters Skyrim/MFA/TWO
+PASS BFA add-on overrides exactly TWO MaleHeadWerewolf (MFA 800) + FemaleHeadWerewolf (TWO 805), NAM1 only
+PASS not a copy of any TWO / Alt Textures file: stage/OStim_Beast_Form_Merged_TWO_Patch.esp (md5 bdc2e58f6e3d83569ffef342ccc02c3b)
+PASS path does not overwrite any TWO / Alt Textures path: OStim_Beast_Form_Merged_TWO_Patch.esp
+PASS not a copy of any TWO / Alt Textures file: stage/meshes/actors/werewolfbeast/character assets/coronerra/twopatch/werewolfsheath.nif (md5 2132c4867749aa732c9b82462c8f5b5b)
+PASS path does not overwrite any TWO / Alt Textures path: meshes/actors/werewolfbeast/character assets/coronerra/twopatch/werewolfsheath.nif
+PASS not a copy of any TWO / Alt Textures file: stage_bfa/OStim_Beast_Form_Merged_TWO_Patch - BFA Heads.esp (md5 01a26b74b78504900aa8900d6c521708)
+PASS path does not overwrite any TWO / Alt Textures path: OStim_Beast_Form_Merged_TWO_Patch - BFA Heads.esp
+PASS not a copy of any TWO / Alt Textures file: stage_bfa/meshes/actors/werewolfbeast/character assets/coronerra/two/ExpHeadWerewolf_BFA.tri (md5 9a42b8af0041223947b3a9f47968640c)
+PASS path does not overwrite any TWO / Alt Textures path: meshes/actors/werewolfbeast/character assets/coronerra/two/ExpHeadWerewolf_BFA.tri
+PASS no personal info / PC paths in OStim_Beast_Form_Merged_TWO_Patch.esp
+PASS no personal info / PC paths in meshes/actors/werewolfbeast/character assets/coronerra/twopatch/werewolfsheath.nif
+PASS no personal info / PC paths in OStim_Beast_Form_Merged_TWO_Patch - BFA Heads.esp
+PASS no personal info / PC paths in meshes/actors/werewolfbeast/character assets/coronerra/two/ExpHeadWerewolf_BFA.tri
+PASS no personal info / PC paths in OSTRANDS_TWO_FINDINGS.txt
+PASS no personal info / PC paths in README_OStim_Beast_Form_Merged_TWO_Patch_0.1.txt
+RESULT ALL PASS

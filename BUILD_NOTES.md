@@ -1,4 +1,4 @@
-# OStim Beast Form Merged: build notes (0.1 to 0.6)
+# OStim Beast Form Merged: build notes (0.1 to 0.7)
 
 Technical history of the merged plugin. Only static checks were done on the build; in-game testing was by the author.
 
@@ -53,3 +53,17 @@ Technical history of the merged plugin. Only static checks were done on the buil
 - Docs: hub_graph_0.3/0.4.json replaced by hub_graph_0.6.json; STATIC_CHECKS_0.6.txt added; WWF mentions in older docs marked as removed.
 - Plugin, PEX, NIF, DDS, HKX byte-identical to 0.5. Same FormIDs and masters; saves stay compatible; no Pandora run.
 - Female werewolf scenes are not bundled; they come from separate optional packs.
+
+## 0.7: one installer, TWO body for everyone
+- Inputs (published release zips, md5-checked): Merged 0.6 (`OStim_Beast_Form_Merged.esp` d19870fd...), TWO Edition 0.2 (`OStim_Beast_Form_TWO.esp` e21abc1c...), Merged TWO Patch 0.1 (`OStim_Beast_Form_Merged_TWO_Patch.esp` e3a9c335...), TWO Herm Patch 0.1 (`OStim_Beast_Form_TWO_Herm_Patch.esp` c206051c...). All four plugins ship unchanged.
+- FOMOD (`fomod/ModuleConfig.xml`): pages Growl/TWO, softbody No/Yes, Herm, acknowledgement; folders `00 Common`, `10 Growl`, `11/12 Growl (No) Softbody`, `20 TWO`, `21/22 TWO (No) Softbody`, `30 Softbody`, `40 Herm`. Validated against the FOMOD 5.0 `ModuleConfig.xsd` (fomod-schema 5.0; its one stray space in `type=" xs:string"` was fixed locally for the validator).
+- `00 Common` = the 354 files Merged 0.6 and TWO Edition 0.2 share byte for byte, plus the new `OBL_Main`. Per-option: `OBF_MCM`, actor-property JSONs (`"mod"`), SkyrimNet manifests and the OStimNet bridge prompt.
+- Two new plugin builds, each one record away from a published plugin:
+  - `12 Growl No Softbody/OStim_Beast_Form_Merged_TWO_Patch.esp`: TWO Patch 0.1 records unchanged + ARMA `08000833` (Merged's `OBL_WerewolfAddonAA`) = TWO Edition's 0x833 record (MOD2 `actors\werewolfbeast\character assets\CreatureFramework\CanineRedHard.nif`, slot 52; RNAM/SNDD point at Skyrim.esm only). HEDR 5 -> 6 records.
+  - `21 TWO Softbody/OStim_Beast_Form_TWO.esp`: TWO Edition 0.2 with ARMA `08000833` replaced by Merged 0.6's record byte for byte (MOD2 `MoreNastyCritters\werewolf\Addon_Dog_Black_Hard.nif`).
+- Dropped from the Growl files (unused once TWO's body and heads win): `coronerra\bfa\` bodies, `werewolfhead*`, `werewolfteeth`, `eyesmalewerewolfbeast` NIF/TRI, `hdtSkinnedMeshConfigs\WerewolfFemale.xml`, `textures\actors\character\werewolf\coronerra\`. The ABC `werewolfballs*` / `werewolfpenis_*` textures used by the sheath are byte-identical in TWO Core and no longer shipped.
+- Softbody-only content (`30 Softbody`): `MoreNastyCritters\werewolf\Addon_Dog.nif`, `Addon_Dog_Black_Hard.nif`, `Addon_Dog_Red_Hard.nif` (GT Softbody, Goutou) and `werewolf_balls{,_n,_sk}.dds`, `werewolf_canine_penis_{black,red,n,sk}.dds`.
+- Scripts (Caprica, game=skyrim): `OBL_Main` gains `AddonMeshPath()`; `Setup()` sets `WerewolfMesh` from the 0x833 armor addon's male model before `MiscUtil.FileExists`. `OBFHerm_Main` resolves `AddonMesh` the same way, with the 0.1 logic as fallback. No properties or variables added or removed. PEX headers carry only the script name.
+- BFA head plugins are installed with both options (they were optional add-ons).
+- Static checks: `Data/Docs/OStim Beast Form Merged/STATIC_CHECKS_0.7.txt` (schema, folder references, all 8 installer combinations simulated: no file conflicts, expected plugins, winning 0x833 path and mesh present, every mesh texture resolvable, no TWO file shipped, plugin identities, privacy).
+- Not tested in game.

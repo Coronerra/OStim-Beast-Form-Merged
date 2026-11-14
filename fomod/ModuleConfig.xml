@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+	<moduleName>OStim Beast Form Merged 0.7</moduleName>
+	<requiredInstallFiles>
+		<folder source="00 Common" destination="" priority="0" />
+	</requiredInstallFiles>
+	<installSteps order="Explicit">
+		<installStep name="TWO user or Growl user">
+			<optionalFileGroups order="Explicit">
+				<group name="Which werewolf setup do you use? (pick one)" type="SelectExactlyOne">
+					<plugins order="Explicit">
+						<plugin name="Growl user (recommended for Nolvus users)">
+							<description>Pick this if you use Growl - Werebeasts of Skyrim. Recommended for Nolvus users.
+
+Werewolves get the TWO body and heads. Growl keeps its gameplay. This installs OStim_Beast_Form_Merged.esp and OStim_Beast_Form_Merged_TWO_Patch.esp, the same plugins as Merged 0.6 + the Merged TWO Patch 0.1, so a save that already uses them keeps working.
+
+Needs: Growl, JS Emissive Eyes SE, TWO - Total Werewolf Overhaul 4.1 (Core, with its Growl patch), Monster Facial Animation (MonsterLipSync1.esp).
+
+Growl - Werebeasts of Skyrim:
+https://www.nexusmods.com/skyrimspecialedition/mods/31245</description>
+							<conditionFlags>
+								<flag name="body">growl</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<type name="Recommended" />
+							</typeDescriptor>
+						</plugin>
+						<plugin name="TWO user (no Growl)">
+							<description>Pick this if you use TWO - Total Werewolf Overhaul 4.1 and do NOT use Growl.
+
+This installs OStim_Beast_Form_TWO.esp, the same plugin as OStim Beast Form - TWO Edition 0.2, so a save that already uses it keeps working. Never enable it together with OStim_Beast_Form_Merged.esp.
+
+Needs: TWO 4.1 (Core), Monster Facial Animation (MonsterLipSync1.esp).
+
+TWO - Total Werewolf Overhaul:
+https://www.loverslab.com/topic/159911-two-total-werewolf-overhaul/</description>
+							<conditionFlags>
+								<flag name="body">two</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<type name="Optional" />
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="Do you use softbody?">
+			<optionalFileGroups order="Explicit">
+				<group name="Do you use softbody? (pick one)" type="SelectExactlyOne">
+					<plugins order="Explicit">
+						<plugin name="No">
+							<description>Pick No if you do not use SOFTBODY (GT - Softbody). That includes UNP users, and CBBE or UBE users who don't run softbody.
+
+Nothing softbody-related is installed. During scenes, male werewolves get TWO's own hard canine cock, which comes with TWO's Core files, so there is nothing extra to install.</description>
+							<conditionFlags>
+								<flag name="softbody">no</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<type name="Recommended" />
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Yes">
+							<description>Pick Yes only if SOFTBODY (GT - Softbody) by Goutou is installed and working.
+
+This installs the GT Softbody werewolf cock meshes and their textures. During scenes, male werewolves wear the GT Softbody cock with softbody physics, the same look as Merged 0.6.
+
+SOFTBODY (GT - Softbody):
+https://www.nexusmods.com/skyrimspecialedition/mods/152103</description>
+							<conditionFlags>
+								<flag name="softbody">yes</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<type name="Optional" />
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="Hermaphrodite patch? A.K.A. Fruta?">
+			<optionalFileGroups order="Explicit">
+				<group name="Hermaphrodite patch? A.K.A. Fruta?" type="SelectAny">
+					<plugins order="Explicit">
+						<plugin name="Hermaphrodite patch (Fruta)">
+							<description>Optional. Only for TWO Extras' herm / urta player werewolf (TWO Extras' "Toggle Herm Werewolf" spell).
+
+OStim then treats your herm or urta werewolf as having a penis as well as a vagina and breasts, and it gets the aroused cock and the Beast Load climax. It installs the right files for whichever setup you picked on the first page.
+
+Needs TWO Extras (WerewolvesExtras.esp), and TWO's WerewolvesExtrasGrowl.esp if you use Growl.
+
+I am not going to test this myself. If you use TWO's herm or urta werewolf, please test it and report any problems in the support section of the OStim Beast Form Merged page on LoversLab.</description>
+							<conditionFlags>
+								<flag name="herm">on</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<type name="Optional" />
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+		<installStep name="Read and acknowledge">
+			<optionalFileGroups order="Explicit">
+				<group name="Acknowledgement (required)" type="SelectAll">
+					<plugins order="Explicit">
+						<plugin name="I have read and understand">
+							<description>I have read every option in this installer and didn't just click through. If I picked the wrong options, the mod won't work. This mod uses the TWO body made by Frosferes, at the LoversLab community's request. If Frosferes comes out of retirement and asks for it to be taken down, it will be taken down with no further support, no questions asked. Until then, anyone is free to make their own patches, hubs and mods based on this one.
+
+Source code: https://github.com/Coronerra/OStim-Beast-Form-Merged</description>
+							<conditionFlags>
+								<flag name="ack">on</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<type name="Required" />
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
+	</installSteps>
+	<conditionalFileInstalls>
+		<patterns>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="body" value="growl" />
+				</dependencies>
+				<files>
+					<folder source="10 Growl" destination="" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="body" value="growl" />
+					<flagDependency flag="softbody" value="yes" />
+				</dependencies>
+				<files>
+					<folder source="11 Growl Softbody" destination="" priority="0" />
+					<folder source="30 Softbody" destination="" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="body" value="growl" />
+					<flagDependency flag="softbody" value="no" />
+				</dependencies>
+				<files>
+					<folder source="12 Growl No Softbody" destination="" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="body" value="two" />
+				</dependencies>
+				<files>
+					<folder source="20 TWO" destination="" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="body" value="two" />
+					<flagDependency flag="softbody" value="yes" />
+				</dependencies>
+				<files>
+					<folder source="21 TWO Softbody" destination="" priority="0" />
+					<folder source="30 Softbody" destination="" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="body" value="two" />
+					<flagDependency flag="softbody" value="no" />
+				</dependencies>
+				<files>
+					<folder source="22 TWO No Softbody" destination="" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="herm" value="on" />
+				</dependencies>
+				<files>
+					<folder source="40 Herm" destination="" priority="0" />
+				</files>
+			</pattern>
+		</patterns>
+	</conditionalFileInstalls>
+</config>

@@ -1,0 +1,39 @@
+STATIC CHECKS — OStim Beast Form TWO Herm Patch 0.1
+
+Plugin: OStim_Beast_Form_TWO_Herm_Patch.esp
+TES4 flags: 0x200 (ESL bit 0x200 expected)
+Masters: ['Skyrim.esm']
+Record count: 4
+
+  MGEF 01000801 OBFHerm_ConditionEffect
+  SPEL 01000802 OBFHerm_ConditionAbility
+    SPIT type=4 (4=Ability) cast=0 (0=Constant) delivery=0 (0=Self)
+    EFID 01000801
+  QUST 01000804 OBFHerm_MainQuest
+    VMAD ver 5 objfmt 2 scripts:
+      OBFHerm_Main (2 props)
+        OBFHerm_ConditionAbility
+        WerewolfBeastRace
+    alias VMAD tail 45 bytes (Player alias + OBFHerm_PlayerAlias)
+  PERK 01000803 OBFHerm_WerewolfHermCondition
+    CTDA func 69 param1 000CDD84
+    CTDA func 214 param1 01000801
+    perk level = 50 (expect 50)
+
+Actor property OBLWerewolfHerm.json:
+  mod=OStim_Beast_Form_TWO_Herm_Patch.esp formid=0x803 type=Werewolf sex=male
+  requirements={'penis': True, 'testicles': True, 'vagina': True, 'breast': True, 'nipple': True, 'anus': True, 'mouth': True, 'hand': True, 'foot': True}
+
+Staged files:
+  OStim_Beast_Form_TWO_Herm_Patch.esp  1530
+  README_OStim_Beast_Form_TWO_Herm_Patch_0.1.txt  8674
+  Docs/OStim Beast Form TWO Herm Patch/README_OStim_Beast_Form_TWO_Herm_Patch_0.1.txt  8674
+  SKSE/Plugins/OStim/actor properties/OBLWerewolfHerm.json  350
+  Scripts/OBFHerm_Main.pex  10195
+  Scripts/OBFHerm_PlayerAlias.pex  1159
+  Scripts/Source/OBFHerm_Main.psc  8243
+  Scripts/Source/OBFHerm_PlayerAlias.psc  568
+
+TWO/mesh/texture/TRI assets in stage: none
+Hard masters besides Skyrim.esm: none
+ESL flag set: True
