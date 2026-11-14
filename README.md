@@ -119,7 +119,7 @@ Get every requirement from its original page and support its author. **Nothing b
   - OCreatures - Billyy Animation Pack COMPLETE (animations by **Billyy**): [Byllis Creature Animation pack Complete - OStim edition](https://www.loverslab.com/files/file/51449-byllis-creature-animation-pack-complete-ostim-edition) (free on LoversLab)
   - FlufyFox OStim - Creatures v0.5.2 (animations by **FlufyFox**): [FluffyFox Creatures animation pack - OStim Conversion](https://www.loverslab.com/files/file/51860-fluffyfox-creatures-animation-pack-) (free on LoversLab)
   - FunnyBiz OStim - Creatures v0.2.3 (animations by **FunnyBiz**, Vampire Lord): [FunnyBiz Creature Animations for OStim Standalone](https://www.loverslab.com/files/file/52667-funnybiz-creature-animations-for-ostim-standalone) (free on LoversLab)
-  - OCreatures - Baka Animation Pack v0.1-dev (animations by **BakaFactory**): the creature version isn't on LoversLab yet. Check [Lirael's Patreon](https://www.patreon.com/LiraelAtelier) [LINK NEEDED]
+  - OCreatures - Baka Animation Pack v0.1-dev (animations by **BakaFactory**): the creature version isn't on LoversLab yet. Check [Lirael's Patreon](https://www.patreon.com/LiraelAtelier).
   - You can support Lirael on [Patreon](https://www.patreon.com/LiraelAtelier). Her free updates and new conversions are posted there too.
 - **Other OStim animation packs that include werewolf animations may work, but they haven't been tested yet.** Please report what you find.
 
@@ -141,7 +141,7 @@ HDT Werewolves, Animated Beast's Cocks (ABC), Creature Framework, HCOS, SOS and 
 - [Better Facial Animations (BFA)](https://www.nexusmods.com/skyrimspecialedition/mods/193598) by **Cyberquach**. In BFA's race filters, tick **WerewolfBeastRace** and **DLC1VampireBeastRace**.
 - [OCreatures Reforged](https://dwemermods.com/mods/5173) 0.1.9 by **Lirael Atelier** ([Patreon](https://www.patreon.com/LiraelAtelier)). **Not required, but fully compatible.** See **OCreatures Reforged compatibility** below.
 - [SkyrimNet](https://www.nexusmods.com/skyrimspecialedition/mods/198346) by **MinLL** and the SkyrimNet team, [OStimNet](https://dwemermods.com/mods/2761) by **tetherball88**, and [OStim Navigator](https://github.com/tetherball88/OStimNavigator) by **tetherball88**. These are needed for Beast Aware and the OStimNet bridge.
-- [Tull Animated Creampie](https://dwemermods.com/mods/3535) by **Tullius Channel** and **Emotional Trash Can**, plus **[Predator] Liquid Pack v2** by **PredatorRJ** [LINK NEEDED]. Without them you still get all of OCum's textures.
+- [Tull Animated Creampie](https://dwemermods.com/mods/3535) by **Tullius Channel** and **Emotional Trash Can**, plus **[Predator] Liquid Pack v2** by **PredatorRJ**. Without them you still get all of OCum's textures.
 - [OCum Ascended - Tull and Liquid Pack Meshes](https://dwemermods.com/mods/5304) by **Blacksheepo815**, and my [OCum + Tull/Liquid + GT Softbody merged script patch](https://github.com/Coronerra/OCum-Tull-Liquid-Softbody-Patch). Keep that patch as its own mod.
 - TWO - Alternate Textures (textures only; any choice is fine).
 - **Ostrands with Werewolves** (separate download, see [below](#ostrands)).
@@ -292,7 +292,7 @@ This mod stands on a lot of other people's work. Thank you all.
 - **The MFA author** (Nexus: User_1926808): Monster Facial Animation. The talking Vampire Lord heads, eyes and the headless Vampire Lord bodies are built from MFA.
 - **Cyberquach**: Better Facial Animations. The heads were extended with the expression shapes BFA needs.
 - **Goutou**: GT - Softbody werewolf cock addons used for the aroused swap (softbody Yes)
-- **[AUTHOR NEEDED]**: Vampire Lord aroused mesh and textures
+- Original author of the **Vampire Lord aroused mesh and textures** (unknown; if this is your work, contact me and I'll credit you)
 - **Earlier versions (0.1 to 0.6)** shipped a female werewolf body from **HDT Werewolves** (**Duzellx**, **Allegretto**, **jacques00**) and a fluffy male body following **Macxhiin**'s Fluffworks method. 0.7 uses TWO's bodies instead. Thank you for getting this project started.
 
 **Animations and scene packs (not included; many are free on [Lirael's LoversLab page](https://www.loverslab.com/profile/6654496-lauffey/content/?type=downloads_file))**
