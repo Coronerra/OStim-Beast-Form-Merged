@@ -140,6 +140,7 @@ Get every requirement from its original page and support its author. **Nothing b
 
 ### Softbody Yes only
 - [SOFTBODY (GT - Softbody)](https://www.nexusmods.com/skyrimspecialedition/mods/152103) by **Goutou** (see its own requirements). Pick **No** on the softbody page if you don't run it. That includes UNP users, and CBBE or UBE users without softbody.
+- Optional GT Softbody add-on: [SOFTBODY - Boing Natural](https://www.nexusmods.com/skyrimspecialedition/mods/193500) by **Slama117**. It adds real-time breast softbody physics for UBE SoftbodyMax (not CBBE, 3BA or BHUNP). Not required for this mod's softbody Yes option.
 - Softbody Yes installs this mod's copy of `Scripts/OCumMaleScript.pex` (OCum + Tull/Liquid + GT Softbody merged script). Load this mod **after GT - Softbody** in the left pane so it wins over GT's optional OCum patch.
 
 <a id="herm-req"></a>
@@ -156,7 +157,7 @@ HDT Werewolves, Animated Beast's Cocks (ABC) and SOS are **not** needed. Creatur
 - [OCreatures Reforged](https://dwemermods.com/mods/5173) 0.1.9 by **Lirael Atelier** ([Patreon](https://www.patreon.com/LiraelAtelier)). **Not required, but fully compatible.** See **OCreatures Reforged compatibility** below.
 - [SkyrimNet](https://www.nexusmods.com/skyrimspecialedition/mods/198346) by **MinLL** and the SkyrimNet team, [OStimNet](https://dwemermods.com/mods/2761) by **tetherball88**, and [OStim Navigator](https://github.com/tetherball88/OStimNavigator) by **tetherball88**. These are needed for Beast Aware and the OStimNet bridge.
 - [Tull Animated Creampie](https://dwemermods.com/mods/3535) by **Tullius Channel** and **Emotional Trash Can**, plus **[Predator] Liquid Pack v2** by **PredatorRJ**. Without them you still get all of OCum's textures.
-- [OCum Ascended - Tull and Liquid Pack Meshes](https://dwemermods.com/mods/5304) by **Blacksheepo815**, and my [OCum + Tull/Liquid + GT Softbody merged script patch](https://github.com/Coronerra/OCum-Tull-Liquid-Softbody-Patch). Since 0.7.2, softbody **Yes** installs that script for you (you can disable the separate patch). With softbody **No**, keep it as its own mod if you want it.
+- [OCum Ascended - Tull and Liquid Pack Meshes](https://dwemermods.com/mods/5304) by **Blacksheepo815** (official download), and my [OCum + Tull/Liquid + GT Softbody merged script patch](https://github.com/Coronerra/OCum-Tull-Liquid-Softbody-Patch). Since 0.7.2, softbody **Yes** installs that script for you (you can disable the separate patch). With softbody **No**, keep it as its own mod if you want it.
 - TWO - Alternate Textures (textures only; any choice is fine).
 - **Ostrands with Werewolves** (separate download, see [below](#ostrands)).
 - **[OStim Beast Form Starter Animation Pack](https://www.loverslab.com/files/file/52869-ostim-beast-form-starter-animation-pack/)** (LoversLab exclusive, separate download): werewolf scenes by Billyy and Dayelyte for this mod's hubs (needs Pandora).
@@ -351,7 +352,8 @@ This mod stands on a lot of other people's work. Thank you all. "Bundled" means 
 - **Cyberquach**: [Better Facial Animations](https://www.nexusmods.com/skyrimspecialedition/mods/193598). The head-morph extension exists so BFA can animate TWO's werewolf heads.
 - **MinLL** and the SkyrimNet team: SkyrimNet (Beast Aware and the OStimNet bridge plug into its API).
 - **tetherball88**: OStimNet and OStim Navigator.
-- **Tullius Channel** and **Emotional Trash Can**: [Tull Animated Creampie](https://dwemermods.com/mods/3535). **PredatorRJ**: [Liquid Pack v2](https://dwemermods.com/mods/330). **Blacksheepo815** (DwemerMods): OCum Ascended - Tull and Liquid Pack Meshes and its Scene Change Fix (their Tull/Liquid script code and the Scene Change Fix are part of the softbody Yes `OCumMaleScript`).
+- **Tullius Channel** and **Emotional Trash Can**: [Tull Animated Creampie](https://dwemermods.com/mods/3535). **PredatorRJ**: [Liquid Pack v2](https://dwemermods.com/mods/330). **Blacksheepo815** (DwemerMods): [OCum Ascended - Tull and Liquid Pack Meshes](https://dwemermods.com/mods/5304) (official download) and its Scene Change Fix (their Tull/Liquid script code and the Scene Change Fix are part of the softbody Yes `OCumMaleScript`).
+- **Slama117**: [SOFTBODY - Boing Natural](https://www.nexusmods.com/skyrimspecialedition/mods/193500), an optional GT Softbody add-on for real-time breast softbody physics (UBE SoftbodyMax).
 - **LeonVanWinkle (Saint)**: [OStrands](https://www.nexusmods.com/skyrimspecialedition/mods/195115). **Keevan2374** (0.8.0.1, creature support) and **crajjjj** (0.8.0.2): the OStrands creature fork that [Ostrands with Werewolves](https://github.com/Coronerra/Ostrands-with-Werewolves) (That Guy (Coronerra)) is based on.
 
 **Earlier versions (0.1 to 0.6; not in 0.7 or later)**
