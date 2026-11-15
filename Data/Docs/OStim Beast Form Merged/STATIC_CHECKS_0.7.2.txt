@@ -1,0 +1,130 @@
+OStim Beast Form Merged 0.7.2 - static checks (build machine, not in game)
+Generated 2026-11-15 11:31 (America/Denver). Release candidate; not tested in game.
+Scope: package diff vs 0.7.1, FOMOD schema, all 8 installer combinations simulated,
+plugin record diffs, mesh skinning/partition/bone checks, SMP XML and TRI checks,
+OCum script and spurt-direction checks, privacy.
+
+PASS vs 0.7.1: removed exactly the 3 GT Softbody MNC cock meshes + 7 MNC textures (10 files)
+PASS vs 0.7.1: added only the 6 softbody TWO files + the merged OCumMaleScript pex/psc (+ this report): ['00 Common/Docs/OStim Beast Form Merged/STATIC_CHECKS_0.7.2.txt', '30 Softbody/SKSE/Plugins/hdtSkinnedMeshConfigs/coronerra/OBF_TWOSoftbodyFemale.xml', '30 Softbody/SKSE/Plugins/hdtSkinnedMeshConfigs/coronerra/OBF_TWOSoftbodyGenitals.xml', '30 Softbody/Scripts/OCumMaleScript.pex', '30 Softbody/Scripts/Source/OCumMaleScript.psc', '30 Softbody/meshes/actors/werewolfbeast/character assets/coronerra/twosoftbody/CanineRedHard.nif', '30 Softbody/meshes/actors/werewolfbeast/character assets/coronerra/twosoftbody/femalebodywerewolf.tri', '30 Softbody/meshes/actors/werewolfbeast/character assets/coronerra/twosoftbody/femalebodywerewolf_0.nif', '30 Softbody/meshes/actors/werewolfbeast/character assets/coronerra/twosoftbody/femalebodywerewolf_1.nif']
+PASS vs 0.7.1: changed only the 2 softbody plugins, the FOMOD and the README (['00 Common/Docs/OStim Beast Form Merged/README_OStim_Beast_Form_Merged.txt', '00 Common/README_OStim_Beast_Form_Merged.txt', '11 Growl Softbody/OStim_Beast_Form_Merged_TWO_Patch.esp', '21 TWO Softbody/OStim_Beast_Form_TWO.esp', 'fomod/ModuleConfig.xml', 'fomod/info.xml'])
+PASS every new mesh/XML/script is inside "30 Softbody" (installed only with softbody Yes)
+PASS ModuleConfig.xml validates against the FOMOD 5.0 schema
+PASS every folder referenced and present
+PASS FOMOD name / info version 0.7.2
+PASS softbody Yes description: Nexus link, says edited TWO copies, says not tested, names OCumMaleScript.pex, load below GT - Softbody, clean fallback without Tull/Liquid
+PASS acknowledgement: new Frosferes wording, old blessing line gone
+PASS Known Incompatibilities section in installer acknowledgement and README txt (Diverse Werewolves Collection SE, opusGlass, Nexus 7009)
+PASS Known Incompatibilities: TWO_SkinSwapper.dll / Skyrim 1.7.99+ entry in installer and README txt
+PASS README txt: new Frosferes wording present (intro + credits)
+PASS body=growl softbody=yes herm=on: 388 files, no conflicting files
+PASS body=growl softbody=yes herm=on: aroused addon = actors\werewolfbeast\character assets\coronerra\twosoftbody\CanineRedHard.nif, shipped
+PASS body=growl softbody=yes herm=on: werewolf skin female body (3rd + 1st person) = actors\werewolfbeast\character assets\coronerra\twosoftbody\femalebodywerewolf_1.nif, _0 and _1 shipped
+PASS body=growl softbody=yes herm=on: merged OCumMaleScript.pex/.psc installed (OCum-Tull-Liquid-Softbody-Patch v1.0 files)
+PASS body=growl softbody=yes herm=on: OCum werewolf urethra node = 0.7.1 file (unchanged)
+PASS body=growl softbody=yes herm=on: no GT Softbody / MNC werewolf files installed
+PASS body=growl softbody=yes herm=on: every texture, SMP XML and TRI a shipped mesh names is installed, in TWO Core, or vanilla/OCum
+PASS body=growl softbody=yes herm=on: no file byte-identical to any TWO 4.1 file 
+PASS body=growl softbody=yes herm=off: 381 files, no conflicting files
+PASS body=growl softbody=yes herm=off: aroused addon = actors\werewolfbeast\character assets\coronerra\twosoftbody\CanineRedHard.nif, shipped
+PASS body=growl softbody=yes herm=off: werewolf skin female body (3rd + 1st person) = actors\werewolfbeast\character assets\coronerra\twosoftbody\femalebodywerewolf_1.nif, _0 and _1 shipped
+PASS body=growl softbody=yes herm=off: merged OCumMaleScript.pex/.psc installed (OCum-Tull-Liquid-Softbody-Patch v1.0 files)
+PASS body=growl softbody=yes herm=off: OCum werewolf urethra node = 0.7.1 file (unchanged)
+PASS body=growl softbody=yes herm=off: no GT Softbody / MNC werewolf files installed
+PASS body=growl softbody=yes herm=off: every texture, SMP XML and TRI a shipped mesh names is installed, in TWO Core, or vanilla/OCum
+PASS body=growl softbody=yes herm=off: no file byte-identical to any TWO 4.1 file 
+PASS body=growl softbody=no herm=on: 380 files, no conflicting files
+PASS body=growl softbody=no herm=on: aroused addon = TWO Core CanineRedHard (not shipped)
+PASS body=growl softbody=no herm=on: female body = TWO's own (actors\werewolfbeast\character assets\femalebodywerewolf_1.nif)
+PASS body=growl softbody=no herm=on: no softbody files installed
+PASS body=growl softbody=no herm=on: merged OCumMaleScript.pex/.psc not installed
+PASS body=growl softbody=no herm=on: OCum werewolf urethra node = 0.7.1 file (unchanged)
+PASS body=growl softbody=no herm=on: no GT Softbody / MNC werewolf files installed
+PASS body=growl softbody=no herm=on: every texture, SMP XML and TRI a shipped mesh names is installed, in TWO Core, or vanilla/OCum
+PASS body=growl softbody=no herm=on: no file byte-identical to any TWO 4.1 file 
+PASS body=growl softbody=no herm=off: 373 files, no conflicting files
+PASS body=growl softbody=no herm=off: aroused addon = TWO Core CanineRedHard (not shipped)
+PASS body=growl softbody=no herm=off: female body = TWO's own (actors\werewolfbeast\character assets\femalebodywerewolf_1.nif)
+PASS body=growl softbody=no herm=off: no softbody files installed
+PASS body=growl softbody=no herm=off: merged OCumMaleScript.pex/.psc not installed
+PASS body=growl softbody=no herm=off: OCum werewolf urethra node = 0.7.1 file (unchanged)
+PASS body=growl softbody=no herm=off: no GT Softbody / MNC werewolf files installed
+PASS body=growl softbody=no herm=off: every texture, SMP XML and TRI a shipped mesh names is installed, in TWO Core, or vanilla/OCum
+PASS body=growl softbody=no herm=off: no file byte-identical to any TWO 4.1 file 
+PASS body=two softbody=yes herm=on: 389 files, no conflicting files
+PASS body=two softbody=yes herm=on: aroused addon = actors\werewolfbeast\character assets\coronerra\twosoftbody\CanineRedHard.nif, shipped
+PASS body=two softbody=yes herm=on: werewolf skin female body (3rd + 1st person) = actors\werewolfbeast\character assets\coronerra\twosoftbody\femalebodywerewolf_1.nif, _0 and _1 shipped
+PASS body=two softbody=yes herm=on: merged OCumMaleScript.pex/.psc installed (OCum-Tull-Liquid-Softbody-Patch v1.0 files)
+PASS body=two softbody=yes herm=on: OCum werewolf urethra node = 0.7.1 file (unchanged)
+PASS body=two softbody=yes herm=on: no GT Softbody / MNC werewolf files installed
+PASS body=two softbody=yes herm=on: every texture, SMP XML and TRI a shipped mesh names is installed, in TWO Core, or vanilla/OCum
+PASS body=two softbody=yes herm=on: no file byte-identical to any TWO 4.1 file 
+PASS body=two softbody=yes herm=off: 382 files, no conflicting files
+PASS body=two softbody=yes herm=off: aroused addon = actors\werewolfbeast\character assets\coronerra\twosoftbody\CanineRedHard.nif, shipped
+PASS body=two softbody=yes herm=off: werewolf skin female body (3rd + 1st person) = actors\werewolfbeast\character assets\coronerra\twosoftbody\femalebodywerewolf_1.nif, _0 and _1 shipped
+PASS body=two softbody=yes herm=off: merged OCumMaleScript.pex/.psc installed (OCum-Tull-Liquid-Softbody-Patch v1.0 files)
+PASS body=two softbody=yes herm=off: OCum werewolf urethra node = 0.7.1 file (unchanged)
+PASS body=two softbody=yes herm=off: no GT Softbody / MNC werewolf files installed
+PASS body=two softbody=yes herm=off: every texture, SMP XML and TRI a shipped mesh names is installed, in TWO Core, or vanilla/OCum
+PASS body=two softbody=yes herm=off: no file byte-identical to any TWO 4.1 file 
+PASS body=two softbody=no herm=on: 381 files, no conflicting files
+PASS body=two softbody=no herm=on: aroused addon = TWO Core CanineRedHard (not shipped)
+PASS body=two softbody=no herm=on: female body = TWO's own ((TWO Werewolves.esp record))
+PASS body=two softbody=no herm=on: no softbody files installed
+PASS body=two softbody=no herm=on: merged OCumMaleScript.pex/.psc not installed
+PASS body=two softbody=no herm=on: OCum werewolf urethra node = 0.7.1 file (unchanged)
+PASS body=two softbody=no herm=on: no GT Softbody / MNC werewolf files installed
+PASS body=two softbody=no herm=on: every texture, SMP XML and TRI a shipped mesh names is installed, in TWO Core, or vanilla/OCum
+PASS body=two softbody=no herm=on: no file byte-identical to any TWO 4.1 file 
+PASS body=two softbody=no herm=off: 374 files, no conflicting files
+PASS body=two softbody=no herm=off: aroused addon = TWO Core CanineRedHard (not shipped)
+PASS body=two softbody=no herm=off: female body = TWO's own ((TWO Werewolves.esp record))
+PASS body=two softbody=no herm=off: no softbody files installed
+PASS body=two softbody=no herm=off: merged OCumMaleScript.pex/.psc not installed
+PASS body=two softbody=no herm=off: OCum werewolf urethra node = 0.7.1 file (unchanged)
+PASS body=two softbody=no herm=off: no GT Softbody / MNC werewolf files installed
+PASS body=two softbody=no herm=off: every texture, SMP XML and TRI a shipped mesh names is installed, in TWO Core, or vanilla/OCum
+PASS body=two softbody=no herm=off: no file byte-identical to any TWO 4.1 file 
+PASS 10 Growl/OStim_Beast_Form_Merged.esp unchanged from 0.7.1 (md5 d19870fd17b53627bca1c8c7181ea583)
+PASS 12 Growl No Softbody/OStim_Beast_Form_Merged_TWO_Patch.esp unchanged from 0.7.1 (md5 21c393c910f818e825616b515ffabc04)
+PASS 22 TWO No Softbody/OStim_Beast_Form_TWO.esp unchanged from 0.7.1 (md5 e21abc1c5a7f4a35866dc13815d9a48b)
+PASS 10 Growl/OStim_Beast_Form_Merged_TWO_Patch - BFA Heads.esp unchanged from 0.7.1 (md5 c9ac43d94e52e7589302b6c73247053c)
+PASS 20 TWO/OStim_Beast_Form_TWO - BFA Heads.esp unchanged from 0.7.1 (md5 fbc21c51f406b54d1db40eaae8594607)
+PASS 40 Herm/OStim_Beast_Form_TWO_Herm_Patch.esp unchanged from 0.7.1 (md5 c206051c2e7a0f567484579726f8750e)
+PASS Growl softbody patch: ESL, same masters, TWO Patch 0.1 FormIDs + 0x833 (6 records, HEDR 6)
+PASS Growl softbody patch: every other TWO Patch 0.1 record byte-identical
+PASS Growl softbody patch: ARMA 000CDD87 differs only in MOD3/MOD5
+PASS Growl softbody patch: 0x833 = the no-softbody 0x833 record (TWO Edition 0.2) except MOD2
+PASS TWO softbody plugin: ESL, same masters, TWO Edition 0.2 FormIDs + ARMA 000CDD87 (26 records)
+PASS TWO softbody plugin: every other TWO Edition 0.2 record byte-identical
+PASS TWO softbody plugin: 0x833 = TWO Edition 0.2 record except MOD2
+PASS TWO softbody plugin: ARMA 000CDD87 = TWO 4.1 Werewolves.esp record except MOD3/MOD5 (form refs all Skyrim.esm)
+PASS femalebodywerewolf_0.nif: loads; NiSkinData, vertex data and skin partitions agree for every shape
+PASS femalebodywerewolf_0.nif: every skin bone is in TWO's werewolf skeleton, or (new VaginaD bones) a nif node under a skeleton bone 
+PASS femalebodywerewolf_0.nif: every shape keeps TWO's skin partitions ([('32/257',)])
+PASS femalebodywerewolf_0.nif: 16 new bones VaginaD{B,F,R,L}00-03, chained under VaginaDeep1
+PASS femalebodywerewolf_0.nif: every TWO shape keeps its vertices, triangles and textures
+PASS femalebodywerewolf_0.nif: one new shape, Collision Vagina Deep, with no shader (invisible)
+PASS femalebodywerewolf_1.nif: loads; NiSkinData, vertex data and skin partitions agree for every shape
+PASS femalebodywerewolf_1.nif: every skin bone is in TWO's werewolf skeleton, or (new VaginaD bones) a nif node under a skeleton bone 
+PASS femalebodywerewolf_1.nif: every shape keeps TWO's skin partitions ([('32/257',)])
+PASS femalebodywerewolf_1.nif: 16 new bones VaginaD{B,F,R,L}00-03, chained under VaginaDeep1
+PASS femalebodywerewolf_1.nif: every TWO shape keeps its vertices, triangles and textures
+PASS femalebodywerewolf_1.nif: one new shape, Collision Vagina Deep, with no shader (invisible)
+PASS CanineRedHard.nif: loads; NiSkinData, vertex data and skin partitions agree for every shape
+PASS CanineRedHard.nif: every skin bone is in TWO's werewolf skeleton, or (new VaginaD bones) a nif node under a skeleton bone 
+PASS CanineRedHard.nif: every shape keeps TWO's skin partitions ([('52/257',)])
+PASS OBF_TWOSoftbodyFemale.xml: well-formed; collision shapes = TWO's + ['Collision Vagina Deep']; shapes not in the nif are TWO's own unused entries ['Collision Breasts Upper', 'Collision Breasts Lower']
+     OBF_TWOSoftbodyFemale.xml: 0 bone / constraint references not in the werewolf skeleton or this nif (TWO's own XML has the same ones; FSMP skips them): []
+PASS OBF_TWOSoftbodyFemale.xml: every new VaginaD bone it uses exists in the nif
+PASS OBF_TWOSoftbodyFemale.xml: added block uses named templates only (TWO's defaults untouched)
+PASS OBF_TWOSoftbodyGenitals.xml: well-formed; collision shapes = TWO's + none; shapes not in the nif are TWO's own unused entries []
+     OBF_TWOSoftbodyGenitals.xml: 0 bone / constraint references not in the werewolf skeleton or this nif (TWO's own XML has the same ones; FSMP skips them): []
+PASS OBF_TWOSoftbodyGenitals.xml: every new VaginaD bone it uses exists in the nif
+PASS OBF_TWOSoftbodyGenitals.xml: added block uses named templates only (TWO's defaults untouched)
+PASS femalebodywerewolf.tri: TWO's morphs unchanged + morphs for Collision Vagina Deep (['BodyHighHDT', 'BodyVeryHighHDT', 'BodyBuxomHDT'])
+PASS OCumMaleScript.pex: disassembly identical to the build-machine merge the author runs in game (9a4931ae...); only the pex header user/machine strings differ
+PASS GT Softbody 3.38 optional OCum patch file = 3.37.2 file (42b46226...), which the merge already contains
+PASS OCumMaleScript.psc: Tull/Liquid items only used when installed (else OCum meshes); GT urethra NiOverride offsets removed
+PASS OCum spurt axis (Urethra world y) = WWD 9 shaft axis (0.00 deg), 3.3 deg from the softbody cock's last 6 units of shaft; emitter [-0.0, 32.23, 68.5] is 0.67 from the tip [0.0, 32.84, 68.22]
+PASS no Vampire Lord .nif/.tri/.dds files shipped
+PASS no personal names, user paths or build-machine names in any shipped file (meshes included) 

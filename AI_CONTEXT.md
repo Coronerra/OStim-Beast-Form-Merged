@@ -8,7 +8,7 @@ Transforming changes the player's race to `WerewolfBeastRace` (Skyrim.esm 0x000C
 Status: beta. OStim is required. SexLab is not required, but it should be compatible.
 
 ## 2. Since 0.7: one installer, TWO body for everyone
-0.7 folds four earlier downloads into one FOMOD zip. Every setup uses the **TWO - Total Werewolf Overhaul 4.1** body (Frosferes; required, never shipped). The older repos (OStim-Beast-Form-TWO, OStim-Beast-Form-Merged-TWO-Patch, OStim-Beast-Form-TWO-Herm-Patch, OStim-Beast-Form) are deprecated and point here.
+0.7 folds four earlier downloads into one FOMOD zip. Every setup uses the **TWO - Total Werewolf Overhaul 4.1** body (Frosferes; required. Only edited copies of the TWO files this mod had to patch are shipped). The older repos (OStim-Beast-Form-TWO, OStim-Beast-Form-Merged-TWO-Patch, OStim-Beast-Form-TWO-Herm-Patch, OStim-Beast-Form) are deprecated and point here.
 
 Installer pages (`fomod/ModuleConfig.xml`, FOMOD 5.0, validated against the schema):
 1. **TWO user or Growl user** (SelectExactlyOne; Growl first and `Recommended` so it is pre-selected) -> flag `body` = `growl` / `two`.
@@ -22,15 +22,15 @@ Zip folders and when they install (`conditionalFileInstalls`):
 |---|---|---|
 | `00 Common` | always | scripts shared by both editions (incl. the 0.7 `OBL_Main`), scene/hub JSON, OStimNet descriptions, HKX fallback idles (incl. the Billyy VL one), OCum urethra node (no Vampire Lord meshes/TRIs/textures since 0.7.1), hub icon, docs |
 | `10 Growl` | body=growl | `OStim_Beast_Form_Merged.esp` (0.6, byte-identical), `OStim_Beast_Form_Merged_TWO_Patch - BFA Heads.esp`, BFA TRI, `coronerra\twopatch\werewolfsheath.nif`, Merged `OBF_MCM`, Merged actor properties and SkyrimNet manifests |
-| `11 Growl Softbody` | growl + yes | `OStim_Beast_Form_Merged_TWO_Patch.esp` = TWO Patch 0.1, byte-identical |
+| `11 Growl Softbody` | growl + yes | `OStim_Beast_Form_Merged_TWO_Patch.esp` = TWO Patch 0.1 with ARMA 000CDD87 female paths -> `coronerra\twosoftbody\femalebodywerewolf_1.nif` + ARMA 0x833 -> `coronerra\twosoftbody\CanineRedHard.nif` (0.7.2) |
 | `12 Growl No Softbody` | growl + no | `OStim_Beast_Form_Merged_TWO_Patch.esp` = TWO Patch 0.1 + one override of Merged's `OBL_WerewolfAddonAA` (0x833) -> TWO `CreatureFramework\CanineRedHard.nif` |
 | `20 TWO` | body=two | `OStim_Beast_Form_TWO - BFA Heads.esp`, BFA TRI, TWO `OBF_MCM` (has the `BeastPie` property), TWO actor properties and SkyrimNet manifests |
-| `21 TWO Softbody` | two + yes | `OStim_Beast_Form_TWO.esp` = TWO Edition 0.2 with `OBL_WerewolfAddonAA` (0x833) -> `MoreNastyCritters\werewolf\Addon_Dog_Black_Hard.nif` (the Merged record, byte-identical) |
+| `21 TWO Softbody` | two + yes | `OStim_Beast_Form_TWO.esp` = TWO Edition 0.2 with `OBL_WerewolfAddonAA` (0x833) -> `coronerra\twosoftbody\CanineRedHard.nif` + ARMA 000CDD87 (TWO 4.1 record, female paths -> `coronerra\twosoftbody\femalebodywerewolf_1.nif`) (0.7.2) |
 | `22 TWO No Softbody` | two + no | `OStim_Beast_Form_TWO.esp` = TWO Edition 0.2, byte-identical |
-| `30 Softbody` | softbody=yes | GT Softbody `MoreNastyCritters\werewolf\Addon_Dog*.nif` (Goutou) + `werewolf_balls*` / `werewolf_canine_penis_*` textures |
+| `30 Softbody` | softbody=yes | 0.7.2: `meshes\actors\werewolfbeast\character assets\coronerra\twosoftbody\` (`CanineRedHard.nif`, `femalebodywerewolf_0/_1.nif`, `femalebodywerewolf.tri`, edited TWO copies) + `SKSE\Plugins\hdtSkinnedMeshConfigs\coronerra\OBF_TWOSoftbody{Female,Genitals}.xml` + `Scripts\OCumMaleScript.pex` (+ Source; OCum + Tull/Liquid + GT Softbody merged script, = OCum-Tull-Liquid-Softbody-Patch v1.0; must win over GT Softbody's optional OCum patch). No GT Softbody files. |
 | `40 Herm` | herm=on | `OStim_Beast_Form_TWO_Herm_Patch.esp` (Herm Patch 0.1, byte-identical), `OBFHerm_*.pex` (0.7 `OBFHerm_Main`), `OBLWerewolfHerm.json` |
 
-**Softbody-only content** is exactly: the three GT Softbody cock meshes, their seven textures, and the 0x833 model path. Nothing else in the mod depends on GT Softbody.
+**Softbody-only content** (0.7.2) is exactly: the `coronerra\twosoftbody\` meshes, the two `coronerra\OBF_TWOSoftbody*.xml` SMP configs, the merged `OCumMaleScript.pex` (+ source), and the 0x833 / 000CDD87 model paths in the softbody plugin variants. Nothing else in the mod depends on GT Softbody, and no GT Softbody file is shipped.
 
 Text sources in this repo: `Data/` = `00 Common` + `10 Growl` text files; `options/20 TWO/`, `options/40 Herm/` = the TWO and Herm text files; `fomod/` = the installer. Binaries (ESP, PEX, NIF, DDS, HKX, TRI) are only in the release zip.
 
@@ -90,7 +90,7 @@ Compile with Caprica (game=skyrim) or the CK compiler. Imports: vanilla, SKSE, S
 - Fallback animation events `OBF_B_*` (project `OBFMerged`, 21 HKX) let the idles play without OCR. That's why Pandora must be run.
 
 ## 6. Load order rules
-- Left pane (since 0.7.1 MFA shares no files with this mod, so its spot is free; full table with reasons in README "Load Order"): frameworks -> OStim -> OCum -> MFA -> Growl/JS Eyes -> GT Softbody -> Tull/Liquid -> OCR (optional) -> animation packs -> SkyrimNet/OStimNet -> **this mod** -> TWO (+ Alternate Textures, BodySlide output) -> BFA -> Pandora output. No file of this mod overlaps a TWO file except seven byte-identical MoreNastyCritters textures (softbody Yes).
+- Left pane (since 0.7.1 MFA shares no files with this mod, so its spot is free; full table with reasons in README "Load Order"): frameworks -> OStim -> OCum -> MFA -> Growl/JS Eyes -> GT Softbody -> Tull/Liquid -> OCR (optional) -> animation packs -> SkyrimNet/OStimNet -> **this mod** -> TWO (+ Alternate Textures, BodySlide output) -> BFA -> Pandora output. No file of this mod overlaps a TWO file (0.7.2: the softbody copies of TWO meshes use this mod's own `coronerra\twosoftbody\` paths).
 - Plugins: Growl option `... Werewolves.esp, WerewolvesGrowl.esp, OStim_Beast_Form_Merged.esp, OStim_Beast_Form_Merged_TWO_Patch.esp, ... - BFA Heads.esp, [Herm]`. TWO option `... Werewolves.esp, OStim_Beast_Form_TWO.esp, ... - BFA Heads.esp, [Herm]`. `Werewolves.esp` after OCreatures.esp. On Nolvus: as low as possible but above the Paper Maps plugins.
 - Never enable `OStim_Beast_Form_TWO.esp` together with `OStim_Beast_Form_Merged.esp` (same scripts).
 
@@ -100,7 +100,7 @@ Compile with Caprica (game=skyrim) or the CK compiler. Imports: vanilla, SKSE, S
 - **A different aroused mesh:** override ARMA 0x833 (`OBL_WerewolfAddonAA`) in your own plugin loaded after this mod's plugins. Since 0.7 the scripts follow the record's model path; keep slot 52.
 - **Vampire Lord version:** the plumbing exists (actor types, VL hubs, OBL VL swap, Beast Load, BFA VL heads). `OBF_Main.IsPlayerBeast()` checks only `WerewolfBeastRace`, so the hotkey and timer guard are werewolf-only.
 - **OCR:** never add OCreatures.esp as a master. Gate on `Game.GetModByName("OCreatures.esp") != 255`.
-- **TWO:** never add TWO, TWO Alternate Textures, MFA or Growl files to this repo or the zip. Reference paths and records only. TWO is used with Frosferes's blessing. Since 0.7.1 the same goes for MFA's Vampire Lord meshes and the MNC/OCR Vampire Lord aroused mesh: the plugins reference their paths, the zip ships none of them.
+- **TWO:** never add TWO, TWO Alternate Textures, MFA or Growl files to this repo or the zip. Reference paths and records only; the exceptions are the softbody Yes copies of TWO's female body (`femalebodywerewolf_0/_1.nif`, `femalebodywerewolf.tri`) and hard canine (`CanineRedHard.nif`), the two softbody SMP configs built from TWO's XMLs, and the BFA head TRI (`ExpHeadWerewolf_BFA.tri`). each edited, at this mod's own paths. Frosferes is okay with patches but I will not repackage any files he made that I did not have to patch. So non-softbody female bodies and all Male bodies are still dependant on his TWO bodies. Since 0.7.1 the same goes for MFA's Vampire Lord meshes and the MNC/OCR Vampire Lord aroused mesh: the plugins reference their paths, the zip ships none of them.
 - **Herm option requirements:** TWO 4.1's `WerewolvesExtras.esp` masters `WerewolvesHCOS.esp`, which masters `CreatureFramework.esm`, `MoreNastyCritters.esp` and `HornyCreatures.esp`. Herm users need all of them; nobody else does. The herm plugin itself masters only `Skyrim.esm`.
 - **Credits:** Billyy, BakaFactory, FluffyFox and FunnyBizness made the animations; Lirael Atelier did the OStim conversions/packaging and OCreatures Reforged; MFA is TealEri's. Full list in README "Credits".
 - **TWO herm body and Skyrim 1.7.x:** TWO Extras' herm / urta body swap is done by `TWO_SkinSwapper.dll` (0.2.1, CommonLibSSE-NG, Address Library post-AE flag, no AddressLibraryV5 flag), called from TWO's `PlayerWerewolfScript` (`SkinSwap.SwapSkin`). It doesn't load on 1.7.99+ (Address Library format 5). `OBFHerm_Main` only reads `TWO_PlayerHermVal` (WerewolvesExtras.esp 0xC09) and doesn't depend on the DLL.

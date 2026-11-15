@@ -31,9 +31,13 @@ build notes.
 Third-party assets and data remain the property of their original authors and
 are NOT relicensed by this file. This includes (but is not limited to) meshes,
 textures, animations and scene data derived from or pointing at:
-- TWO - Total Werewolf Overhaul (Frosferes): referenced, not shipped, apart
-  from a modified copy of its werewolf expression TRI. Used with Frosferes's
-  blessing.
+- TWO - Total Werewolf Overhaul (Frosferes): referenced. Frosferes is okay
+  with patches but I will not repackage any files he made that I did not have
+  to patch. So non-softbody female bodies and all Male bodies are still
+  dependant on his TWO bodies. Shipped TWO-derived files, each edited, at this
+  mod's own paths: the softbody Yes copies of TWO's female body and hard
+  canine, the two softbody SMP configs built from TWO's XMLs, and the BFA head
+  TRI. They are not covered by the MIT license.
 - Monster Facial Animation and Expressive Werebeasts (TealEri, aka
   CinnaMewRoll): referenced, not shipped (Vampire Lord meshes were bundled up
   to 0.7, not since 0.7.1).
@@ -46,9 +50,12 @@ textures, animations and scene data derived from or pointing at:
   routing only).
 - OCreatures (J0suk3_), OCreatures Revived (chrystelle) and OCreatures
   Reforged (Lirael Atelier): edited copies of the idle/hub scene files.
-- GT - Softbody (Goutou) and More Nasty Critters textures (softbody "Yes").
+- GT - Softbody (Goutou): the softbody canal setup follows it (its werewolf
+  cock meshes and the More Nasty Critters textures were shipped up to 0.7.1).
 - OCum Ascended (Aietos, with OsmosisWrench and Sairion350): the werewolf
-  urethra node is based on OCum's.
+  urethra node is based on OCum's; softbody "Yes" ships a modified copy of
+  OCum's OCumMaleScript (with Tull/Liquid code and the Scene Change Fix by
+  Blacksheepo815, and GT Softbody's OCum fixes by Goutou).
 - Growl (EnaiSiaion), JS Emissive Eyes (johnskyrim), OStim Standalone
   (Kannonfodder, VersuchDrei and the OStim team), Better Facial Animations
   (Cyberquach).

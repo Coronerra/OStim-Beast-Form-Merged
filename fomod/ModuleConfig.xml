@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
-	<moduleName>OStim Beast Form Merged 0.7.1</moduleName>
+	<moduleName>OStim Beast Form Merged 0.7.2</moduleName>
 	<requiredInstallFiles>
 		<folder source="00 Common" destination="" priority="0" />
 	</requiredInstallFiles>
@@ -63,7 +63,12 @@ Nothing softbody-related is installed. During scenes, male werewolves get TWO's 
 						<plugin name="Yes">
 							<description>Pick Yes only if SOFTBODY (GT - Softbody) by Goutou is installed and working.
 
-This installs the GT Softbody werewolf cock meshes and their textures. During scenes, male werewolves wear the GT Softbody cock with softbody physics, the same look as Merged 0.6.
+Male werewolves wear TWO's own hard canine in scenes (same look as softbody No), with a collision setup that GT Softbody bodies react to. Female werewolves get a softbody-ready copy of TWO's female body: the same body, textures and SMP, plus a stretchable vaginal canal with its own collision, so a cock with SMP collision (TWO's canine or a GT Softbody male) can push it open. Not tested in game yet.
+
+These are edited copies of TWO's meshes, installed in this mod's own folder. TWO's own files are not overwritten. No GT Softbody files are shipped any more.
+
+Yes also installs one OCum script, Scripts/OCumMaleScript.pex: my OCum + Tull/Liquid + GT Softbody merged script patch (the same script as OCum-Tull-Liquid-Softbody-Patch v1.0 on GitHub, used in game by the author). It replaces OCum Ascended 4.1.1's OCumMaleScript and adds GT Softbody's two OCum fixes, Tull Animated Creampie / Liquid Pack v2 support and the Scene Change Fix. Without Tull or Liquid Pack it falls back cleanly to OCum's own creampie meshes.
+If you ticked GT Softbody's "OCum" patch, this mod's copy must win: keep this mod BELOW GT - Softbody (and below the OCum Tull/Liquid add-on and its Scene Change Fix) in MO2's left pane. If you already use the separate patch, you can disable it (same script).
 
 SOFTBODY (GT - Softbody):
 https://www.nexusmods.com/skyrimspecialedition/mods/152103</description>
@@ -106,7 +111,12 @@ I am not going to test this myself. If you use TWO's herm or urta werewolf, plea
 				<group name="Acknowledgement (required)" type="SelectAll">
 					<plugins order="Explicit">
 						<plugin name="I have read and understand">
-							<description>I have read every option in this installer and didn't just click through. If I picked the wrong options, the mod won't work. This mod uses the TWO body made by Frosferes, at the LoversLab community's request. TWO is used with Frosferes's blessing. Anyone is free to make their own patches, hubs and mods based on this one.
+							<description>I have read every option in this installer and didn't just click through. If I picked the wrong options, the mod won't work. This mod uses the TWO body made by Frosferes, at the LoversLab community's request. Frosferes is okay with patches but I will not repackage any files he made that I did not have to patch. So non-softbody female bodies and all Male bodies are still dependant on his TWO bodies. Anyone is free to make their own patches, hubs and mods based on this one.
+
+
+Known incompatibilities (as of this release):
+- Diverse Werewolves Collection SE by opusGlass (https://www.nexusmods.com/skyrimspecialedition/mods/7009): with it installed, the camera locks to the sides. Leave it off with this mod.
+- TWO's TWO_SkinSwapper.dll (v0.2.1, part of TWO Extras) by Frosferes (https://www.loverslab.com/topic/159911-two-total-werewolf-overhaul/): it does not load on Skyrim SE 1.7.99 / 1.7.104 or newer, because it doesn't support the new Address Library format. TWO's gender / herm skin spells then have no effect. This is a limit of TWO's DLL and the game version, not a bug in this mod. This mod's Hermaphrodite option doesn't use that DLL, but TWO's herm / urta body is swapped in by it, so on those game versions use 1.6.1170 (or GOG 1.6.1179) for the herm body until TWO's DLL is updated.
 
 Source code: https://github.com/Coronerra/OStim-Beast-Form-Merged</description>
 							<conditionFlags>

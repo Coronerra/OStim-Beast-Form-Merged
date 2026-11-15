@@ -1,5 +1,22 @@
 # Changelog: OStim Beast Form Merged
 
+## 0.7.2
+- **Beta: the softbody Yes female body and the softbody cock setup are not tested in game yet.**
+- Docs: cover image (`docs/OStim_Beast_Form_cover.jpg`) and a link to the separate, LoversLab-exclusive [OStim Beast Form Starter Animation Pack](https://www.loverslab.com/files/file/52869-ostim-beast-form-starter-animation-pack/).
+- **Known Incompatibilities (as of this release)** section added to both READMEs and the installer: [Diverse Werewolves Collection SE](https://www.nexusmods.com/skyrimspecialedition/mods/7009) by opusGlass; [TWO's TWO_SkinSwapper.dll (v0.2.1, part of TWO Extras)](https://www.loverslab.com/topic/159911-two-total-werewolf-overhaul/) by Frosferes.
+- **Softbody Yes no longer ships GT Softbody files.** Removed `meshes/MoreNastyCritters/werewolf/Addon_Dog.nif`, `Addon_Dog_Black_Hard.nif`, `Addon_Dog_Red_Hard.nif` and the seven `werewolf_balls*` / `werewolf_canine_penis_*` textures from `30 Softbody`.
+- **Softbody TWO cock:** `meshes/actors/werewolfbeast/character assets/coronerra/twosoftbody/CanineRedHard.nif` = TWO 4.1's `CreatureFramework/CanineRedHard.nif` with only its SMP config path changed, to `SKSE/Plugins/hdtSkinnedMeshConfigs/coronerra/OBF_TWOSoftbodyGenitals.xml` (TWO's `HDTWerewolfGenitals.xml` + a second tag, `VirtualPenis`, so GT Softbody's vaginal/anal guide tubes react to it). Geometry, weights and TWO's textures are unchanged.
+- **Softbody TWO female body:** `coronerra/twosoftbody/femalebodywerewolf_0.nif` / `_1.nif` = TWO 4.1's female body with:
+  - 16 new bones `VaginaD{B,F,R,L}00`-`03` (GT Softbody names) as children of `VaginaDeep1`, placed along TWO's canal (z 69.4 to 74.8). FSMP merges them into the skeleton at runtime, so no skeleton edit or extra DLL is needed.
+  - `Female Insides`: the 177 canal vertices are reweighted onto those chains (vulva, anus and the outer body untouched; geometry, UVs, textures unchanged).
+  - New hidden shape `Collision Vagina Deep` (133 vertices, 222 triangles, no shader): the canal wall, weighted like the visible canal. TWO's own collision covers only the vulva and the cervix cap.
+  - SMP config `coronerra/OBF_TWOSoftbodyFemale.xml` = TWO's `HDTWerewolfFemale.xml` + the canal chains (GT Softbody 3.38 values, named templates only) + the new collision shape. Morph file `coronerra/twosoftbody/femalebodywerewolf.tri` = TWO's TRI + the same morphs for the new collision shape.
+- **Plugins (softbody Yes only):** `11 Growl Softbody/OStim_Beast_Form_Merged_TWO_Patch.esp`: ARMA `NakedTorsoWerewolfBeast` (000CDD87) female paths -> the softbody body, plus ARMA `OBL_WerewolfAddonAA` (0x833) -> the softbody TWO cock. `21 TWO Softbody/OStim_Beast_Form_TWO.esp`: 0x833 -> the softbody TWO cock, plus an ARMA 000CDD87 override (TWO 4.1's `Werewolves.esp` record with only MOD3/MOD5 changed). Same FormIDs and masters; saves keep working.
+- **Softbody Yes: OCum script patch included.** `30 Softbody/Scripts/OCumMaleScript.pex` + `Scripts/Source/OCumMaleScript.psc` = [OCum-Tull-Liquid-Softbody-Patch](https://github.com/Coronerra/OCum-Tull-Liquid-Softbody-Patch) v1.0 (OCum Ascended 4.1.1 `OCumMaleScript` + Tull/Liquid add-on + Scene Change Fix + GT Softbody's two OCum fixes). Falls back to OCum's own meshes without Tull/Liquid Pack. Must win over GT Softbody's optional `Patch/OCum` file (same in GT 3.37.2 and 3.38): load this mod after GT - Softbody.
+- Softbody No: unchanged from 0.7.1.
+- Docs: Diverse Werewolves Collection SE (Nexus 7009) reported as not compatible (camera locks to the side).
+- Installer acknowledgement, README and docs: the Frosferes wording is now "Frosferes is okay with patches but I will not repackage any files he made that I did not have to patch. So non-softbody female bodies and all Male bodies are still dependant on his TWO bodies." (replaces 0.7.1's wording).
+
 ## 0.7.1
 - **Removed every Vampire Lord mesh, head morph and texture** from `00 Common` (13 files), so the mod no longer overwrites other mods' files:
   - `meshes/actors/vampirelord/character assets/`: `vampirelordhead.nif`, `vampirelordfemalehead.nif`, `vampirelordeyes.nif`, `vampirelordfemaleeyes.nif`, `body/vampirelord.nif`, `body/vampirelordfemale.nif` (byte-identical to MFA's), `vampirelordhead.tri`, `vampirelordfemalehead.tri` (MFA + BFA extended versions that overwrote MFA's).
