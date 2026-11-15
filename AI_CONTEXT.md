@@ -5,6 +5,8 @@ This file is for AI assistants, bots and modders who want to understand this mod
 ## 1. What problem it solves
 Transforming changes the player's race to `WerewolfBeastRace` (Skyrim.esm 0x000CDD84) or `DLC1VampireBeastRace` (Dawnguard.esm 0x0000283A). OStim Standalone has no actor type for those races, beast form blocks normal activation, and the beast-form timer keeps running during scenes. This mod makes the beast-form player a normal, sentient OStim actor: actor typing, scene start, hubs, a body/head that work in scenes, OCum climax handling and SkyrimNet awareness.
 
+Status: beta. OStim is required. SexLab is not required, but it should be compatible.
+
 ## 2. Since 0.7: one installer, TWO body for everyone
 0.7 folds four earlier downloads into one FOMOD zip. Every setup uses the **TWO - Total Werewolf Overhaul 4.1** body (Frosferes; required, never shipped). The older repos (OStim-Beast-Form-TWO, OStim-Beast-Form-Merged-TWO-Patch, OStim-Beast-Form-TWO-Herm-Patch, OStim-Beast-Form) are deprecated and point here.
 
@@ -88,7 +90,7 @@ Compile with Caprica (game=skyrim) or the CK compiler. Imports: vanilla, SKSE, S
 - Fallback animation events `OBF_B_*` (project `OBFMerged`, 21 HKX) let the idles play without OCR. That's why Pandora must be run.
 
 ## 6. Load order rules
-- Left pane (since 0.7.1 MFA shares no files with this mod, so its spot is free): frameworks -> OStim -> OCum -> MFA -> Growl/JS Eyes -> GT Softbody -> Tull/Liquid -> OCR (optional) -> animation packs -> SkyrimNet/OStimNet -> **this mod** -> TWO (+ Alternate Textures, BodySlide output) -> BFA -> Pandora output. No file of this mod overlaps a TWO file except seven byte-identical MoreNastyCritters textures (softbody Yes).
+- Left pane (since 0.7.1 MFA shares no files with this mod, so its spot is free; full table with reasons in README "Load Order"): frameworks -> OStim -> OCum -> MFA -> Growl/JS Eyes -> GT Softbody -> Tull/Liquid -> OCR (optional) -> animation packs -> SkyrimNet/OStimNet -> **this mod** -> TWO (+ Alternate Textures, BodySlide output) -> BFA -> Pandora output. No file of this mod overlaps a TWO file except seven byte-identical MoreNastyCritters textures (softbody Yes).
 - Plugins: Growl option `... Werewolves.esp, WerewolvesGrowl.esp, OStim_Beast_Form_Merged.esp, OStim_Beast_Form_Merged_TWO_Patch.esp, ... - BFA Heads.esp, [Herm]`. TWO option `... Werewolves.esp, OStim_Beast_Form_TWO.esp, ... - BFA Heads.esp, [Herm]`. `Werewolves.esp` after OCreatures.esp. On Nolvus: as low as possible but above the Paper Maps plugins.
 - Never enable `OStim_Beast_Form_TWO.esp` together with `OStim_Beast_Form_Merged.esp` (same scripts).
 
@@ -99,6 +101,8 @@ Compile with Caprica (game=skyrim) or the CK compiler. Imports: vanilla, SKSE, S
 - **Vampire Lord version:** the plumbing exists (actor types, VL hubs, OBL VL swap, Beast Load, BFA VL heads). `OBF_Main.IsPlayerBeast()` checks only `WerewolfBeastRace`, so the hotkey and timer guard are werewolf-only.
 - **OCR:** never add OCreatures.esp as a master. Gate on `Game.GetModByName("OCreatures.esp") != 255`.
 - **TWO:** never add TWO, TWO Alternate Textures, MFA or Growl files to this repo or the zip. Reference paths and records only. TWO is used with Frosferes's blessing. Since 0.7.1 the same goes for MFA's Vampire Lord meshes and the MNC/OCR Vampire Lord aroused mesh: the plugins reference their paths, the zip ships none of them.
+- **Herm option requirements:** TWO 4.1's `WerewolvesExtras.esp` masters `WerewolvesHCOS.esp`, which masters `CreatureFramework.esm`, `MoreNastyCritters.esp` and `HornyCreatures.esp`. Herm users need all of them; nobody else does. The herm plugin itself masters only `Skyrim.esm`.
+- **Credits:** Billyy, BakaFactory, FluffyFox and FunnyBizness made the animations; Lirael Atelier did the OStim conversions/packaging and OCreatures Reforged; MFA is TealEri's. Full list in README "Credits".
 - **TWO herm body and Skyrim 1.7.x:** TWO Extras' herm / urta body swap is done by `TWO_SkinSwapper.dll` (0.2.1, CommonLibSSE-NG, Address Library post-AE flag, no AddressLibraryV5 flag), called from TWO's `PlayerWerewolfScript` (`SkinSwap.SwapSkin`). It doesn't load on 1.7.99+ (Address Library format 5). `OBFHerm_Main` only reads `TWO_PlayerHermVal` (WerewolvesExtras.esp 0xC09) and doesn't depend on the DLL.
 
 ## 8. Other Coronerra repos

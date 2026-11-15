@@ -2,7 +2,9 @@
 
 > **GitHub edition of the mod page.** Download the mod from the **[v0.7.1 release](https://github.com/Coronerra/OStim-Beast-Form-Merged/releases/tag/v0.7.1)** (`OStim_Beast_Form_Merged_0.7.1.zip`). This repo holds the open-source parts: Papyrus sources, SkyrimNet bundles, OStim JSON, the FOMOD installer and docs. AI assistants: start with **[AI_CONTEXT.md](AI_CONTEXT.md)**. History: [CHANGELOG.md](CHANGELOG.md) and [BUILD_NOTES.md](BUILD_NOTES.md). License: [MIT for coronerra's work; third-party assets belong to their authors](LICENSE).
 
-**Skyrim SE / AE · OStim Standalone · ESL-flagged plugins · FOMOD installer · by coronerra**
+**Skyrim SE / AE · OStim Standalone · ESL-flagged plugins · FOMOD installer · by That Guy (Coronerra)**
+
+> **This is a beta. OStim is required. SexLab is not required, but it should be compatible.**
 
 Play as a werewolf in OStim with your mind intact.
 
@@ -81,7 +83,7 @@ I made this just to see if it could be done. **Everything I made for it is open 
 
 **Hermaphrodite (Fruta) option**
 - For TWO Extras' herm / urta **player** werewolf (TWO Extras' "Toggle Herm Werewolf" spell). OStim then treats your herm or urta werewolf as having a penis as well as a vagina and breasts, so the male-werewolf-role scenes can be offered. The aroused cock and Beast Load climax run for her too. Regular female werewolves (including Aela) are unchanged.
-- Needs TWO Extras (`WerewolvesExtras.esp`), and TWO's `WerewolvesExtrasGrowl.esp` if you use Growl. Leave OStim's MCM option "Futas use male role" on (the default).
+- Needs TWO Extras (`WerewolvesExtras.esp`) and everything it masters (see [Hermaphrodite option only](#herm-req)), and TWO's `WerewolvesExtrasGrowl.esp` if you use Growl. On Skyrim 1.7.99 or newer, TWO's herm body swap doesn't work yet (see [TWO's skin swapper](#skinswapper)). Leave OStim's MCM option "Futas use male role" on (the default).
 - I am not going to test this myself. If you use TWO's herm or urta werewolf, please test it and report any problems in the support section of the [OStim Beast Form Merged](https://www.loverslab.com/files/file/52768-ostim-beast-form-merged/) page on LoversLab.
 
 **SkyrimNet / OStimNet (optional)**
@@ -131,11 +133,14 @@ Get every requirement from its original page and support its author. **Nothing b
 ### Softbody Yes only
 - [SOFTBODY (GT - Softbody)](https://www.nexusmods.com/skyrimspecialedition/mods/152103) by **Goutou** (see its own requirements). Pick **No** on the softbody page if you don't run it. That includes UNP users, and CBBE or UBE users without softbody.
 
+<a id="herm-req"></a>
 ### Hermaphrodite option only
 - TWO Extras (`WerewolvesExtras.esp`, part of TWO), plus `WerewolvesExtrasGrowl.esp` if you use Growl.
+- **TWO Extras pulls in TWO's HCOS stack.** In TWO 4.1, `WerewolvesExtras.esp` masters `WerewolvesHCOS.esp`, and that one masters `CreatureFramework.esm` (Creature Framework), `MoreNastyCritters.esp` (More Nasty Critters) and `HornyCreatures.esp` (Horny Creatures of Skyrim). All of them have to be installed and enabled, or the game won't start. Check each mod's page for its own requirements. Our herm plugin itself only masters `Skyrim.esm` and detects TWO Extras at runtime.
+- TWO Extras' herm / urta body swap needs TWO's `TWO_SkinSwapper.dll`, which doesn't load on Skyrim 1.7.99 or newer yet. See [TWO's skin swapper and Skyrim 1.7.99+](#skinswapper).
 
 ### Not needed any more
-HDT Werewolves, Animated Beast's Cocks (ABC), Creature Framework, HCOS, SOS and SexLab are **not** needed. **HDT Werewolves must be off:** its plugin is also named `Werewolves.esp` and cannot run next to TWO.
+HDT Werewolves, Animated Beast's Cocks (ABC) and SOS are **not** needed. Creature Framework, More Nasty Critters and HCOS are **not** needed **unless you use the Hermaphrodite option** (see above). SexLab is **not required**, but it should be compatible. **HDT Werewolves must be off:** its plugin is also named `Werewolves.esp` and cannot run next to TWO.
 
 ### Optional
 - [Better Facial Animations (BFA)](https://www.nexusmods.com/skyrimspecialedition/mods/193598) by **Cyberquach**. In BFA's race filters, tick **WerewolfBeastRace** and **DLC1VampireBeastRace**.
@@ -198,51 +203,68 @@ Before any update: in game, change back to human form, leave any scene and save.
 
 ## 📑 Load Order
 
-### Left pane (mod priority; lower wins)
-Place them top to bottom like this:
-1. SKSE plugins and frameworks (Address Library, PapyrusUtil, powerofthree's Papyrus Extender, RaceMenu, SkyUI, XPMSSE, FSMP)
-2. OStim Standalone
-3. OCum Ascended
-4. Monster Facial Animation (no shared files with this mod since 0.7.1, so its spot relative to this mod doesn't matter)
-5. Growl - Werebeasts of Skyrim, JS Emissive Eyes SE (Growl option)
-6. GT - Softbody (softbody Yes)
-7. Tull Animated Creampie, Liquid Pack v2, OCum Tull/Liquid add-on and patches (optional)
-8. OCreatures Reforged 0.1.9 (optional; must be **above** this mod)
-9. Lirael Atelier's animation packs
-10. SkyrimNet / OStimNet / OStim Navigator (optional)
-11. **OStim Beast Form Merged 0.7.1**
-12. **TWO - Total Werewolf Overhaul 4.1**, then TWO - Alternate Textures (optional), then your TWO BodySlide output (optional, its own mod). TWO must win the werewolf skeleton, body and head files against everything else (OCreatures, XPMSSE, ABC...). This mod doesn't overwrite any TWO file.
-13. Better Facial Animations (if used)
-14. Pandora output (always last)
+### Left pane (MO2 install / overwrite order), with WHY
 
-### Right pane (plugin order)
-Put these in this relative order. Other plugins can sit between them. **Place them by hand. Don't let LOOT re-sort them.**
+Lower in the left pane = wins file conflicts. I compared the 0.7.1 package file-by-file against TWO 4.1 (all folders), TWO Alternate Textures 4.0, MFA, OStim 7.5.1c, OCum Ascended 4.1.1, OCum Tull/Liquid Meshes + Scene Change Fix, GT Softbody 3.37.2, OCreatures Reforged 1.9, Growl (plugin + BSA contents), JS Emissive Eyes, BFA 5.0.6, Ostrands with Werewolves 0.8.0.3, OCum Werewolf Shot 1.0, and ABC (BakaFactory).
 
-**Growl option**
-1. Skyrim.esm, Update.esm, Dawnguard.esm, HearthFires.esm, Dragonborn.esm
+| # | Mod | Why here |
+|---|---|---|
+| 1 | SKSE frameworks, XPMSSE, FSMP | No file overlap with this mod. TWO has to beat them on werewolf skeleton/body files (see #10). |
+| 2 | OStim Standalone, OCum Ascended (+ Tull/Liquid add-ons and patches) | **No overlap** with this mod. |
+| 3 | Monster Facial Animation | **No overlap since 0.7.1**, so its spot relative to this mod doesn't matter. (0.7 shipped copies of MFA's Vampire Lord meshes and overwrote its VL head TRIs; those are gone.) |
+| 4 | Growl, JS Emissive Eyes (Growl path) | No overlap. Growl's assets are in a BSA, and loose files beat BSAs anyway. |
+| 5 | GT - Softbody (softbody Yes) | Our 3 MNC werewolf cock NIFs are **byte-identical** to GT Softbody's Creature/MNC option, so order doesn't matter. Keep it above us anyway. |
+| 6 | OCreatures Reforged (optional) | **This mod must win.** We overwrite OCR's werewolf/VL idle scene JSONs (`ocrwerewolfidle*.json`, `ocrvampirelordidlefm.json`) to hook our hubs, and with softbody Yes, its three `addon_dog*.nif` werewolf meshes. |
+| 7 | Animation packs | No overlap. |
+| 8 | OStrands, then Ostrands with Werewolves (optional) | No overlap with this mod. Ostrands with Werewolves must sit below OStrands so its DLL wins. |
+| 9 | **OStim Beast Form Merged 0.7.1** | — |
+| 10 | **TWO 4.1**, then TWO Alternate Textures, then your BodySlide output (own mod) | This mod and TWO share **no** files with different content: the only overlap is the 7 MNC textures, byte-identical. So their relative order is free. TWO **must** win against OCR and ABC, which ship the werewolf `skeleton.nif/.hkx`, body meshes and body/head textures. Alternate Textures overwrites TWO's normal maps by design. |
+| 11 | Better Facial Animations (optional) | No overlap with this mod or TWO. |
+| 12 | Pandora Output | Generated behaviors. We ship no behavior files. |
+
+**Nolvus:** keep all of the above **above the Paper Maps mods**. In a Nolvus left pane, the Paper Maps block sits at the very bottom, below Pandora Output.
+
+**TWO's SOS genitals + GT Softbody:** if a TWO user picks SOS genitals in TWO's installer and also runs GT Softbody, those two mods overwrite each other's `sos/*/werewolfgenitals_0/1.nif`. That's between TWO and GT Softbody, not this mod. Pick which one you want to win.
+
+### Right pane (plugin order), with WHY
+
+**Growl path**
+1. Skyrim.esm … Dragonborn.esm
 2. JS Emissive Eyes SE - Johnskyrim.esp, OStim.esp, OCum.esp, TT_OStimNet.esp (optional)
 3. MonsterLipSync1.esp
 4. Growl - Werebeasts of Skyrim.esp, then its patches
 5. OCreatures.esp (optional)
-6. Werewolves.esp (TWO), then WerewolvesGrowl.esp (and WerewolvesExtras.esp / WerewolvesExtrasGrowl.esp if you use TWO Extras)
+6. Werewolves.esp, WerewolvesGrowl.esp (+ WerewolvesExtras.esp / WerewolvesExtrasGrowl.esp for herm)
 7. **OStim_Beast_Form_Merged.esp**
-8. **OStim_Beast_Form_Merged_TWO_Patch.esp** (directly below it)
+8. **OStim_Beast_Form_Merged_TWO_Patch.esp**
 9. **OStim_Beast_Form_Merged_TWO_Patch - BFA Heads.esp**
-10. **OStim_Beast_Form_TWO_Herm_Patch.esp** (Hermaphrodite option only)
+10. **OStim_Beast_Form_TWO_Herm_Patch.esp** (herm only)
 
-**TWO option**
-1. Skyrim.esm, Update.esm, Dawnguard.esm, HearthFires.esm, Dragonborn.esm
+**TWO path**
+1. Skyrim.esm … Dragonborn.esm
 2. OStim.esp, OCum.esp, TT_OStimNet.esp (optional)
 3. MonsterLipSync1.esp
 4. OCreatures.esp (optional)
-5. Werewolves.esp (TWO), then any other Werewolves*.esp you use (WerewolvesExtras.esp, WerewolvesMTSE.esp...)
+5. Werewolves.esp, then any other Werewolves*.esp you use
 6. **OStim_Beast_Form_TWO.esp**
 7. **OStim_Beast_Form_TWO - BFA Heads.esp**
-8. **OStim_Beast_Form_TWO_Herm_Patch.esp** (Hermaphrodite option only)
+8. **OStim_Beast_Form_TWO_Herm_Patch.esp** (herm only)
 
-`Werewolves.esp` must load after OCreatures.esp and any other mod that edits the werewolf race, or TWO's heads go missing. This mod restores OCR's race keywords at runtime, so OCR scenes still work.
+**Why:**
+- **Masters first.** `OStim_Beast_Form_Merged.esp` masters Skyrim/Update/Dawnguard/Dragonborn, JS Emissive Eyes, Growl, OStim and OCum. The TWO Patch masters MFA, `Werewolves.esp` and `OStim_Beast_Form_Merged.esp`. The BFA Heads plugins master MFA and `Werewolves.esp`. `OStim_Beast_Form_TWO.esp` masters `Werewolves.esp`, MFA, OStim and OCum.
+- **Our race edits have to win.** The werewolf race is edited by Growl, OCR, TWO and TWO's Growl/Extras patches. Our plugins go after all of them, so their race edits are the last ones loaded. On Growl, the TWO Patch carries the merged TWO + Growl + OStim race and must sit directly below `OStim_Beast_Form_Merged.esp`.
+- **`Werewolves.esp` after `OCreatures.esp`**, or TWO's heads go missing. We restore OCR's race keywords at runtime, so OCR scenes still work.
+- **Herm last.** It only masters `Skyrim.esm`, so it doesn't matter technically, but keep it at the end of ours.
+- **Nolvus: nothing below Paper Maps.** Put our plugins as low as you like, but **above `FWMF for Fantasy Paper Maps.esp`** and the other Paper Map plugins (the last of them is `Nolvus Awakening Paper Map Patch.esp`). **Don't run LOOT.** Place plugins by hand.
+- **Never enable `OStim_Beast_Form_TWO.esp` and `OStim_Beast_Form_Merged.esp` together.** They share scripts. The installer never installs both.
 
-**⚠️ Nolvus players:** do **not** place any plugin below **Paper Maps** in the ESP load order. Put this mod's plugins as low as you can, but **above** the Paper Maps plugins. Don't run LOOT. Place plugins by hand.
+### Must be off
+- **HDT Werewolves.** Its plugin is also called `Werewolves.esp`, so it can't coexist with TWO.
+- **Animated Beast's Cocks.** It ships `malebodywerewolf_0/1.nif`, the werewolf `skeleton.nif/.hkx` and the werewolf body/head textures, all of which collide with TWO Core.
+- Old patches built for HDT Werewolves (for example "MFA and Growl Patch" / `MFA-Growl-HDTWW_Patch.esp`).
+- **OCum Werewolf Shot.** Its urethra node is in here, byte-identical.
+- The old OStim Beast Form, Beast Lite, Beast Aware, OCum Beast Pie and BeastForm BFA Heads mods.
+- The old TWO Edition / TWO Patch / Herm Patch mods.
 
 ---
 
@@ -277,43 +299,45 @@ It's licensed under the **GNU GPL v3**, the same as OStrands, and the license an
 
 ## 🏆 Credits
 
-This mod stands on a lot of other people's work. Thank you all.
-
-**Frameworks and core mods**
-- **VersuchDrei** and the OStim team: OStim Standalone
-- **Aietos** (with OsmosisWrench and Sairion350): OCum Ascended. The werewolf urethra node is based on OCum's.
-- **EnaiSiaion**: Growl - Werebeasts of Skyrim (its werewolf race record is the base of the Growl option's race edit)
-- **johnskyrim**: JS Emissive Eyes SE (glowing eye spells kept on both races in the Growl option)
-- **SKSE team**, **meh321** (Address Library), **exiledviper and meh321** (PapyrusUtil), **powerofthree** (Papyrus Extender), **expired6978** (RaceMenu), **schlangster** and the SkyUI team, **Groovtama** (XPMSSE), **DaydreamingDay** and the FSMP contributors, **Monitor221hz** (Pandora)
-
-**Bodies, heads and meshes**
-- **Frosferes**: [TWO - Total Werewolf Overhaul](https://www.loverslab.com/topic/159911-two-total-werewolf-overhaul/) (bodies, heads, skeleton, SMP and the hard canine this mod points at; nothing of TWO's is shipped). The BFA brow-morph TRI is a modified copy of TWO's expression TRI.
-- **TealEri (aka CinnaMewRoll)**: Monster Facial Animation morphs and Expressive Werebeasts, the base of TWO's expressive heads
-- **BakaFactory**: Animated Beast's Cocks (ABC). The Growl option's sheath, tip and knot are ABC geometry.
-- **The MFA author** (Nexus: User_1926808): Monster Facial Animation. The talking Vampire Lord heads, eyes and headless Vampire Lord bodies this mod's plugins use come from MFA (bundled up to 0.7, no longer shipped since 0.7.1).
-- **Cyberquach**: Better Facial Animations. TWO's werewolf heads were extended with the expression shapes BFA needs.
-- **Goutou**: GT - Softbody werewolf cock addons used for the aroused swap (softbody Yes)
-- Original author of the **Vampire Lord aroused mesh and textures** (More Nasty Critters lineage; unknown author). The plugins still point at that mesh path, but the mesh and textures are no longer shipped since 0.7.1.
-- **Earlier versions (0.1 to 0.6)** shipped a female werewolf body from **HDT Werewolves** (**Duzellx**, **Allegretto**, **jacques00**) and a fluffy male body following **Macxhiin**'s Fluffworks method. 0.7 uses TWO's bodies instead. Thank you for getting this project started.
-
-**Animations and scene packs (not included; many are free on [Lirael's LoversLab page](https://www.loverslab.com/profile/6654496-lauffey/content/?type=downloads_file))**
-- **Lirael Atelier** (LoversLab: **Lauffey**; [Patreon](https://www.patreon.com/LiraelAtelier)): OCreatures Reforged and the converted OStim creature packs. The hub layout follows OCreatures' design.
-- **Billyy**: the original Billyy animations. **Billyy has given full permission** for the Billyy-derived files included in this mod (the stage-1 fallback poses and Billyy werewolf hub/scene files).
-- **BakaFactory**, **FlufyFox** and **FunnyBiz**: the original animations in those packs
-- **J0suk3_** (original OCreatures) and **chrystelle** (OCreatures Revived): the idle and hub registration approach
-
-**Cum and fluids**
-- **Tullius Channel** and **Emotional Trash Can**: Tull Animated Creampie
-- **PredatorRJ**: Liquid Pack v2
-- **Blacksheepo815**: OCum Ascended - Tull and Liquid Pack Meshes and its Scene Change Fix
-- **LeonVanWinkle (Saint)**, **Keevan2374** and **crajjjj**: OStrands and its creature fork
-
-**AI and NPCs**
-- **MinLL** and the SkyrimNet team: SkyrimNet and its open API
-- **tetherball88**: OStimNet and OStim Navigator
+This mod stands on a lot of other people's work. Thank you all. "Bundled" means a file from that work is inside the 0.7.1 download. Everything else is required, optional or referenced, and you get it from its own page.
 
 **This mod**
-- **coronerra** (That Guy (Coronerra)): OStim Beast Form, Beast Lite, Beast Aware, OCum Werewolf Shot, Beast Pie / Beast Load, the TWO plugins and patch, the Hermaphrodite option, the BFA head work, the hub menus, the werewolf medallion icon and the merge
+- **That Guy (Coronerra)**: OStim Beast Form Merged and everything merged into it: OStim Beast Form, Beast Lite (fallback scenes), Beast Aware (SkyrimNet), OCum Werewolf Shot, Beast Pie / Beast Load (OCum beast climax), the Beast Form OStimNet bridge, the TWO plugins and TWO patch, the softbody and Hermaphrodite (Fruta) options, the hub menus and pack pages, the MFA/BFA head-morph work, the werewolf medallion icon, all Papyrus scripts, the MCM, the SkyrimNet prompts, the OStim actor/hub JSON, the FOMOD installer and the docs.
+
+**Werewolf body and heads**
+- **Frosferes**: [TWO - Total Werewolf Overhaul](https://www.loverslab.com/topic/159911-two-total-werewolf-overhaul/). Werewolf bodies, heads, skeleton, SMP physics and textures, plus the hard canine (`CanineRedHard.nif`) used for softbody "No". Required, **not bundled**. Bundled: a modified copy of TWO's werewolf expression TRI (BFA brow morphs). TWO is used with Frosferes's blessing.
+- **TealEri (aka CinnaMewRoll)**: [Monster Facial Animation (MFA)](https://www.nexusmods.com/skyrimspecialedition/mods/22878) and Expressive Werebeasts, the base of TWO's talking heads. MFA is required. It also provides the Vampire Lord heads, eyes, headless VL bodies and VL head morphs (TRI) our plugins use. **Not bundled** since 0.7.1 (up to 0.7, copies of them and an extended VL head TRI were bundled). (MFA's Nexus page now shows the uploader as User_1926808. TWO's credits name TealEri as MFA's creator.)
+- **BakaFactory**: Animated Beast's Cocks (ABC). Bundled: the Growl option's resting sheath, tip and knot are ABC geometry.
+
+**Animations**
+- **Billyy**: the werewolf and Vampire Lord animations this mod is built around. **Billyy gave full permission** for the Billyy files bundled here: 21 stage-1 fallback poses (HKX) and the Billyy werewolf/VL scene and hub files.
+- **Lirael Atelier** (LoversLab: **Lauffey**, [Patreon](https://www.patreon.com/LiraelAtelier)): **OStim conversion and packaging** of Billyy's creature animations ([Byllis Creature Animation pack Complete - OStim edition](https://www.loverslab.com/files/file/51449-byllis-creature-animation-pack-complete-ostim-edition)), FluffyFox's ([FluffyFox Creatures - OStim Conversion](https://www.loverslab.com/files/file/51860-fluffyfox-creatures-animation-pack-)) and FunnyBizness's ([FunnyBiz Creature Animations for OStim Standalone](https://www.loverslab.com/files/file/52667-funnybiz-creature-animations-for-ostim-standalone)) and BakaFactory's (OCreatures - Baka Animation Pack, on her [Patreon](https://www.patreon.com/LiraelAtelier)), and [OCreatures Reforged](https://dwemermods.com/mods/5173). The bundled fallback poses were taken from her conversion of Billyy's pack. The bundled pack scene files are edited copies of her converted scene data, re-routed to this mod's hubs. **Lirael did not make the animations.** The hub layout follows OCreatures' design.
+- **BakaFactory**: the original animations in the Baka creature pack (Lirael did the OStim conversion; BakaFactory made the animations). Bundled: edited copies of that pack's werewolf/VL scene files (hub routing only).
+- **FluffyFox**: the original animations in the FluffyFox creature pack. Bundled: edited copies of its werewolf scene files (hub routing only).
+- **FunnyBizness**: the original Vampire Lord animations in the FunnyBiz pack. Bundled: edited copies of its VL scene files (hub routing only).
+
+**Frameworks and requirements**
+- **Kannonfodder, VersuchDrei** and the OStim team: [OStim Standalone](https://www.nexusmods.com/skyrimspecialedition/mods/98163) (hard master).
+- **Aietos**, with **OsmosisWrench** and **Sairion350**: [OCum Ascended](https://www.nexusmods.com/skyrimspecialedition/mods/77506) (hard master). Bundled: the werewolf urethra node, based on OCum's.
+- **EnaiSiaion**: [Growl - Werebeasts of Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/31245) (Growl option hard master; its werewolf race is the base of the Growl option's race edit).
+- **johnskyrim**: [JS Emissive Eyes SE](https://www.nexusmods.com/skyrimspecialedition/mods/60108) (Growl option hard master; its glowing-eye spells are kept).
+- **Goutou**: [SOFTBODY (GT - Softbody)](https://www.nexusmods.com/skyrimspecialedition/mods/152103). Bundled with softbody "Yes": its three MNC werewolf cock meshes (unchanged copies).
+- **The More Nasty Critters (MNC) author**: the MNC werewolf cock textures bundled with softbody "Yes" (identical copies also ship in OCreatures Reforged and TWO's optional genital folders). The Vampire Lord aroused swap points at the MNC Vampire Lord mesh path; that mesh and its textures are **no longer bundled** since 0.7.1.
+- **J0suk3_** (original OCreatures) and **chrystelle** (OCreatures Revived): the idle/hub scene registration this mod plugs into. Bundled: edited copies of OCR's werewolf/VL idle scene files.
+- **SKSE team**: SKSE64. **meh321**: Address Library. **exiledviper** and **meh321**: PapyrusUtil SE (used for the loose-file mesh check). **powerofthree**: Papyrus Extender (restores OCR race keywords). **expired6978**: RaceMenu. **schlangster** and the SkyUI team: SkyUI (MCM). **Groovtama**: XPMSSE.
+- **hydrogensaysHDT** (original HDT-SMP), **DaydreamingDay** and the FSMP contributors: [FSMP - Faster HDT-SMP](https://www.nexusmods.com/skyrimspecialedition/mods/57339) (TWO's physics).
+- **Pandora Behaviour Engine Team** (**Monitor221hz**): [Pandora Behaviour Engine+](https://www.nexusmods.com/skyrimspecialedition/mods/133232).
+
+**Optional add-ons**
+- **Cyberquach**: [Better Facial Animations](https://www.nexusmods.com/skyrimspecialedition/mods/193598). The head-morph extension exists so BFA can animate TWO's werewolf heads.
+- **MinLL** and the SkyrimNet team: SkyrimNet (Beast Aware and the OStimNet bridge plug into its API).
+- **tetherball88**: OStimNet and OStim Navigator.
+- **Tullius Channel** and **Emotional Trash Can**: [Tull Animated Creampie](https://dwemermods.com/mods/3535). **PredatorRJ**: [Liquid Pack v2](https://dwemermods.com/mods/330). **Blacksheepo815**: OCum Ascended - Tull and Liquid Pack Meshes and its Scene Change Fix.
+- **LeonVanWinkle (Saint)**: [OStrands](https://www.nexusmods.com/skyrimspecialedition/mods/195115). **Keevan2374** (0.8.0.1, creature support) and **crajjjj** (0.8.0.2): the OStrands creature fork that [Ostrands with Werewolves](https://github.com/Coronerra/Ostrands-with-Werewolves) (That Guy (Coronerra)) is based on.
+
+**Earlier versions (0.1 to 0.6; not in 0.7 or 0.7.1)**
+- **jacques00** (original HDT Werewolves), **Duzellx** and **Allegretto**: the HDT Werewolves female body shipped in 0.1 to 0.6.
+- **Macxhiin**: the Fluffworks shell-fur method used on the 0.1 to 0.6 male body.
 
 ---
 
@@ -362,6 +386,23 @@ Full history: [CHANGELOG.md](CHANGELOG.md).
 - Removed the experimental WWF_OnTop female cowgirl test scenes (`WWFCowgirl1-1` to `1-5`) and their "WW Female Cowgirl 1 (TEST)" button on the female werewolf + man hub (`OBFWerewolfIdleMF`). Their OStimNet descriptions were removed too.
 - Female werewolf scenes are not bundled. They come from separate, optional scene packs, which add their own button to the female werewolf hubs.
 - Plugin, FormIDs, masters, scripts, meshes, textures and HKX are unchanged from 0.5. Saves stay compatible. No Pandora run needed.
+
+---
+
+<a id="skinswapper"></a>
+
+## 🧩 Herm option: TWO's skin swapper and Skyrim 1.7.99+
+
+A user on a herm setup reported an error about `TWO_SkinSwapper.dll` at startup, clicked ignore, and then TWO's gender spells cast but did nothing. Here's what's going on:
+
+- **The herm / urta body is swapped in by TWO, not by this mod.** TWO Extras ships its own SKSE plugin, `TWO_SkinSwapper.dll` (version 0.2.1, built in November 2022). TWO's werewolf script calls it when you transform or load a save, and that call is what puts the herm or urta body on.
+- **That DLL is too old for the newest Skyrim.** It was built for Skyrim 1.5.97 and 1.6.x (1.6.1170 and GOG 1.6.1179 included). Skyrim **1.7.99 / 1.7.104** (Steam, August 2026) moved to a new Address Library format that older SKSE plugins can't read, so SKSE reports an error for the DLL. With the DLL not loaded, the gender spell still flips TWO's herm setting (you see its message), but nothing changes the body.
+- **Our Hermaphrodite option doesn't use the DLL.** It only reads TWO's herm setting so OStim treats your werewolf as herm. On 1.7.x, OStim can treat you as herm while the body stays TWO's default female.
+- **What you can do now:** play on **1.6.1170** (Steam downgrade) or GOG **1.6.1179**, where the DLL loads, or wait for an updated `TWO_SkinSwapper.dll` built for 1.7.x. I haven't found one, and its source isn't public, so I can't rebuild it myself.
+- **Even when the DLL works,** the gender spell takes effect the **next time you transform** (or reload). Cast it in human form, then transform.
+- **Clicking ignore should be harmless otherwise:** only TWO's herm / urta body swap is missing; the rest of TWO and this mod run normally. (Not tested on 1.7.104 by me.)
+
+When you report a herm problem, please say which Skyrim version you're on (the main menu shows it, for example 1.6.1170 or 1.7.104).
 
 ---
 

@@ -30,13 +30,29 @@ build notes.
 
 Third-party assets and data remain the property of their original authors and
 are NOT relicensed by this file. This includes (but is not limited to) meshes,
-textures, animations and scene data derived from or pointing at: TWO - Total
-Werewolf Overhaul (Frosferes; referenced, not shipped, apart from a modified
-copy of its expression TRI) and TealEri (MFA morphs), HDT Werewolves (Duzellx,
-Allegretto, jacques00), Animated Beast's Cocks (BakaFactory), Monster Facial
-Animation, Better Facial Animations (Cyberquach), GT - Softbody (Goutou),
-Fluffworks (Macxhiin), OCum Ascended (Aietos et al.), Growl (EnaiSiaion),
-JS Emissive Eyes (johnskyrim), and the animation packs by Billyy, BakaFactory,
-FlufyFox and FunnyBiz as converted by Lirael Atelier. Billyy has given full
-permission for the Billyy-derived files used here. Ask the respective authors
-before redistributing their work.
+textures, animations and scene data derived from or pointing at:
+- TWO - Total Werewolf Overhaul (Frosferes): referenced, not shipped, apart
+  from a modified copy of its werewolf expression TRI. Used with Frosferes's
+  blessing.
+- Monster Facial Animation and Expressive Werebeasts (TealEri, aka
+  CinnaMewRoll): referenced, not shipped (Vampire Lord meshes were bundled up
+  to 0.7, not since 0.7.1).
+- Animated Beast's Cocks (BakaFactory): the Growl option's sheath, tip and knot
+  geometry.
+- Animations by Billyy, BakaFactory, FluffyFox and FunnyBizness. Their OStim
+  conversions and packaging are by Lirael Atelier, who did not make the
+  animations. Bundled: Billyy-derived fallback poses and scene/hub files (Billyy
+  has given full permission) and edited copies of the packs' scene files (hub
+  routing only).
+- OCreatures (J0suk3_), OCreatures Revived (chrystelle) and OCreatures
+  Reforged (Lirael Atelier): edited copies of the idle/hub scene files.
+- GT - Softbody (Goutou) and More Nasty Critters textures (softbody "Yes").
+- OCum Ascended (Aietos, with OsmosisWrench and Sairion350): the werewolf
+  urethra node is based on OCum's.
+- Growl (EnaiSiaion), JS Emissive Eyes (johnskyrim), OStim Standalone
+  (Kannonfodder, VersuchDrei and the OStim team), Better Facial Animations
+  (Cyberquach).
+- Earlier versions only (0.1 to 0.6): HDT Werewolves (jacques00, Duzellx,
+  Allegretto) and the Fluffworks shell-fur method (Macxhiin).
+Full credits: README.md, section "Credits". Ask the respective authors before
+redistributing their work.
