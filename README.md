@@ -163,8 +163,6 @@ HDT Werewolves, Animated Beast's Cocks (ABC) and SOS are **not** needed. Creatur
 
 ---
 
-<a id="two-choices"></a>
-
 ## 🚫 Known Incompatibilities (as of this release)
 
 - **[Diverse Werewolves Collection SE](https://www.nexusmods.com/skyrimspecialedition/mods/7009)** by **opusGlass**: with it installed, the camera locks to the sides. Leave it off with this mod.
@@ -172,6 +170,8 @@ HDT Werewolves, Animated Beast's Cocks (ABC) and SOS are **not** needed. Creatur
 <!-- Further known incompatibilities go here (tool/incompat072.py). -->
 
 ---
+
+<a id="two-choices"></a>
 
 ## 🐺 TWO installer choices
 
@@ -192,7 +192,7 @@ BodySlide is optional. TWO already ships default bodies and heads. If you do bui
 
 1. Install every requirement above, including TWO 4.1 with the choices above. **Disable HDT Werewolves.**
 2. **If you used any earlier OStim Beast Form download, read [Updating to 0.7](#updating) first.**
-3. Install **OStim_Beast_Form_Merged_0.7.zip** with MO2 ("Install a new mod from archive"). Answer the four installer pages.
+3. Install **OStim_Beast_Form_Merged_0.7.2.zip** with MO2 ("Install a new mod from archive"). Answer the four installer pages.
 4. Put it in the **left pane** as shown below, then set the **right pane** (plugin order).
 5. **Run Pandora** (or your behavior engine) to regenerate behaviors.
 6. Load your game, wait for SkyUI to register the MCM, then open **OStim Beast Form** and **set the Start scene hotkey**. It can be the same key as OStim's activation key. That works fine; I use the Up Arrow for both.
