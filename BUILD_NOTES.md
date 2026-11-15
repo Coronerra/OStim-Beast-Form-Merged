@@ -1,4 +1,4 @@
-# OStim Beast Form Merged: build notes (0.1 to 0.7)
+# OStim Beast Form Merged: build notes (0.1 to 0.7.1)
 
 Technical history of the merged plugin. Only static checks were done on the build; in-game testing was by the author.
 
@@ -67,3 +67,8 @@ Technical history of the merged plugin. Only static checks were done on the buil
 - BFA head plugins are installed with both options (they were optional add-ons).
 - Static checks: `Data/Docs/OStim Beast Form Merged/STATIC_CHECKS_0.7.txt` (schema, folder references, all 8 installer combinations simulated: no file conflicts, expected plugins, winning 0x833 path and mesh present, every mesh texture resolvable, no TWO file shipped, plugin identities, privacy).
 - Not tested in game.
+
+## 0.7.1: no Vampire Lord meshes
+- `stage.py` adds `meshes/actors/vampirelord/character assets/`, `meshes/MoreNastyCritters/vampirelord/` and `textures/MoreNastyCritters/vampirelord/` to the dropped list (13 files). Everything else, including all six plugins, is byte-identical to 0.7.
+- Conflict re-check against TWO 4.1, TWO Alternate Textures, MFA, OStim 7.5.1c, OCum 4.1.1 (+ Tull/Liquid add-ons), GT Softbody 3.37.2, OCR 1.9, Growl (BSA), JS Emissive Eyes, BFA 5.0.6, Ostrands with Werewolves, OCum Werewolf Shot and ABC: 34 overlaps left (was 49), none with MFA. Remaining: OCR idle JSONs (ours must win), softbody `addon_dog*.nif` (identical to GT Softbody, ours must win vs OCR/ABC), the 7 softbody MNC textures (identical) and OCum Werewolf Shot's urethra node (identical; keep Werewolf Shot off).
+- FOMOD acknowledgement text updated ("TWO is used with Frosferes's blessing"). `verify.py` checks it, and that no VL nif/tri/dds is shipped. Static checks: `STATIC_CHECKS_0.7.1.txt`.

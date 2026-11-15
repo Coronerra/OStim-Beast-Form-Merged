@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
-	<moduleName>OStim Beast Form Merged 0.7</moduleName>
+	<moduleName>OStim Beast Form Merged 0.7.1</moduleName>
 	<requiredInstallFiles>
 		<folder source="00 Common" destination="" priority="0" />
 	</requiredInstallFiles>
@@ -106,7 +106,7 @@ I am not going to test this myself. If you use TWO's herm or urta werewolf, plea
 				<group name="Acknowledgement (required)" type="SelectAll">
 					<plugins order="Explicit">
 						<plugin name="I have read and understand">
-							<description>I have read every option in this installer and didn't just click through. If I picked the wrong options, the mod won't work. This mod uses the TWO body made by Frosferes, at the LoversLab community's request. If Frosferes comes out of retirement and asks for it to be taken down, it will be taken down with no further support, no questions asked. Until then, anyone is free to make their own patches, hubs and mods based on this one.
+							<description>I have read every option in this installer and didn't just click through. If I picked the wrong options, the mod won't work. This mod uses the TWO body made by Frosferes, at the LoversLab community's request. TWO is used with Frosferes's blessing. Anyone is free to make their own patches, hubs and mods based on this one.
 
 Source code: https://github.com/Coronerra/OStim-Beast-Form-Merged</description>
 							<conditionFlags>

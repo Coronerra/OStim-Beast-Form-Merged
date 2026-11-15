@@ -1,4 +1,4 @@
-OStim Beast Form Merged 0.7 (Skyrim SE / AE)
+OStim Beast Form Merged 0.7.1 (Skyrim SE / AE)
 by That Guy (Coronerra)
 Source code: https://github.com/Coronerra/OStim-Beast-Form-Merged
 
@@ -13,10 +13,8 @@ body by Frosferes. TWO is REQUIRED and NOT included:
   https://www.loverslab.com/topic/159911-two-total-werewolf-overhaul/
 
 This mod uses the TWO body made by Frosferes, at the LoversLab community's
-request. If Frosferes comes out of retirement and asks for it to be taken
-down, it will be taken down with no further support, no questions asked.
-Until then, anyone is free to make their own patches, hubs and mods based on
-this one.
+request. TWO is used with Frosferes's blessing. Anyone is free to make their
+own patches, hubs and mods based on this one.
 
 THE INSTALLER (read every page; wrong options = the mod won't work)
 -------------------------------------------------------------------
@@ -75,10 +73,11 @@ INSTALL (MO2)
 1. Install the requirements and TWO 4.1. Disable HDT Werewolves.
 2. Coming from an earlier OStim Beast Form download? Read UPDATING first.
 3. Install this zip and answer the four pages.
-4. Left pane: this mod below OStim, OCum, MFA, Growl, GT - Softbody,
+4. Left pane: this mod below OStim, OCum, Growl, GT - Softbody,
    OCreatures Reforged, the animation packs and SkyrimNet/OStimNet. Put TWO
    (then TWO Alternate Textures, then your TWO BodySlide output) below this
-   mod. Better Facial Animations and the Pandora output go last.
+   mod. Better Facial Animations and the Pandora output go last. MFA shares
+   no files with this mod (since 0.7.1), so its spot doesn't matter.
 5. Right pane, by hand (no LOOT):
    Growl option:
      MonsterLipSync1.esp, Growl - Werebeasts of Skyrim.esp (+ patches),
@@ -101,6 +100,8 @@ UPDATING
 --------
 First: human form, no scene, save, quit the game and MO2, back up. Reinstall
 over the old mod with MO2's "Replace".
+- Merged 0.7: same options as before. Plugins unchanged; your save keeps
+  working. No Pandora run needed.
 - Merged 0.6 + Merged TWO Patch 0.1: pick Growl (softbody Yes if you run
   GT - Softbody). Then disable / remove the old TWO Patch mod; 0.7 contains
   its plugin. Same plugin names and FormIDs: your save keeps working. No
@@ -121,6 +122,24 @@ OSTRANDS (separate, optional download)
 Ostrands with Werewolves 0.8.0.3 (GPL v3):
   https://github.com/Coronerra/Ostrands-with-Werewolves/releases/tag/v0.8.0.3
 No new OStrands build is needed for 0.7.
+
+0.7.1 CHANGELOG
+---------------
+- No Vampire Lord meshes, head morphs (TRI) or textures shipped any more
+  (13 files). MFA and OCreatures Reforged provide their own copies, so this
+  mod no longer overwrites them. Plugins, scripts and scene files unchanged.
+  The Vampire Lord aroused swap only runs if another mod provides
+  meshes\MoreNastyCritters\vampirelord\vampirelord_Hard.nif as a loose file.
+- TWO is used with Frosferes's blessing (installer and docs).
+
+HERMAPHRODITE OPTION AND SKYRIM 1.7.99+
+---------------------------------------
+TWO's herm / urta body is swapped in by TWO's own TWO_SkinSwapper.dll (TWO
+Extras, 0.2.1 from 2022). It supports Skyrim 1.5.97 and 1.6.x, not the new
+Address Library format of 1.7.99 / 1.7.104, so SKSE reports an error for it
+and the gender spell changes nothing visible. That's TWO's DLL, not this mod.
+Use 1.6.1170 (or GOG 1.6.1179) for the herm body until TWO's DLL is updated.
+Even then, the spell takes effect on your next transformation.
 
 0.7 CHANGELOG
 -------------
@@ -150,10 +169,11 @@ No TWO mesh, texture, plugin or skeleton is included. The plugins point at
 TWO's file paths and carry over a few TWO records, as any compatibility patch
 does. ExpHeadWerewolf_BFA.tri is a modified copy of TWO's expression TRI
 (Frosferes; MFA morphs by TealEri aka CinnaMewRoll) with two brow morphs
-added. GT Softbody cock meshes by Goutou; MoreNastyCritters textures as in
-earlier releases. Sheath geometry from Animated Beast's Cocks (BakaFactory).
-Growl (EnaiSiaion), JS Emissive Eyes (johnskyrim), MFA (Vampire Lord heads),
-Better Facial Animations (Cyberquach), OStim (VersuchDrei), OCum (Aietos),
+added. GT Softbody cock meshes by Goutou; MoreNastyCritters werewolf
+textures as in earlier releases. Sheath geometry from Animated Beast's Cocks
+(BakaFactory). Growl (EnaiSiaion), JS Emissive Eyes (johnskyrim), MFA
+(Vampire Lord heads; not shipped since 0.7.1), Better Facial Animations
+(Cyberquach), OStim (VersuchDrei), OCum (Aietos),
 Billyy (full permission for the Billyy-derived files), Lirael Atelier and the
 pack authors. Earlier versions shipped bodies from HDT Werewolves (Duzellx,
 Allegretto, jacques00) and a Fluffworks-style fur shell (Macxhiin); thank
