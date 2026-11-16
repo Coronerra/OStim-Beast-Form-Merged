@@ -1,0 +1,60 @@
+{
+	"name": "HCoS Werewolffy Style (Gay) 2 [female + male werewolf, male-first]",
+	"modpack": "OBeastLite",
+	"length": 6,
+	"navigations": [
+		{
+			"destination": "OBFWVLmmggaywerewolffystyleMF-3",
+			"description": "Next",
+			"icon": "OStim/symbols/next"
+		},
+		{
+			"destination": "OBFWVLCCHubMF",
+			"description": "Return",
+			"icon": "OStim/symbols/return"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmggaywerewolffystyle_S2"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			]
+		},
+		{
+			"type": "Werewolf",
+			"intendedSex": "female"
+		}
+	],
+	"actions": [
+		{
+			"type": "analsex",
+			"actor": 0,
+			"target": 1,
+			"performer": 0
+		}
+	],
+	"tags": [
+		"hcos",
+		"creature",
+		"cc",
+		"samerace",
+		"werewolf",
+		"doggystyle",
+		"standing",
+		"loving",
+		"romantic",
+		"packbeastcouples",
+		"converted",
+		"slal",
+		"anal",
+		"femwerewolf",
+		"obfunlock"
+	]
+}

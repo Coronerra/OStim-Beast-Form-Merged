@@ -1,0 +1,6 @@
+OStim Beast Form Merged 0.8.1 (beta) - static checks (on top of STATIC_CHECKS_0.8.txt)
+Not tested in game.
+- Changed vs 0.8: Scripts/OCumBeastPie.pex + .psc, 40 Herm/Scripts/OBFHerm_Main.pex + .psc, README (both copies), fomod/ModuleConfig.xml (name), fomod/info.xml (version), this file. Everything else byte-identical, including all plugins.
+- Compiled with Caprica 0.3.0 (game=skyrim). Same variables and properties, same order, as 0.8 (save-safe). New functions only: FaceFinish, GlazeActorFace.
+- FOMOD schema-valid.
+- Face rule run in a Python copy over every male werewolf/Vampire Lord stage in Lirael's 0.2.3 pack and this mod (927 beast/partner pairs): no face when he is inside anyone (643 pairs, 135 of them got face cum before); face for mouth/face/hand/foot/breast finishes (240) and oral-tagged scenes without actions (8); body only for unclear scenes (9) and for scenes tagged both oral and anal without actions (2, FlufyFox blowjob male-partner variant).

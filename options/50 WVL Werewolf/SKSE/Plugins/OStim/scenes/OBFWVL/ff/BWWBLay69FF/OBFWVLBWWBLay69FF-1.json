@@ -1,0 +1,78 @@
+{
+	"name": "Billyy (Werewolf) Laying 69 1 [female werewolf + woman]",
+	"modpack": "OBeastLite",
+	"length": 6,
+	"navigations": [
+		{
+			"origin": "OBFWVLHubFF",
+			"description": "Billyy (Werewolf) Laying 69 [female werewolf + woman]",
+			"icon": "OCreatures/werewolf/werewolforal"
+		},
+		{
+			"destination": "OBFWVLBWWBLay69FF-2",
+			"description": "Next",
+			"icon": "OStim/symbols/next"
+		},
+		{
+			"destination": "OBFWVLHubFF",
+			"description": "Return",
+			"icon": "OStim/symbols/return"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_BWWBLay69_S1"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "female"
+		},
+		{
+			"intendedSex": "female",
+			"tags": [
+				"lyingback"
+			],
+			"feetOnGround": false
+		}
+	],
+	"actions": [
+		{
+			"type": "cunnilingus",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		},
+		{
+			"type": "cunnilingus",
+			"actor": 0,
+			"target": 1,
+			"performer": 0
+		}
+	],
+	"tags": [
+		"billyy",
+		"creature",
+		"werewolf",
+		"bestiality",
+		"cf",
+		"dirty",
+		"laying",
+		"handjob",
+		"knotted",
+		"cuminmouth",
+		"movingdick",
+		"abc",
+		"packwerewolf",
+		"converted",
+		"slal",
+		"cunnilingus",
+		"oral",
+		"femwerewolf",
+		"lesbian",
+		"69",
+		"sixtynine",
+		"obfunlock"
+	]
+}

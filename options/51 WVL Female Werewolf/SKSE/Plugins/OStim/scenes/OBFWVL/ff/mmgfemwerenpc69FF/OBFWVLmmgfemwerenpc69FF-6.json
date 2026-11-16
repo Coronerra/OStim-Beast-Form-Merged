@@ -1,0 +1,70 @@
+{
+	"name": "HCoS (Female Werewolf) 69ing a FemWolf 6 [female werewolf + woman]",
+	"modpack": "OBeastLite",
+	"length": 6,
+	"navigations": [
+		{
+			"destination": "OBFWVLmmgfemwerenpc69FF-7",
+			"description": "Next(climax)",
+			"icon": "OStim/symbols/climax"
+		},
+		{
+			"destination": "OBFWVLHubFF",
+			"description": "Return",
+			"icon": "OStim/symbols/return"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmgfemwerenpc69_S6"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "female",
+			"autoTransitions": {
+				"climax": "OBFWVLmmgfemwerenpc69FF-7"
+			}
+		},
+		{
+			"intendedSex": "female",
+			"sosBend": 2,
+			"autoTransitions": {
+				"climax": "OBFWVLmmgfemwerenpc69FF-7"
+			}
+		}
+	],
+	"actions": [
+		{
+			"type": "cunnilingus",
+			"actor": 0,
+			"target": 1,
+			"performer": 0
+		},
+		{
+			"type": "cunnilingus",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"hcos",
+		"bestiality",
+		"werewolf",
+		"facesit",
+		"facesitting",
+		"creature",
+		"packfemalewerewolf",
+		"converted",
+		"slal",
+		"cunnilingus",
+		"oral",
+		"femwerewolf",
+		"lesbian",
+		"69",
+		"sixtynine",
+		"obfunlock"
+	]
+}

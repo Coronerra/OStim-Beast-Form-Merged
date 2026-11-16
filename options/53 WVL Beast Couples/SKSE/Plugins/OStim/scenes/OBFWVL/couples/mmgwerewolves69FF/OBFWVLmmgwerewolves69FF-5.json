@@ -1,0 +1,71 @@
+{
+	"name": "HCoS Werewolves 69 5 [two female werewolves]",
+	"modpack": "OBeastLite",
+	"length": 6,
+	"navigations": [
+		{
+			"destination": "OBFWVLmmgwerewolves69FF-6",
+			"description": "Next(climax)",
+			"icon": "OStim/symbols/climax"
+		},
+		{
+			"destination": "OBFWVLCCHubFF",
+			"description": "Return",
+			"icon": "OStim/symbols/return"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmgwerewolves69_S5"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "female",
+			"autoTransitions": {
+				"climax": "OBFWVLmmgwerewolves69FF-6"
+			}
+		},
+		{
+			"type": "Werewolf",
+			"intendedSex": "female",
+			"autoTransitions": {
+				"climax": "OBFWVLmmgwerewolves69FF-6"
+			}
+		}
+	],
+	"actions": [
+		{
+			"type": "cunnilingus",
+			"actor": 0,
+			"target": 1,
+			"performer": 0
+		},
+		{
+			"type": "cunnilingus",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"hcos",
+		"creature",
+		"cc",
+		"samerace",
+		"werewolf",
+		"loving",
+		"romantic",
+		"packbeastcouples",
+		"converted",
+		"slal",
+		"cunnilingus",
+		"oral",
+		"femwerewolf",
+		"lesbian",
+		"69",
+		"sixtynine",
+		"obfunlock"
+	]
+}

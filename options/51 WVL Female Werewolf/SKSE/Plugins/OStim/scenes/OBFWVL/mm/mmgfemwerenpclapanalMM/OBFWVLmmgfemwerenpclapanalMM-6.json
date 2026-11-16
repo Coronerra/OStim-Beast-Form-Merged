@@ -1,0 +1,55 @@
+{
+	"name": "HCoS (Werewolf) Anal FemWolfDom 6 [male werewolf + man]",
+	"modpack": "OBeastLite",
+	"length": 23.333334,
+	"speeds": [
+		{
+			"animation": "WVL_mmgfemwerenpclapanal_S6"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"tags": [
+				"climaxing"
+			]
+		},
+		{
+			"intendedSex": "male",
+			"tags": [
+				"lyingback",
+				"onbottom",
+				"climaxing"
+			],
+			"feetOnGround": false,
+			"sosBend": -2
+		}
+	],
+	"actions": [
+		{
+			"type": "analsex",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"hcos",
+		"bestiality",
+		"werewolf",
+		"cowgirl",
+		"femdom",
+		"dom",
+		"creature",
+		"packfemalewerewolf",
+		"converted",
+		"slal",
+		"transition",
+		"anal",
+		"gay",
+		"obfunlock"
+	],
+	"noRandomSelection": true,
+	"destination": "OBFWVLmmgfemwerenpclapanalMM-5"
+}

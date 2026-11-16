@@ -1,0 +1,58 @@
+{
+	"name": "HCoS (Werewolf) FemWolf Standing Embrace 3 [male werewolf + man]",
+	"modpack": "OBeastLite",
+	"length": 6,
+	"navigations": [
+		{
+			"destination": "OBFWVLmmgfemwerenpcstandMM-4",
+			"description": "Next",
+			"icon": "OStim/symbols/next"
+		},
+		{
+			"destination": "OBFWVLHubMM",
+			"description": "Return",
+			"icon": "OStim/symbols/return"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmgfemwerenpcstand_S3"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male"
+		},
+		{
+			"intendedSex": "male",
+			"tags": [
+				"standing"
+			],
+			"feetOnGround": true,
+			"sosBend": 3
+		}
+	],
+	"actions": [
+		{
+			"type": "analsex",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"hcos",
+		"bestiality",
+		"werewolf",
+		"standing",
+		"holding",
+		"creature",
+		"packfemalewerewolf",
+		"converted",
+		"slal",
+		"anal",
+		"gay",
+		"obfunlock"
+	]
+}

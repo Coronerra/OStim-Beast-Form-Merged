@@ -2,14 +2,7 @@
     "name": "OCrWerewolfIdleFMMM",
     "modpack": "OBeastLite",
     "length": 2,
-    "navigations": [
-        {
-            "destination": "BillyyWerewolfHubFMMM",
-            "description": "BillyyWerewolfHubFMMM",
-            "icon": "OCreatures/werewolf/werewolf",
-            "priority": 0
-        }
-    ],
+    "navigations": [],
     "speeds": [
         {
             "animation": "OBF_B_WW_B_4pGB1_S1"

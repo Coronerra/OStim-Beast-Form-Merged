@@ -1,8 +1,52 @@
-OStim Beast Form Merged 0.7.2 (Skyrim SE / AE)
+OStim Beast Form Merged 0.8.1 BETA (Skyrim SE / AE)
 by That Guy (Coronerra)
 Source code: https://github.com/Coronerra/OStim-Beast-Form-Merged
 
 Play as a werewolf in OStim with your mind intact.
+
+NEW IN 0.8.1 (BETA): BEAST CLIMAX FACE FIX
+------------------------------------------
+- The beast-sized climax (MCM "Beast climax (OCum)") now only covers her
+  face when he finishes in her mouth or on her face (blowjob, facial), or
+  sprays from outside (handjob, footjob, boobjob, scenes tagged as an
+  outside finish). When he finishes inside her (vaginal or anal), her face
+  stays clean; the body still gets the spill-over as before.
+- Scripts only (OCumBeastPie, and OBFHerm_Main for the Herm option). Same
+  plugins and FormIDs; saves keep working. Update with MO2's "Replace".
+
+NEW IN 0.8 (BETA): BUILT FOR LIRAEL'S WEREWOLF AND VAMPIRE LORD OSTIM
+--------------------------------------------------------------------
+Lirael Atelier's "Werewolf and Vampire Lord OStim" (0.2.3) now carries all
+the animations. This mod carries the bodies, the scripts, and a set of scene
+files that sit on top of her pack. Her pack is recommended, not required:
+  https://www.patreon.com/LiraelAtelier/posts/werewolf-and-for-175434973
+- New optional installer page: tick the parts of her pack you installed
+  (Werewolf, Female Werewolf, Vampire Lord, Beast Couples). It pre-ticks them
+  when WVLAnimObj.esp is enabled. Nothing from her pack is copied: no
+  animations, no behavior files. Put this mod BELOW her pack in MO2's left
+  pane.
+- Works without OCreatures Reforged: her Female Werewolf menu hangs from this
+  mod's own female werewolf start, her Beast Couples menus get this mod's own
+  couple starts (two werewolves, two vampire lords, mixed pairs), and her
+  menus' waiting poses use this mod's fallback animations. With OCreatures
+  Reforged installed, her menus also keep their OCR buttons.
+- More pairings where the pose really fits (18 of her 83 animations, see
+  Docs\OStim Beast Form Merged\WVL_ROLE_UNLOCKS_0.8.md):
+  * a man taking a male werewolf from behind, missionary, riding, standing,
+    in his lap, plus blowjob and 69 (from her female werewolf scenes);
+  * a female werewolf going down on a woman, a woman going down on a female
+    werewolf, 69s and cuddling;
+  * two male werewolves, two female werewolves, and female + male werewolf
+    versions of her couple scenes, plus two male vampire lords.
+  A man as the werewolf's partner is already in her own "male partner"
+  options, so those aren't duplicated. No herm/futa pairings are added; a
+  female werewolf never takes the penetrating role.
+- Old animation-pack menus removed: the Billyy, Baka, FlufyFox and FunnyBiz
+  menu pages (and their scene files) are no longer shipped. If you still have
+  those older packs (or the old Starter Animation Pack) installed, their own
+  menu buttons still appear on this mod's hubs.
+- Same plugins, scripts, meshes and FormIDs as 0.7.2. Saves keep working. No
+  Pandora run needed for this mod (her pack needs one).
 
 ONE DOWNLOAD FOR EVERYONE (NEW IN 0.7)
 --------------------------------------
@@ -53,16 +97,19 @@ THE INSTALLER (read every page; wrong options = the mod won't work)
    I am not going to test this myself. If you use TWO's herm or urta
    werewolf, please test it and report any problems in the support section
    of the OStim Beast Form Merged page on LoversLab.
-4. Read and acknowledge: one required box, "I have read and understand".
+4. Lirael's Werewolf and Vampire Lord OStim (optional, new in 0.8): tick
+   each part of her pack you installed. Only tick what you have; a ticked
+   part without her pack gives menu buttons that don't animate.
+5. Read and acknowledge: one required box, "I have read and understand".
 
 REQUIREMENTS
 ------------
 Everyone: TWO 4.1 (Core), Monster Facial Animation (MonsterLipSync1.esp, a
 hard master), OStim Standalone, OCum Ascended, SKSE, Address Library, SkyUI,
 PapyrusUtil, RaceMenu, powerofthree's Papyrus Extender, XPMSSE, FSMP,
-Pandora (or another behavior engine), and at least one OStim pack with
-werewolf scenes (for example Lirael Atelier's free converted packs on
-LoversLab, account Lauffey).
+Pandora (or another behavior engine), and an OStim pack with werewolf
+scenes. Recommended: Lirael Atelier's Werewolf and Vampire Lord OStim
+0.2.3 (https://www.patreon.com/LiraelAtelier/posts/werewolf-and-for-175434973).
 Growl option: Growl, JS Emissive Eyes SE, TWO's Growl patch
 (WerewolvesGrowl.esp).
 Softbody Yes: SOFTBODY (GT - Softbody) by Goutou. This mod must load after it
@@ -99,9 +146,10 @@ INSTALL (MO2)
 -------------
 1. Install the requirements and TWO 4.1. Disable HDT Werewolves.
 2. Coming from an earlier OStim Beast Form download? Read UPDATING first.
-3. Install this zip and answer the four pages.
+3. Install this zip and answer the five pages.
 4. Left pane: this mod below OStim, OCum, Growl, GT - Softbody,
-   OCreatures Reforged, the animation packs and SkyrimNet/OStimNet. Put TWO
+   OCreatures Reforged, Lirael's Werewolf and Vampire Lord OStim (this mod
+   overrides a few of her menu files, so it must win) and SkyrimNet/OStimNet. Put TWO
    (then TWO Alternate Textures, then your TWO BodySlide output) below this
    mod. Better Facial Animations and the Pandora output go last. MFA shares
    no files with this mod (since 0.7.1), so its spot doesn't matter.
@@ -127,6 +175,13 @@ UPDATING
 --------
 First: human form, no scene, save, quit the game and MO2, back up. Reinstall
 over the old mod with MO2's "Replace".
+- Merged 0.8: same options; just replace. Scripts only.
+- Merged 0.7.2: same options as before, plus the new page for Lirael's pack.
+  Your save keeps working. The Billyy/Baka/FlufyFox/FunnyBiz menu pages that
+  0.7.2 shipped are gone; install her pack for scenes.
+- Old Starter Animation Pack / Lirael's older Billyy, Baka, FlufyFox and
+  FunnyBiz packs: you can keep them (their buttons still show up), but her
+  0.2.3 pack contains the same animations, so you would see them twice.
 - Merged 0.7.1: same options as before; your save keeps working. Softbody
   No: nothing changed. Softbody Yes: TWO's canine replaces the GT Softbody
   cock and female werewolves get the softbody-ready TWO body. No Pandora run.
@@ -216,7 +271,18 @@ KNOWN LIMITS / PLEASE TEST
   other mods (HCOS herm skin, Diverse Werewolves Collection) keep TWO's.
 - Diverse Werewolves Collection SE (Nexus 7009): reported not compatible,
   the camera locks to the side. Leave it off.
-- No female werewolf scenes are bundled; they come from separate packs.
+- No scenes are bundled; they come from Lirael's pack.
+- 0.8 BETA, not tested in game: the new pairings, the couple starts and the
+  menu fixes for Lirael's pack. Please report problems in the support topic.
+- Starting scenes: OStim's own start key puts whoever has a penis first. The
+  couple starts are set up for that. For a female werewolf with a man or a
+  woman, and for a male werewolf with a man, the werewolf has to be first:
+  use this mod's start key as the werewolf, or OStim's "player selects role"
+  option.
+- Menu icons for her pages come from OCreatures Reforged; without it some
+  buttons show no icon (a Beast Form icon pack is planned).
+- The male werewolf versions of her female werewolf scenes reuse her female
+  werewolf animations, so expect some clipping on the male body.
 - Scenes can't start in combat (try the "Try StopCombat" MCM option).
 
 PERMISSIONS AND CREDITS
@@ -239,7 +305,14 @@ Tull/Liquid code and Scene Change Fix (Blacksheepo815, DwemerMods) and GT
 Softbody's OCum fixes (Goutou); Tull Animated Creampie (Tullius Channel,
 Emotional Trash Can), Liquid Pack v2 (PredatorRJ),
 Billyy (full permission for the Billyy-derived files), Lirael Atelier and the
-pack authors. Earlier versions shipped bodies from HDT Werewolves (Duzellx,
+pack authors.
+0.8 scene files: Lirael Atelier converted and packaged Werewolf and Vampire
+Lord OStim; the new pairings are edited copies of her scene data and use her
+animations. The animations are by Billyy (werewolf, vampire lord), Anub,
+FlufyFox, Baka (BakaFactory), FunnyBizness, the More Nasty Critters team
+(Dayelyte, Panicforever) and MadMansGun (Horny Creatures of Skyrim; the
+couple and female werewolf + human scenes). Lirael did not make the
+animations. Earlier versions shipped bodies from HDT Werewolves (Duzellx,
 Allegretto, jacques00) and a Fluffworks-style fur shell (Macxhiin); thank
 you. Full credits: https://github.com/Coronerra/OStim-Beast-Form-Merged
 That Guy (Coronerra)'s own work is MIT. Third-party assets belong to their

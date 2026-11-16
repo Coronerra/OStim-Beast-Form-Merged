@@ -1,0 +1,68 @@
+{
+	"name": "Billyy (Werewolf) Laying 69 5 [female werewolf + woman]",
+	"modpack": "OBeastLite",
+	"length": 8.333333,
+	"speeds": [
+		{
+			"animation": "WVL_BWWBLay69_S5"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "female",
+			"tags": [
+				"climaxing"
+			]
+		},
+		{
+			"intendedSex": "female",
+			"tags": [
+				"lyingback",
+				"climaxing"
+			],
+			"feetOnGround": false
+		}
+	],
+	"actions": [
+		{
+			"type": "cunnilingus",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		},
+		{
+			"type": "cunnilingus",
+			"actor": 0,
+			"target": 1,
+			"performer": 0
+		}
+	],
+	"tags": [
+		"billyy",
+		"creature",
+		"werewolf",
+		"bestiality",
+		"cf",
+		"dirty",
+		"laying",
+		"handjob",
+		"knotted",
+		"cuminmouth",
+		"movingdick",
+		"abc",
+		"packwerewolf",
+		"converted",
+		"slal",
+		"transition",
+		"cunnilingus",
+		"oral",
+		"femwerewolf",
+		"lesbian",
+		"69",
+		"sixtynine",
+		"obfunlock"
+	],
+	"noRandomSelection": true,
+	"destination": "OBFWVLBWWBLay69FF-4"
+}

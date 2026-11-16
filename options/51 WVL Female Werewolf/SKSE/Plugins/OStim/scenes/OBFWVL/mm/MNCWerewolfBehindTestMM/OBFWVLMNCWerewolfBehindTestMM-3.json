@@ -1,0 +1,53 @@
+{
+	"name": "MNC (Werewolf) Doggystyle 3 [male werewolf + man]",
+	"modpack": "OBeastLite",
+	"length": 13.333333,
+	"speeds": [
+		{
+			"animation": "WVL_MNCWerewolfBehindTest_S3"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"tags": [
+				"climaxing"
+			]
+		},
+		{
+			"intendedSex": "male",
+			"tags": [
+				"kneeling",
+				"climaxing"
+			],
+			"feetOnGround": false
+		}
+	],
+	"actions": [
+		{
+			"type": "analsex",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"mnc",
+		"dayelyte",
+		"bestiality",
+		"werewolf",
+		"doggystyle",
+		"holding",
+		"creature",
+		"packfemalewerewolf",
+		"converted",
+		"slal",
+		"transition",
+		"anal",
+		"gay",
+		"obfunlock"
+	],
+	"noRandomSelection": true,
+	"destination": "OBFWVLMNCWerewolfBehindTestMM-2"
+}

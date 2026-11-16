@@ -1,0 +1,52 @@
+{
+	"name": "MNC (Werewolf) Missionary 3 [male werewolf + man]",
+	"modpack": "OBeastLite",
+	"length": 15,
+	"speeds": [
+		{
+			"animation": "WVL_MNCWerewolfMissionaryTest_S3"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"tags": [
+				"climaxing"
+			]
+		},
+		{
+			"intendedSex": "male",
+			"tags": [
+				"kneeling",
+				"climaxing"
+			],
+			"feetOnGround": false
+		}
+	],
+	"actions": [
+		{
+			"type": "analsex",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"mnc",
+		"dayelyte",
+		"bestiality",
+		"werewolf",
+		"missionary",
+		"creature",
+		"packfemalewerewolf",
+		"converted",
+		"slal",
+		"transition",
+		"anal",
+		"gay",
+		"obfunlock"
+	],
+	"noRandomSelection": true,
+	"destination": "OBFWVLMNCWerewolfMissionaryTestMM-2"
+}

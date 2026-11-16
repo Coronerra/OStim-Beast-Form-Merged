@@ -1,0 +1,65 @@
+{
+	"name": "Billyy (Werewolf) Cunnilingus Missionary 3 [female werewolf + woman]",
+	"modpack": "OBeastLite",
+	"length": 6,
+	"navigations": [
+		{
+			"destination": "OBFWVLBWWBCunnMissFF-4",
+			"description": "Next",
+			"icon": "OStim/symbols/next"
+		},
+		{
+			"destination": "OBFWVLHubFF",
+			"description": "Return",
+			"icon": "OStim/symbols/return"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_BWWBCunnMiss_S3"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "female"
+		},
+		{
+			"intendedSex": "female",
+			"tags": [
+				"lyingback"
+			],
+			"feetOnGround": false
+		}
+	],
+	"actions": [
+		{
+			"type": "cunnilingus",
+			"actor": 0,
+			"target": 1,
+			"performer": 0
+		}
+	],
+	"tags": [
+		"billyy",
+		"creature",
+		"werewolf",
+		"bestiality",
+		"cf",
+		"dirty",
+		"loving",
+		"laying",
+		"missiongary",
+		"movingdick",
+		"abc",
+		"romantic",
+		"packwerewolf",
+		"converted",
+		"slal",
+		"cunnilingus",
+		"oral",
+		"femwerewolf",
+		"lesbian",
+		"obfunlock"
+	]
+}

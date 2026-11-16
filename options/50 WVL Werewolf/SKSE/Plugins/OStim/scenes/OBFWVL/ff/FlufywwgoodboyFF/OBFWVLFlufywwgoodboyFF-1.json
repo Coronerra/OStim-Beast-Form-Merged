@@ -1,0 +1,67 @@
+{
+	"name": "FlufyFox Werewolf Good Boy 1 [female werewolf + woman]",
+	"modpack": "OBeastLite",
+	"length": 6,
+	"navigations": [
+		{
+			"origin": "OBFWVLHubFF",
+			"description": "FlufyFox Werewolf Good Boy [female werewolf + woman]",
+			"icon": "OCreatures/werewolf/werewolf"
+		},
+		{
+			"destination": "OBFWVLFlufywwgoodboyFF-2",
+			"description": "Next(climax)",
+			"icon": "OStim/symbols/climax"
+		},
+		{
+			"destination": "OBFWVLHubFF",
+			"description": "Return",
+			"icon": "OStim/symbols/return"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_Flufywwgoodboy_S1"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "female",
+			"autoTransitions": {
+				"climax": "OBFWVLFlufywwgoodboyFF-2"
+			}
+		},
+		{
+			"intendedSex": "female",
+			"autoTransitions": {
+				"climax": "OBFWVLFlufywwgoodboyFF-2"
+			}
+		}
+	],
+	"actions": [
+		{
+			"type": "cuddling",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"flufyfox",
+		"creature",
+		"bestiality",
+		"werewolf",
+		"cute",
+		"foreplay",
+		"pet",
+		"petting",
+		"pose",
+		"packwerewolf",
+		"converted",
+		"slal",
+		"femwerewolf",
+		"lesbian",
+		"obfunlock"
+	]
+}

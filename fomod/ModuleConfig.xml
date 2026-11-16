@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
-	<moduleName>OStim Beast Form Merged 0.7.2</moduleName>
+	<moduleName>OStim Beast Form Merged 0.8.1 (beta)</moduleName>
 	<requiredInstallFiles>
 		<folder source="00 Common" destination="" priority="0" />
 	</requiredInstallFiles>
@@ -106,12 +106,100 @@ I am not going to test this myself. If you use TWO's herm or urta werewolf, plea
 				</group>
 			</optionalFileGroups>
 		</installStep>
+		<installStep name="Lirael's Werewolf and Vampire Lord OStim (optional)">
+			<optionalFileGroups order="Explicit">
+				<group name="Which parts of Lirael's Werewolf and Vampire Lord OStim 0.2.3 did you install? (tick all that apply, or none)" type="SelectAny">
+					<plugins order="Explicit">
+						<plugin name="Werewolf">
+							<description>Her Werewolf part. Fixes her Werewolf Pack menus so their waiting pose works without OCreatures Reforged, and adds female werewolf + woman versions of the scenes where only the werewolf's tongue or hands are used (cunnilingus, 69, cuddling). Only tick the parts of Lirael's pack you actually installed. This mod ships no animations, only scene files that use hers, so a ticked part whose pack is missing gives you menu buttons that don't animate. Keep this mod BELOW Lirael's pack in MO2's left pane. No Pandora run is needed for this mod (run it for Lirael's pack as she says).
+
+Lirael's pack: https://www.patreon.com/LiraelAtelier/posts/werewolf-and-for-175434973</description>
+							<conditionFlags>
+								<flag name="wvl_ww">on</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional" />
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="WVLAnimObj.esp" state="Active" />
+											</dependencies>
+											<type name="Recommended" />
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Female Werewolf">
+							<description>Her Female Werewolf part. Hooks her Female Werewolf Pack to this mod's own female werewolf start, so it works without OCreatures Reforged, and adds male werewolf + man versions (the man takes the werewolf from behind, missionary, riding, standing, lap, blowjob, 69) and female werewolf + woman versions (cunnilingus, 69). Only tick the parts of Lirael's pack you actually installed. This mod ships no animations, only scene files that use hers, so a ticked part whose pack is missing gives you menu buttons that don't animate. Keep this mod BELOW Lirael's pack in MO2's left pane. No Pandora run is needed for this mod (run it for Lirael's pack as she says).</description>
+							<conditionFlags>
+								<flag name="wvl_fww">on</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional" />
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="WVLAnimObj.esp" state="Active" />
+											</dependencies>
+											<type name="Recommended" />
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Vampire Lord">
+							<description>Her Vampire Lord part. Fixes her Vampire Lord Pack menu so its waiting pose works without OCreatures Reforged. Only tick the parts of Lirael's pack you actually installed. This mod ships no animations, only scene files that use hers, so a ticked part whose pack is missing gives you menu buttons that don't animate. Keep this mod BELOW Lirael's pack in MO2's left pane. No Pandora run is needed for this mod (run it for Lirael's pack as she says).</description>
+							<conditionFlags>
+								<flag name="wvl_vl">on</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional" />
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="WVLAnimObj.esp" state="Active" />
+											</dependencies>
+											<type name="Recommended" />
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+						<plugin name="Beast Couples">
+							<description>Her Beast Couples part. Adds this mod's own couple start scenes, so two werewolves or two vampire lords can start her couple scenes with OStim's normal start key and no OCreatures Reforged. Adds two male werewolf, female + male werewolf, two female werewolf and two male vampire lord versions. Only tick the parts of Lirael's pack you actually installed. This mod ships no animations, only scene files that use hers, so a ticked part whose pack is missing gives you menu buttons that don't animate. Keep this mod BELOW Lirael's pack in MO2's left pane. No Pandora run is needed for this mod (run it for Lirael's pack as she says).</description>
+							<conditionFlags>
+								<flag name="wvl_cc">on</flag>
+							</conditionFlags>
+							<typeDescriptor>
+								<dependencyType>
+									<defaultType name="Optional" />
+									<patterns>
+										<pattern>
+											<dependencies operator="And">
+												<fileDependency file="WVLAnimObj.esp" state="Active" />
+											</dependencies>
+											<type name="Recommended" />
+										</pattern>
+									</patterns>
+								</dependencyType>
+							</typeDescriptor>
+						</plugin>
+					</plugins>
+				</group>
+			</optionalFileGroups>
+		</installStep>
 		<installStep name="Read and acknowledge">
 			<optionalFileGroups order="Explicit">
 				<group name="Acknowledgement (required)" type="SelectAll">
 					<plugins order="Explicit">
 						<plugin name="I have read and understand">
 							<description>I have read every option in this installer and didn't just click through. If I picked the wrong options, the mod won't work. This mod uses the TWO body made by Frosferes, at the LoversLab community's request. Frosferes is okay with patches but I will not repackage any files he made that I did not have to patch. So non-softbody female bodies and all Male bodies are still dependant on his TWO bodies. Anyone is free to make their own patches, hubs and mods based on this one.
+
+Animations: this mod no longer ships or links any old animation pack scenes. Install Lirael Atelier's Werewolf and Vampire Lord OStim (https://www.patreon.com/LiraelAtelier/posts/werewolf-and-for-175434973) for werewolf and vampire lord scenes; this mod only adds scene files on top of it. Lirael converted those animations; the animators are credited in her pack and in this mod's README.
 
 
 Known incompatibilities (as of this release):
@@ -193,6 +281,38 @@ Source code: https://github.com/Coronerra/OStim-Beast-Form-Merged</description>
 				</dependencies>
 				<files>
 					<folder source="40 Herm" destination="" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="wvl_ww" value="on" />
+				</dependencies>
+				<files>
+					<folder source="50 WVL Werewolf" destination="" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="wvl_fww" value="on" />
+				</dependencies>
+				<files>
+					<folder source="51 WVL Female Werewolf" destination="" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="wvl_vl" value="on" />
+				</dependencies>
+				<files>
+					<folder source="52 WVL Vampire Lord" destination="" priority="0" />
+				</files>
+			</pattern>
+			<pattern>
+				<dependencies operator="And">
+					<flagDependency flag="wvl_cc" value="on" />
+				</dependencies>
+				<files>
+					<folder source="53 WVL Beast Couples" destination="" priority="0" />
 				</files>
 			</pattern>
 		</patterns>

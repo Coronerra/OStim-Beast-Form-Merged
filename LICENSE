@@ -43,11 +43,14 @@ textures, animations and scene data derived from or pointing at:
   to 0.7, not since 0.7.1).
 - Animated Beast's Cocks (BakaFactory): the Growl option's sheath, tip and knot
   geometry.
-- Animations by Billyy, BakaFactory, FluffyFox and FunnyBizness. Their OStim
-  conversions and packaging are by Lirael Atelier, who did not make the
-  animations. Bundled: Billyy-derived fallback poses and scene/hub files (Billyy
-  has given full permission) and edited copies of the packs' scene files (hub
-  routing only).
+- Animations by Billyy, Anub, FlufyFox (FluffyFox), BakaFactory, FunnyBizness,
+  the More Nasty Critters team (Dayelyte, Panicforever) and MadMansGun. Their
+  OStim conversions and packaging (including Werewolf and Vampire Lord OStim
+  0.2.3) are by Lirael Atelier, who did not make the animations. Bundled:
+  Billyy-derived fallback poses (Billyy has given full permission) and, since
+  0.8, edited copies of Lirael's converted scene data (menu overrides and
+  extra-cast scenes, no animation files). Up to 0.7.2: Billyy scene/hub files
+  and edited copies of the Baka/FluffyFox/FunnyBiz scene files (hub routing).
 - OCreatures (J0suk3_), OCreatures Revived (chrystelle) and OCreatures
   Reforged (Lirael Atelier): edited copies of the idle/hub scene files.
 - GT - Softbody (Goutou): the softbody canal setup follows it (its werewolf

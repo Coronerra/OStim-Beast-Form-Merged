@@ -1,0 +1,62 @@
+{
+	"name": "Beast Couples Pack MM",
+	"modpack": "WerewolfVampireLordOStim",
+	"length": 2,
+	"navigations": [
+		{
+			"origin": "OCrWerewolfIdleCCMM",
+			"description": "Beast Couples Pack",
+			"icon": "OCreatures/werewolf/werewolf",
+			"priority": -100,
+			"noWarnings": true
+		},
+		{
+			"destination": "OCrWerewolfIdleCCMM",
+			"description": "Return",
+			"icon": "OStim/symbols/return",
+			"priority": -1000,
+			"noWarnings": true
+		},
+		{
+			"destination": "OBFWerewolfIdleCCMM",
+			"description": "Return (Beast Form)",
+			"icon": "OStim/symbols/return",
+			"priority": -1001
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmggaywerewolffystyle_S1"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"tags": [
+				"standing"
+			]
+		},
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"tags": [
+				"standing"
+			]
+		}
+	],
+	"tags": [
+		"idle",
+		"intro",
+		"creature",
+		"werewolf",
+		"packbeastcouples"
+	],
+	"noRandomSelection": true
+}

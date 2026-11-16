@@ -1,0 +1,65 @@
+{
+	"name": "HCoS Vampire on Vampire 5 [two male vampire lords]",
+	"modpack": "OBeastLite",
+	"length": 6,
+	"navigations": [
+		{
+			"destination": "OBFWVLmmgvamponvampMM-6",
+			"description": "Next(climax)",
+			"icon": "OStim/symbols/climax"
+		},
+		{
+			"destination": "OBFWVLCCVLHubMM",
+			"description": "Return",
+			"icon": "OStim/symbols/return"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmgvamponvamp_S5"
+		}
+	],
+	"actors": [
+		{
+			"type": "VampireLord",
+			"intendedSex": "male",
+			"autoTransitions": {
+				"climax": "OBFWVLmmgvamponvampMM-6"
+			}
+		},
+		{
+			"type": "VampireLord",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"autoTransitions": {
+				"climax": "OBFWVLmmgvamponvampMM-6"
+			}
+		}
+	],
+	"actions": [
+		{
+			"type": "analsex",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"hcos",
+		"creature",
+		"cc",
+		"samerace",
+		"vampirelord",
+		"missionary",
+		"loving",
+		"romantic",
+		"packbeastcouples",
+		"converted",
+		"slal",
+		"anal",
+		"gay",
+		"obfunlock"
+	]
+}

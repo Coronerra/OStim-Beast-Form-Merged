@@ -1,0 +1,58 @@
+{
+	"name": "OBFWVLHubMM",
+	"modpack": "OBeastLite",
+	"length": 2,
+	"navigations": [
+		{
+			"origin": "OBFWerewolfIdleMM",
+			"description": "Werewolf Bottom (Beast Form)",
+			"icon": "OCreatures/werewolf/werewolf",
+			"priority": -100
+		},
+		{
+			"origin": "WVLIdleWWMWerewolfMMC1",
+			"description": "Werewolf Bottom (Beast Form)",
+			"icon": "OCreatures/werewolf/werewolf",
+			"priority": -100,
+			"noWarnings": true
+		},
+		{
+			"destination": "OBFWerewolfIdleMM",
+			"description": "Return",
+			"icon": "OStim/symbols/return",
+			"priority": -1000
+		}
+	],
+	"speeds": [
+		{
+			"animation": "OBF_B_WW_B_Dog2_S1"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"tags": [
+				"standing"
+			]
+		},
+		{
+			"intendedSex": "male",
+			"tags": [
+				"standing"
+			]
+		}
+	],
+	"tags": [
+		"idle",
+		"intro",
+		"creature",
+		"werewolf",
+		"obfunlock",
+		"packwerewolfmalepartner"
+	],
+	"noRandomSelection": true
+}

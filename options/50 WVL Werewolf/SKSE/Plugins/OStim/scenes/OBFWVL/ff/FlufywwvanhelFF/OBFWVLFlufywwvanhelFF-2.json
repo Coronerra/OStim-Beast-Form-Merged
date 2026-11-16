@@ -1,0 +1,52 @@
+{
+	"name": "FlufyFox Werewolf Vanhelsing Howl 2 [female werewolf + woman]",
+	"modpack": "OBeastLite",
+	"length": 10,
+	"speeds": [
+		{
+			"animation": "WVL_Flufywwvanhel_S2"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "female",
+			"tags": [
+				"climaxing"
+			]
+		},
+		{
+			"intendedSex": "female",
+			"tags": [
+				"climaxing"
+			]
+		}
+	],
+	"actions": [
+		{
+			"type": "cuddling",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"flufyfox",
+		"creature",
+		"bestiality",
+		"werewolf",
+		"cute",
+		"foreplay",
+		"pet",
+		"pose",
+		"packwerewolf",
+		"converted",
+		"slal",
+		"transition",
+		"femwerewolf",
+		"lesbian",
+		"obfunlock"
+	],
+	"noRandomSelection": true,
+	"destination": "OBFWVLFlufywwvanhelFF-1"
+}

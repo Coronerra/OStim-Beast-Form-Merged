@@ -252,7 +252,7 @@ Event OnBeastOrgasm(string eventName, string strArg, float numArg, Form sender)
 	endif
 	int pos = OThread.GetActorPosition(tid, orgasmer)
 
-	bool oral = OMetadata.HasAnySceneTagCSV(sid, "blowjob,oral,cuminmouth,facefuck,facial,facecum,deepthroat") || OMetadata.FindAnyActionForActorCSV(sid, pos, "blowjob,deepthroating,penilelicking,rubbingpenisagainstface,facial") != -1 || OMetadata.FindAnyActionCSV(sid, "blowjob,deepthroating") != -1
+	bool oral = OMetadata.HasAnySceneTagCSV(sid, "blowjob,oral,cuminmouth,facefuck,facial,facecum,deepthroat") || OMetadata.FindAnyActionForTargetCSV(sid, pos, "blowjob,deepthroating,penilelicking") != -1 || OMetadata.FindAnyActionForActorCSV(sid, pos, "rubbingpenisagainstface,facial") != -1 || OMetadata.FindAnyActionCSV(sid, "blowjob,deepthroating") != -1
 	bool anal = OMetadata.HasAnySceneTagCSV(sid, "anal,analcreampie") || OMetadata.FindAnyActionForActorCSV(sid, pos, "analsex") != -1
 	bool vag = OMetadata.HasAnySceneTagCSV(sid, "vaginal,creampie,knotted") || OMetadata.FindAnyActionForActorCSV(sid, pos, "vaginalsex,wwfvaginalsex") != -1
 	bool foot = OMetadata.HasSceneTag(sid, "footjob") || OMetadata.FindAnyActionCSV(sid, "footjob") != -1
@@ -263,8 +263,10 @@ Event OnBeastOrgasm(string eventName, string strArg, float numArg, Form sender)
 		vag = false
 		anal = false
 	endif
+	bool guessed = false
 	if !oral && !anal && !vag && !outside
 		outside = true
+		guessed = true
 	endif
 
 	Debug.Trace("[OBF Herm] " + orgasmer.GetDisplayName() + " climax, thread " + tid + ", scene " + sid)
@@ -285,7 +287,8 @@ Event OnBeastOrgasm(string eventName, string strArg, float numArg, Form sender)
 			Actor t = acts[i]
 			if t && t != orgasmer && !Pie.IsBeast(t)
 				Pie.PrepTarget(t)
-				Pie.GlazeActor(orgasmer, t, tid, sid, intensity, layers, oral, vag, anal, foot, hand, outside)
+				bool face = Pie.FaceFinish(sid, pos, OThread.GetActorPosition(tid, t), oral, vag, anal, outside, guessed)
+				Pie.GlazeActorFace(orgasmer, t, tid, sid, intensity, layers, oral, vag, anal, foot, hand, outside, face)
 			endif
 		endwhile
 	endif

@@ -6,6 +6,7 @@ Scriptname OCumBeastPie extends Quest
    vaginalsex/analsex/blowjob, so footjobs, handjobs and "aircum" scenes get nothing, and vaginal/anal
    overlays and meshes are off by default in OCum). Decals go through OCum's own functions, so OCum's
    cleanup timer and bathing still clear them. Tull/Liquid meshes are worn as long as OCum's decals last.
+0.8.1: cum on the face only for oral/facial finishes and outside sprays, never for an internal (vaginal/anal) finish.
 No OCumMaleScript.pex replacement, no new records.}
 
 Race WerewolfRace
@@ -115,7 +116,7 @@ Event OnPie(string eventName, string strArg, float numArg, Form sender)
 EndEvent
 
 ; ======================= 2) Beast Load =======================
-; finish bits: 1 vaginal/anal pie, 2 oral/face, 4 body glaze; ItemMask() turns them (+ round) into item bits
+; finish bits: 1 vaginal/anal pie, 2 oral/face, 4 body glaze, 8 no face (0.8.1); ItemMask() turns them (+ round) into item bits
 
 Event OnBeastOrgasm(string eventName, string strArg, float numArg, Form sender)
 	; cheap exit for every non-beast orgasm (keeps the VM light)
@@ -138,7 +139,8 @@ Event OnBeastOrgasm(string eventName, string strArg, float numArg, Form sender)
 	int pos = OThread.GetActorPosition(tid, orgasmer)
 
 	; creature packs tag their scenes better than they fill in actions, so read both
-	bool oral = OMetadata.HasAnySceneTagCSV(sid, "blowjob,oral,cuminmouth,facefuck,facial,facecum,deepthroat") || OMetadata.FindAnyActionForActorCSV(sid, pos, "blowjob,deepthroating,penilelicking,rubbingpenisagainstface,facial") != -1 || OMetadata.FindAnyActionCSV(sid, "blowjob,deepthroating") != -1
+	; 0.8.1: in blowjob/deepthroating/penilelicking the beast is the action's target (the actor is the mouth)
+	bool oral = OMetadata.HasAnySceneTagCSV(sid, "blowjob,oral,cuminmouth,facefuck,facial,facecum,deepthroat") || OMetadata.FindAnyActionForTargetCSV(sid, pos, "blowjob,deepthroating,penilelicking") != -1 || OMetadata.FindAnyActionForActorCSV(sid, pos, "rubbingpenisagainstface,facial") != -1 || OMetadata.FindAnyActionCSV(sid, "blowjob,deepthroating") != -1
 	bool anal = OMetadata.HasAnySceneTagCSV(sid, "anal,analcreampie") || OMetadata.FindAnyActionForActorCSV(sid, pos, "analsex") != -1
 	bool vag = OMetadata.HasAnySceneTagCSV(sid, "vaginal,creampie,knotted") || OMetadata.FindAnyActionForActorCSV(sid, pos, "vaginalsex,wwfvaginalsex") != -1
 	bool foot = OMetadata.HasSceneTag(sid, "footjob") || OMetadata.FindAnyActionCSV(sid, "footjob") != -1
@@ -150,8 +152,10 @@ Event OnBeastOrgasm(string eventName, string strArg, float numArg, Form sender)
 		vag = false
 		anal = false
 	endif
+	bool guessed = false
 	if !oral && !anal && !vag && !outside
 		outside = true ; unknown metadata ("default", none, lickingvagina): treat as a finish on her body
+		guessed = true ; ...but not on her face (0.8.1)
 	endif
 
 	Debug.Trace("[OBF BeastLoad] " + orgasmer.GetDisplayName() + " climax, thread " + tid + ", scene " + sid + ", oral " + oral + " vaginal " + vag + " anal " + anal + " outside " + outside)
@@ -171,7 +175,8 @@ Event OnBeastOrgasm(string eventName, string strArg, float numArg, Form sender)
 		Actor t = acts[i]
 		if t && t != orgasmer && !IsBeast(t)
 			PrepTarget(t)
-			GlazeActor(orgasmer, t, tid, sid, intensity, layers, oral, vag, anal, foot, hand, outside)
+			bool face = FaceFinish(sid, pos, OThread.GetActorPosition(tid, t), oral, vag, anal, outside, guessed)
+			GlazeActorFace(orgasmer, t, tid, sid, intensity, layers, oral, vag, anal, foot, hand, outside, face)
 		endif
 	endwhile
 
@@ -217,8 +222,46 @@ Function PrepTarget(Actor t)
 	endif
 EndFunction
 
+; ---- 0.8.1: face only for oral/facial finishes and outside sprays, never for an internal finish ----
+bool Function FaceFinish(string sid, int pos, int tp, bool oral, bool vag, bool anal, bool outside, bool guessed)
+	; actions are per stage, so this reads the climax stage. An internal finish always wins: some converted
+	; gangbangs list him inside her and in her mouth at once.
+	if pos >= 0 && OMetadata.FindAnyActionForActorCSV(sid, pos, "vaginalsex,wwfvaginalsex,analsex") != -1
+		return false ; he is inside her (or another partner): the body spill-over stays, the face stays clean
+	endif
+	if tp >= 0 && pos >= 0
+		if OMetadata.FindAnyActionForActorAndTargetCSV(sid, tp, pos, "blowjob,deepthroating,penilelicking,handjob,footjob,boobjob") != -1 || OMetadata.FindAnyActionForActorAndTargetCSV(sid, pos, tp, "facial,rubbingpenisagainstface") != -1
+			return true ; her mouth, face, hands, feet or breasts are on him: oral finish or outside spray
+		endif
+	endif
+	if pos >= 0 && (OMetadata.FindAnyActionForActorCSV(sid, pos, "facial,rubbingpenisagainstface") != -1 || OMetadata.FindAnyActionForTargetCSV(sid, pos, "blowjob,deepthroating,penilelicking") != -1)
+		return false ; another partner's face takes it
+	endif
+	; no action ties him to anyone: the scene's tags decide, an internal tag wins over an oral one
+	if vag || anal
+		return false
+	endif
+	if oral
+		return true
+	endif
+	return outside && !guessed
+EndFunction
+
+; kept for callers compiled against 0.8 and earlier
 Function GlazeActor(Actor orgasmer, Actor t, int tid, string sid, int intensity, int layers, bool oral, bool vag, bool anal, bool foot, bool hand, bool outside)
+	GlazeActorFace(orgasmer, t, tid, sid, intensity, layers, oral, vag, anal, foot, hand, outside, !vag && !anal && (oral || outside))
+EndFunction
+
+Function GlazeActorFace(Actor orgasmer, Actor t, int tid, string sid, int intensity, int layers, bool oral, bool vag, bool anal, bool foot, bool hand, bool outside, bool face)
+	if oral && !face
+		; tagged oral but not on her face (he is inside her or someone else): body only
+		oral = false
+		outside = true
+	endif
 	int meshSet = 0
+	if !face
+		meshSet = 8 ; no face meshes (see ItemMask)
+	endif
 	int n = 0
 	int rnd = 1
 	if StackRounds
@@ -283,8 +326,8 @@ Function GlazeActor(Actor orgasmer, Actor t, int tid, string sid, int intensity,
 			n += 1
 		endwhile
 		OCumMale.ApplyCumThighs(t, -1)
-		if HugeLoad
-			OCumMale.ApplyCumFacial(t, 4, -1)
+		if HugeLoad && face
+			OCumMale.ApplyCumFacial(t, 4, -1) ; full-body spray reaches the face; never on internal finishes
 		endif
 		meshSet = Math.LogicalOr(meshSet, 4)
 	endif
@@ -330,6 +373,7 @@ int Function ItemMask(int meshSet, int rnd)
 	bool pie = Math.LogicalAnd(meshSet, 1) != 0
 	bool face = Math.LogicalAnd(meshSet, 2) != 0
 	bool body = Math.LogicalAnd(meshSet, 4) != 0
+	bool noFace = Math.LogicalAnd(meshSet, 8) != 0 ; 0.8.1: internal finish, keep the face clean
 	int m = 0
 	if pie
 		m = Math.LogicalOr(m, 7)          ; 0,1,2
@@ -373,12 +417,18 @@ int Function ItemMask(int meshSet, int rnd)
 		elseif Math.LogicalAnd(m, 17) == 0
 			bit = 1
 		endif
+		if noFace && (bit == 32 || bit == 64)
+			bit = 0
+		endif
 		if bit && Math.LogicalAnd(m, bit) == 0
 			m = Math.LogicalOr(m, bit)
 			extra -= 1
 		endif
 		k += 1
 	endwhile
+	if noFace
+		m = Math.LogicalAnd(m, 143) ; drop face items 4,5,6 (Tull oral, Liquid face, Liquid face SMP)
+	endif
 	return m
 EndFunction
 

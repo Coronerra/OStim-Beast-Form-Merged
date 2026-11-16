@@ -1,0 +1,53 @@
+{
+	"name": "HCoS (Werewolf) FemWolf Standing Embrace 5 [male werewolf + man]",
+	"modpack": "OBeastLite",
+	"length": 20,
+	"speeds": [
+		{
+			"animation": "WVL_mmgfemwerenpcstand_S5"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"tags": [
+				"climaxing"
+			]
+		},
+		{
+			"intendedSex": "male",
+			"tags": [
+				"standing",
+				"climaxing"
+			],
+			"feetOnGround": true,
+			"sosBend": 3
+		}
+	],
+	"actions": [
+		{
+			"type": "analsex",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"hcos",
+		"bestiality",
+		"werewolf",
+		"standing",
+		"holding",
+		"creature",
+		"packfemalewerewolf",
+		"converted",
+		"slal",
+		"transition",
+		"anal",
+		"gay",
+		"obfunlock"
+	],
+	"noRandomSelection": true,
+	"destination": "OBFWVLmmgfemwerenpcstandMM-4"
+}

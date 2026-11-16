@@ -1,0 +1,52 @@
+{
+	"name": "Werewolf Pack FM",
+	"modpack": "WerewolfVampireLordOStim",
+	"length": 2,
+	"navigations": [
+		{
+			"origin": "OCrWerewolfIdleFM",
+			"description": "Werewolf Pack",
+			"icon": "OCreatures/werewolf/werewolf",
+			"priority": -100,
+			"noWarnings": true
+		},
+		{
+			"destination": "OCrWerewolfIdleFM",
+			"description": "Return",
+			"icon": "OStim/symbols/return",
+			"priority": -1000,
+			"noWarnings": true
+		}
+	],
+	"speeds": [
+		{
+			"animation": "OBF_B_WW_B_Dog2_S1"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"tags": [
+				"standing"
+			]
+		},
+		{
+			"intendedSex": "female",
+			"tags": [
+				"standing"
+			]
+		}
+	],
+	"tags": [
+		"idle",
+		"intro",
+		"creature",
+		"werewolf",
+		"packwerewolf"
+	],
+	"noRandomSelection": true
+}

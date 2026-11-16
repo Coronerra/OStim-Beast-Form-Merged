@@ -1,0 +1,59 @@
+{
+	"name": "HCoS Werewolffy Style (Straight) 5 [two male werewolves]",
+	"modpack": "OBeastLite",
+	"length": 26.666666,
+	"speeds": [
+		{
+			"animation": "WVL_mmgwerewolffystyle_S5"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"tags": [
+				"climaxing"
+			]
+		},
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"tags": [
+				"climaxing"
+			]
+		}
+	],
+	"actions": [
+		{
+			"type": "analsex",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"hcos",
+		"creature",
+		"cc",
+		"samerace",
+		"a1",
+		"a2",
+		"werewolf",
+		"doggystyle",
+		"standing",
+		"loving",
+		"romantic",
+		"packbeastcouples",
+		"converted",
+		"slal",
+		"transition",
+		"anal",
+		"gay",
+		"obfunlock"
+	],
+	"noRandomSelection": true,
+	"destination": "OBFWVLmmgwerewolffystyleMM-4"
+}

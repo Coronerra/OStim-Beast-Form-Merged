@@ -1,0 +1,73 @@
+{
+	"name": "HCoS Werewolves 69 1 [female + male werewolf]",
+	"modpack": "OBeastLite",
+	"length": 6,
+	"navigations": [
+		{
+			"origin": "WVLCCWerewolfHubFMC2",
+			"description": "HCoS Werewolves 69 [female + male werewolf]",
+			"icon": "OCreatures/werewolf/werewolforal"
+		},
+		{
+			"destination": "OBFWVLmmgwerewolves69FM-2",
+			"description": "Next",
+			"icon": "OStim/symbols/next"
+		},
+		{
+			"destination": "WVLCCWerewolfHubFMC2",
+			"description": "Return",
+			"icon": "OStim/symbols/return"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmgwerewolves69_S1"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "female"
+		},
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			]
+		}
+	],
+	"actions": [
+		{
+			"type": "blowjob",
+			"actor": 0,
+			"target": 1,
+			"performer": 0
+		},
+		{
+			"type": "cunnilingus",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"hcos",
+		"creature",
+		"cc",
+		"samerace",
+		"werewolf",
+		"loving",
+		"romantic",
+		"packbeastcouples",
+		"converted",
+		"slal",
+		"blowjob",
+		"oral",
+		"cunnilingus",
+		"femwerewolf",
+		"69",
+		"sixtynine",
+		"obfunlock"
+	]
+}

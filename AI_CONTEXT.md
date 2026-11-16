@@ -5,6 +5,7 @@ This file is for AI assistants, bots and modders who want to understand this mod
 ## 1. What problem it solves
 Transforming changes the player's race to `WerewolfBeastRace` (Skyrim.esm 0x000CDD84) or `DLC1VampireBeastRace` (Dawnguard.esm 0x0000283A). OStim Standalone has no actor type for those races, beast form blocks normal activation, and the beast-form timer keeps running during scenes. This mod makes the beast-form player a normal, sentient OStim actor: actor typing, scene start, hubs, a body/head that work in scenes, OCum climax handling and SkyrimNet awareness.
 
+Status: 0.8.1 beta (installer folders 50-53 = optional Lirael WVL 0.2.3 integration, scene JSON only).
 Status: beta. OStim is required. SexLab is not required, but it should be compatible.
 
 ## 2. Since 0.7: one installer, TWO body for everyone
@@ -90,7 +91,7 @@ Compile with Caprica (game=skyrim) or the CK compiler. Imports: vanilla, SKSE, S
 - Fallback animation events `OBF_B_*` (project `OBFMerged`, 21 HKX) let the idles play without OCR. That's why Pandora must be run.
 
 ## 6. Load order rules
-- Left pane (since 0.7.1 MFA shares no files with this mod, so its spot is free; full table with reasons in README "Load Order"): frameworks -> OStim -> OCum -> MFA -> Growl/JS Eyes -> GT Softbody -> Tull/Liquid -> OCR (optional) -> animation packs -> SkyrimNet/OStimNet -> **this mod** -> TWO (+ Alternate Textures, BodySlide output) -> BFA -> Pandora output. No file of this mod overlaps a TWO file (0.7.2: the softbody copies of TWO meshes use this mod's own `coronerra\twosoftbody\` paths).
+- Left pane (since 0.7.1 MFA shares no files with this mod, so its spot is free; full table with reasons in README "Load Order"): frameworks -> OStim -> OCum -> MFA -> Growl/JS Eyes -> GT Softbody -> Tull/Liquid -> OCR (optional) -> Lirael's Werewolf and Vampire Lord OStim 0.2.3 and other animation packs -> SkyrimNet/OStimNet -> **this mod** (must win over her pack: 0.8 overrides a few of her hub JSONs) -> TWO (+ Alternate Textures, BodySlide output) -> BFA -> Pandora output. No file of this mod overlaps a TWO file (0.7.2: the softbody copies of TWO meshes use this mod's own `coronerra\twosoftbody\` paths).
 - Plugins: Growl option `... Werewolves.esp, WerewolvesGrowl.esp, OStim_Beast_Form_Merged.esp, OStim_Beast_Form_Merged_TWO_Patch.esp, ... - BFA Heads.esp, [Herm]`. TWO option `... Werewolves.esp, OStim_Beast_Form_TWO.esp, ... - BFA Heads.esp, [Herm]`. `Werewolves.esp` after OCreatures.esp. On Nolvus: as low as possible but above the Paper Maps plugins.
 - Never enable `OStim_Beast_Form_TWO.esp` together with `OStim_Beast_Form_Merged.esp` (same scripts).
 
@@ -102,8 +103,20 @@ Compile with Caprica (game=skyrim) or the CK compiler. Imports: vanilla, SKSE, S
 - **OCR:** never add OCreatures.esp as a master. Gate on `Game.GetModByName("OCreatures.esp") != 255`.
 - **TWO:** never add TWO, TWO Alternate Textures, MFA or Growl files to this repo or the zip. Reference paths and records only; the exceptions are the softbody Yes copies of TWO's female body (`femalebodywerewolf_0/_1.nif`, `femalebodywerewolf.tri`) and hard canine (`CanineRedHard.nif`), the two softbody SMP configs built from TWO's XMLs, and the BFA head TRI (`ExpHeadWerewolf_BFA.tri`). each edited, at this mod's own paths. Frosferes is okay with patches but I will not repackage any files he made that I did not have to patch. So non-softbody female bodies and all Male bodies are still dependant on his TWO bodies. Since 0.7.1 the same goes for MFA's Vampire Lord meshes and the MNC/OCR Vampire Lord aroused mesh: the plugins reference their paths, the zip ships none of them.
 - **Herm option requirements:** TWO 4.1's `WerewolvesExtras.esp` masters `WerewolvesHCOS.esp`, which masters `CreatureFramework.esm`, `MoreNastyCritters.esp` and `HornyCreatures.esp`. Herm users need all of them; nobody else does. The herm plugin itself masters only `Skyrim.esm`.
-- **Credits:** Billyy, BakaFactory, FluffyFox and FunnyBizness made the animations; Lirael Atelier did the OStim conversions/packaging and OCreatures Reforged; MFA is TealEri's. Full list in README "Credits".
+- **Credits:** Billyy, Anub, FlufyFox/FluffyFox, BakaFactory, FunnyBizness, the MNC team (Dayelyte, Panicforever) and MadMansGun made the animations; Lirael Atelier did the OStim conversions/packaging (incl. Werewolf and Vampire Lord OStim 0.2.3) and OCreatures Reforged, not the animations; MFA is TealEri's. Full list in README "Credits".
 - **TWO herm body and Skyrim 1.7.x:** TWO Extras' herm / urta body swap is done by `TWO_SkinSwapper.dll` (0.2.1, CommonLibSSE-NG, Address Library post-AE flag, no AddressLibraryV5 flag), called from TWO's `PlayerWerewolfScript` (`SkinSwap.SwapSkin`). It doesn't load on 1.7.99+ (Address Library format 5). `OBFHerm_Main` only reads `TWO_PlayerHermVal` (WerewolvesExtras.esp 0xC09) and doesn't depend on the DLL.
 
 ## 8. Other Coronerra repos
 See the list in README.md.
+
+## 0.8 (beta) notes
+- Base: the 0.7.2 release package. The 0.8 scene files, OStimNet descriptions, unlock table, FOMOD page and static checks were generated by build-machine scripts (not in this repo); see STATIC_CHECKS_0.8.txt / 0.8.1.txt in Data/Docs.
+- OStim sorts the penis-having actor first on its own start key -> male-first (MF) copies with animationIndex remap; OCR-style [F,M] idles kept too.
+- Scene ID = filename; her hub overrides use the same relative path so MO2 replaces them (BF below her pack).
+- Public wording: forced scenes are described as "forcefully taking" or "aggressively taking". Lirael = converter, animators are Billyy, Anub, FlufyFox, Baka, FunnyBizness, MNC team, MadMansGun.
+- No herm/futa unlocks (author decision; herm handling stays with the Herm option). 0.8 animations tested in game by the author; the 0.8.1 face fix is not.
+
+## 0.8.1 notes
+- OCumBeastPie.FaceFinish(sid, pos, tp, oral, vag, anal, outside, guessed) decides face per partner from the climax stage's actions: beast is actor of vaginalsex/wwfvaginalsex/analsex on anyone -> no face; partner is actor of blowjob/deepthroating/penilelicking/handjob/footjob/boobjob on him, or he is actor of facial/rubbingpenisagainstface on her -> face; he is in another partner's mouth/face -> no face; else tags (internal tag beats oral tag; guessed outside -> no face).
+- GlazeActorFace(..., face): face=false strips ApplyCumFacial/ApplyCumMouth/BreastFace and sets meshSet bit 8, which ItemMask uses to drop face items 4/5/6 (also from round stacking).
+- Compile: Caprica 0.3.0 (game=skyrim, OStim 7.5.1c sources, OCum Ascended 4.1.1 + merged OCumMaleScript, SkyrimNet headers, NiOverride/MiscUtil/SkyUI stubs). Baseline recompile of the 0.8 source disassembles identically to the shipped 0.8 pex (only a case difference in one property-name string). PEX header strings carry only the script name.

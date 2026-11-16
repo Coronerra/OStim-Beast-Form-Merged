@@ -1,0 +1,59 @@
+{
+	"name": "HCoS Werewolffy Style (Gay) 5 [female + male werewolf]",
+	"modpack": "OBeastLite",
+	"length": 26.666666,
+	"speeds": [
+		{
+			"animation": "WVL_mmggaywerewolffystyle_S5"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "female",
+			"tags": [
+				"climaxing"
+			],
+			"animationIndex": 1
+		},
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"tags": [
+				"climaxing"
+			],
+			"animationIndex": 0
+		}
+	],
+	"actions": [
+		{
+			"type": "analsex",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"hcos",
+		"creature",
+		"cc",
+		"samerace",
+		"werewolf",
+		"doggystyle",
+		"standing",
+		"loving",
+		"romantic",
+		"packbeastcouples",
+		"converted",
+		"slal",
+		"transition",
+		"anal",
+		"femwerewolf",
+		"obfunlock"
+	],
+	"noRandomSelection": true,
+	"destination": "OBFWVLmmggaywerewolffystyleFM-4"
+}

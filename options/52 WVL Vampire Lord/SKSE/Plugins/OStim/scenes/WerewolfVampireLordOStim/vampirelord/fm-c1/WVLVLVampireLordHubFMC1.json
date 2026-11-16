@@ -1,0 +1,52 @@
+{
+	"name": "Vampire Lord Pack FM",
+	"modpack": "WerewolfVampireLordOStim",
+	"length": 2,
+	"navigations": [
+		{
+			"origin": "OCrVampireLordIdleFM",
+			"description": "Vampire Lord Pack",
+			"icon": "OCreatures/vampirelord/vampirelord",
+			"priority": -100,
+			"noWarnings": true
+		},
+		{
+			"destination": "OCrVampireLordIdleFM",
+			"description": "Return",
+			"icon": "OStim/symbols/return",
+			"priority": -1000,
+			"noWarnings": true
+		}
+	],
+	"speeds": [
+		{
+			"animation": "OBF_B_Vamp_B_Dog_S1"
+		}
+	],
+	"actors": [
+		{
+			"type": "VampireLord",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"tags": [
+				"standing"
+			]
+		},
+		{
+			"intendedSex": "female",
+			"tags": [
+				"standing"
+			]
+		}
+	],
+	"tags": [
+		"idle",
+		"intro",
+		"creature",
+		"vampirelord",
+		"packvampirelord"
+	],
+	"noRandomSelection": true
+}

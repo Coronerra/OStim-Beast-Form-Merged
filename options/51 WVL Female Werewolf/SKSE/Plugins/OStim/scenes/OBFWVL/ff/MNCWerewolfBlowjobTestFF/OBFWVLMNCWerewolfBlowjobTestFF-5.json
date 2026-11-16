@@ -1,0 +1,52 @@
+{
+	"name": "MNC (Female Werewolf) Gives BlowJob 5 [female werewolf + woman]",
+	"modpack": "OBeastLite",
+	"length": 13.333333,
+	"speeds": [
+		{
+			"animation": "WVL_MNCWerewolfBlowjobTest_S5"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "female",
+			"tags": [
+				"climaxing"
+			]
+		},
+		{
+			"intendedSex": "female",
+			"tags": [
+				"climaxing"
+			]
+		}
+	],
+	"actions": [
+		{
+			"type": "cunnilingus",
+			"actor": 0,
+			"target": 1,
+			"performer": 0
+		}
+	],
+	"tags": [
+		"mnc",
+		"dayelyte",
+		"bestiality",
+		"werewolf",
+		"holding",
+		"creature",
+		"packfemalewerewolf",
+		"converted",
+		"slal",
+		"transition",
+		"cunnilingus",
+		"oral",
+		"femwerewolf",
+		"lesbian",
+		"obfunlock"
+	],
+	"noRandomSelection": true,
+	"destination": "OBFWVLMNCWerewolfBlowjobTestFF-4"
+}

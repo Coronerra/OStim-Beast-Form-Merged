@@ -1,5 +1,21 @@
 # Changelog: OStim Beast Form Merged
 
+## 0.8.1 (beta, unpublished)
+- Beast Load face rule: cum on the face (OCum facial/mouth decals, BreastFace overlay, Liquid Pack face meshes 55/57, Tull oral mesh) only when the climax is oral/facial (her mouth or face on him) or an outside spray (her hands/feet/breasts on him, or outside-finish tags with no internal action). Internal vaginal/anal finishes keep the body glaze and creampie but no face.
+- Fixed the oral check: in blowjob/deepthroating/penilelicking the beast is the action target, not the actor.
+- Unknown metadata (no tag, no action) still glazes the body, but no longer the face.
+- Scripts only: OCumBeastPie (+ new functions FaceFinish, GlazeActorFace; GlazeActor kept as a wrapper), OBFHerm_Main recompiled to use them. No variables or properties added or removed, plugins and FormIDs unchanged.
+
+## 0.8 (beta, unpublished)
+- Built on Lirael Atelier's Werewolf and Vampire Lord OStim 0.2.3 (her pack carries all animations; BF ships scene JSON only). New optional FOMOD page (folders 50-53, flags wvl_ww/wvl_fww/wvl_vl/wvl_cc, Recommended when WVLAnimObj.esp is active).
+- Role unlocks: 18 of 83 animations, 28 new scene sets ([`Data/Docs/OStim Beast Form Merged/WVL_ROLE_UNLOCKS_0.8.md`](Data/Docs/OStim%20Beast%20Form%20Merged/WVL_ROLE_UNLOCKS_0.8.md)). No herm/futa unlocks; female werewolves never penetrate.
+- Couple starts without OCR: OBFWerewolfIdleCC{FM,MF,MM,FF}, OBFVampireLordIdleCC{FM,MF,MM}; male-first copies of her FM couple scenes for OStim's actor sort.
+- Her female werewolf hub linked from OBFWerewolfIdleMF; her 7 hubs repointed from unregistered B_WW_B_*/B_Vamp_B_Dog to OBF_* events.
+- Removed Billyy/Baka/FlufyFox/FunnyBiz scene folders and their dead buttons from 00 Common; old packs re-add their own buttons via origin navigations.
+- Tested by the author: the new animations play and a SkyrimNet spouse could start a scene with him in beast form.
+- Docs: Lirael's [Werewolf and Vampire Lord OStim 0.2.3](https://www.patreon.com/LiraelAtelier/posts/werewolf-and-for-175434973) is the recommended animation source; the Starter Animation Pack stays linked as legacy (superseded for her 0.2.3 users). Lirael is credited as converter; the animators are Billyy, Anub, FlufyFox, BakaFactory, FunnyBizness, the MNC team (Dayelyte, Panicforever) and MadMansGun.
+- OStimNet descriptions for all new scenes. Plugins/scripts/meshes byte-identical to 0.7.2 (FormIDs unchanged).
+
 ## 0.7.2
 - **Beta: the softbody Yes female body and the softbody cock setup are not tested in game yet.**
 - Docs: cover image (`docs/OStim_Beast_Form_cover.jpg`) and a link to the separate, LoversLab-exclusive [OStim Beast Form Starter Animation Pack](https://www.loverslab.com/files/file/52869-ostim-beast-form-starter-animation-pack/).

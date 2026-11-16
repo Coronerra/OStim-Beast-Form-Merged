@@ -1,0 +1,30 @@
+OStim Beast Form Merged 0.8 (beta) - static checks
+Generated on the build machine; nothing here was tested in game.
+
+Files: 0.7.2 = 410, 0.8 = 308; added 170, removed 272, changed 10.
+Plugins/scripts/meshes/textures/HKX/SMP XML changed vs 0.7.2: 0 []
+Plugins (md5, identical to 0.7.2 => same FormIDs, masters, records):
+  10 Growl/OStim_Beast_Form_Merged.esp: d19870fd17b53627bca1c8c7181ea583 SAME
+  10 Growl/OStim_Beast_Form_Merged_TWO_Patch - BFA Heads.esp: c9ac43d94e52e7589302b6c73247053c SAME
+  11 Growl Softbody/OStim_Beast_Form_Merged_TWO_Patch.esp: c9701eec6c605fa499d230344eea6d3b SAME
+  12 Growl No Softbody/OStim_Beast_Form_Merged_TWO_Patch.esp: 21c393c910f818e825616b515ffabc04 SAME
+  20 TWO/OStim_Beast_Form_TWO - BFA Heads.esp: fbc21c51f406b54d1db40eaae8594607 SAME
+  21 TWO Softbody/OStim_Beast_Form_TWO.esp: 56c3e6092b490633a42601e7a416311b SAME
+  22 TWO No Softbody/OStim_Beast_Form_TWO.esp: e21abc1c5a7f4a35866dc13815d9a48b SAME
+  40 Herm/OStim_Beast_Form_TWO_Herm_Patch.esp: c206051c2e7a0f567484579726f8750e SAME
+Removed (272): all under 00 Common/SKSE/Plugins/OStim/scenes/BakaCreatures, 00 Common/SKSE/Plugins/OStim/scenes/BillyyCreatures, 00 Common/SKSE/Plugins/OStim/scenes/FlufyCreatures, 00 Common/SKSE/Plugins/OStim/scenes/FunnyBizCreatures
+Changed text/JSON files: 00 Common/Docs/OStim Beast Form Merged/README_OStim_Beast_Form_Merged.txt, 00 Common/README_OStim_Beast_Form_Merged.txt, 00 Common/SKSE/Plugins/OStim/scenes/OCreatures/OCrVampireLord/fm/OCrVampireLordIdleFM.json, 00 Common/SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/ffm/OCrWerewolfIdleFFM.json, 00 Common/SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fm/OCrWerewolfIdleFM.json, 00 Common/SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fmm/OCrWerewolfIdleFMM.json, 00 Common/SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fmmm/OCrWerewolfIdleFMMM.json, 00 Common/SKSE/Plugins/OStim/scenes/OCreatures/OCrWerewolf/fmmmm/OCrWerewolfIdleFMMMM.json, fomod/ModuleConfig.xml, fomod/info.xml
+
+Scene graph (BF 0.8 all options + Lirael 0.2.3 all options, no OCreatures Reforged):
+  JSON files in package parsed: 206; BF scene files: 186; links checked: 341; actor animation events checked against FNIS lists: 400.
+  Problems: 0. Her sex scenes not reachable from a random start: 0.
+  Random-selectable starts: OBFVampireLordIdleCCFM, OBFVampireLordIdleCCMF, OBFVampireLordIdleCCMM, OBFWerewolfIdleCCFF, OBFWerewolfIdleCCFM, OBFWerewolfIdleCCMF, OBFWerewolfIdleCCMM, OBFWerewolfIdleFwF, OBFWerewolfIdleMF, OBFWerewolfIdleMM, OCrVampireLordIdleFM, OCrWerewolfIdleFFM, OCrWerewolfIdleFM, OCrWerewolfIdleFMM, OCrWerewolfIdleFMMM, OCrWerewolfIdleFMMMM, WVLIdleVLMVampireLordMMC1, WVLIdleWWMWerewolfMMC1, WVLIdleWWMWerewolfMMMC2, WVLIdleWWMWerewolfMMMMC3, WVLIdleWWMWerewolfMMMMMC4, WVLIdleWWWerewolfFMMC1.
+  BF scenes not reachable from random starts (0.7.2 legacy helpers for scripted starts, unchanged): OBFVampireLordIdleFM, OBFWerewolfIdleFF, OBFWerewolfIdleFFM, OBFWerewolfIdleFM, OBFWerewolfIdleFMM, OBFWerewolfIdleFMMM, OBFWerewolfIdleFMMMM, OBLVampireLordHubFM, OBLWerewolfHubFF, OBLWerewolfHubFFM, OBLWerewolfHubFM, OBLWerewolfHubFMM, OBLWerewolfHubFMMM, OBLWerewolfHubFMMMM, OCrWerewolfIdleFF.
+  Every link endpoint pair: same actor count, same actor types, same intendedSex per slot.
+  Links to OCreatures Reforged 1.62+ starts (OCrWerewolfIdleFwM/CCFM/CCMM, OCrVampireLordIdleCCFM) carry noWarnings.
+  Her-pack option combinations simulated (BF folders ticked to match): 64; with problems: 0.
+FOMOD: schema-valid (fomod 5.0 xsd). Installer combinations simulated: 128. Conflicting files involving the new 50-53 folders: 0 []
+Files shipped in both 50 and 51 (must be byte-identical): 2, identical: True
+Public docs/installer wording check (banned wording, see the README's "forcefully taking" rule): 0 hits
+Frosferes line verbatim in installer: True
+New HKX/FNIS files added: 0 (none expected; no Lirael animation or behavior file is shipped)

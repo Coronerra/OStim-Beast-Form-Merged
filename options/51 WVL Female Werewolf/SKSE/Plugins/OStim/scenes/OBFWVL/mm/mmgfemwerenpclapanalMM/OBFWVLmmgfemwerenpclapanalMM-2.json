@@ -1,0 +1,60 @@
+{
+	"name": "HCoS (Werewolf) Anal FemWolfDom 2 [male werewolf + man]",
+	"modpack": "OBeastLite",
+	"length": 6,
+	"navigations": [
+		{
+			"destination": "OBFWVLmmgfemwerenpclapanalMM-3",
+			"description": "Next",
+			"icon": "OStim/symbols/next"
+		},
+		{
+			"destination": "OBFWVLHubMM",
+			"description": "Return",
+			"icon": "OStim/symbols/return"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmgfemwerenpclapanal_S2"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male"
+		},
+		{
+			"intendedSex": "male",
+			"tags": [
+				"lyingback",
+				"onbottom"
+			],
+			"feetOnGround": false,
+			"sosBend": 2
+		}
+	],
+	"actions": [
+		{
+			"type": "analsex",
+			"actor": 1,
+			"target": 0,
+			"performer": 1
+		}
+	],
+	"tags": [
+		"hcos",
+		"bestiality",
+		"werewolf",
+		"cowgirl",
+		"femdom",
+		"dom",
+		"creature",
+		"packfemalewerewolf",
+		"converted",
+		"slal",
+		"anal",
+		"gay",
+		"obfunlock"
+	]
+}
