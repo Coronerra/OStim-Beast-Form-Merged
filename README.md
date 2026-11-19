@@ -1,3 +1,6 @@
+# ⚠️ DEPRECIATED! ⚠️
+> # GO TO (https://github.com/Coronerra/OStim-Beast-Form/)
+
 # OStim Beast Form Merged 0.8.1 (beta)
 
 ![OStim Beast Form](docs/OStim_Beast_Form_cover.jpg)
