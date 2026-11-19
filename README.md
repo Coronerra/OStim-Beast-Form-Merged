@@ -1,3 +1,5 @@
+<div align="center">
+
 # ⚠️ DEPRECIATED! ⚠️
 > # GO TO (https://github.com/Coronerra/OStim-Beast-Form/)
 
